@@ -9,10 +9,46 @@ sudo halt
 sudo reboot
 ```
 
-Updating
+Install these
+
+
+```bash
+xclip allows you to copy + paste from command line
+sudo apt-get install xclip 
+```
+
+### Updating
 
 ```
 # download the package lists from repositories and "updates" them to get
 # information on the newest versions
 sudo apt-get update
 ```
+
+### Generate Github SSH keys
+
+```bash
+# generate keys
+cd ~
+mkdir .ssh
+cd .ssh
+ssh-keygen -t rsa -b 4096 -C "herereadthos@email.com"
+# you will be prompted to create a file; the id_rsa default is fine
+# you will also be prompted to create a passphrase; create it
+# start the ssh-agent
+eval "$(ssh-agent -s)"
+# add SSH private key to the ssh-agent
+ssh-add id_rsa
+#copy the SSH key
+xclip -sel clip < id_rsa.pub
+```
+
+Log in to your github page, then go to [/settings/keys](https://github.com/settings/keys), and select "New SSH key." Paste your key there and save.
+
+```bash
+# test your connection
+ssh -T git@github.com
+# verify by typing yes
+```
+
+ 
