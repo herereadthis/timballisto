@@ -23,6 +23,10 @@ sudo apt-get install xclip
 # download the package lists from repositories and "updates" them to get
 # information on the newest versions
 sudo apt-get update
+# upgrade your packages
+sudo apt-get upgrade
+# upgrade your distribution
+sudo apt-get dist-upgrade
 ```
 
 ### Generate Github SSH keys
