@@ -2,15 +2,14 @@
 
 This repo is for me to keep track of whatever I'm doing with my Raspberry Pi.
 
-How to turn on/off the pi
+### How to turn on/off the pi
 
 ```bash
 sudo halt
 sudo reboot
 ```
 
-Install these
-
+### Install these
 
 ```bash
 xclip allows you to copy + paste from command line
@@ -29,6 +28,12 @@ sudo apt-get upgrade
 sudo apt-get dist-upgrade
 ```
 
+### Set up Github
+
+```bash
+git config --global user.name "herereadthis"
+git config --global user.email "herereadthis@email.com"
+```
 
 ### Generate Github SSH keys
 
