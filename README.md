@@ -1,8 +1,8 @@
 # LUTRA!
 
-![Raspberry Pi](https://github.com/herereadthis/lutra/resources/images/raspberry_pi_64x64.png)
+![Raspberry Pi](https://raw.githubusercontent.com/herereadthis/lutra/master/resources/images/raspberry_pi_64x64.png)
 
-This repo is  for me to keep track of whatever I'm doing with my Raspberry Pi.
+This repo is for me to keep track of whatever I'm doing with my Raspberry Pi.
 
 ### How to turn on/off the pi
 
@@ -14,8 +14,13 @@ sudo reboot
 ### Install these
 
 ```bash
-xclip allows you to copy + paste from command line
+# xclip allows you to copy + paste from command line
 sudo apt-get install xclip 
+# X Windows screensaver application
+# the option will show up under "Preferences" from the Desktop menu.
+sudo apt-get install xscreensaver
+# Network Mapper tool for network discovery
+sudp apt-get install nmap
 ```
 
 ### Updating
@@ -29,6 +34,12 @@ sudo apt-get upgrade
 # upgrade your distribution
 sudo apt-get dist-upgrade
 ```
+
+```bash
+# what is my IP address?
+hostname -I
+# discover other devices on my subnet
+nmap -sn 192.168.1.0/24
 
 ### Set up Github
 
@@ -63,4 +74,27 @@ ssh -T git@github.com
 # verify by typing yes
 ```
 
+### Virtual Network computing
+
+[VNC Conect from RealVNC is included with Raspbian](https://www.raspberrypi.org/documentation/remote-access/vnc/README.md). The packages are `realvnc-vnc-server` and `realvnc-vnc-viewer` In Menu > Preferences > RPi Config > Interfaces, enable VNC.
+
+```bash
+# what is my IP address?
+hostname -I
+# scan the whole subnet for other devices
+nmap -sn 192.168.1.0/24
+```
+
+* Direct connection: Download VNC Viewer onto your computer, and look for the IP address of the Raspberry Pi. Username/password is pi/raspberry as default.
+* Cloud Connection: [Register an account with RealVNC](https://www.realvnc.com/raspberrypi/#sign-up). Then go to VNC Server on Raspberry Pi (top right corner), and sign into VNC Viewer on your other machine.
+* Virtual Desktop: In RPi terminal run ```vncserver``` and it will generate an IP address. Use that address in VNC viewer. Run ```vncserver -kill :<display-number>``` to kill.
+
+### Bash Aliases
+
+[Copy the bash script from this repo's resources directory](https://github.com/herereadthis/lutra/blob/master/resources/.bash_aliases)
+
+```
+cd ~
+touch .bash_aliases
+```
  
