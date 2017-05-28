@@ -34,15 +34,20 @@ def find_furthest():
             furthest_station = station
     return furthest_station
 
-# furthest station
-furthest_station = find_furthest()
-weather = weather + str(furthest_station['weather_stn_id'])
+def find_closest_station_id():
+    furthest_station = find_furthest()
+    return furthest_station['weather_stn_id']
 
-print('Furthest weather station is {0} (ID: {1})' .format(
-    furthest_station['weather_stn_name'],
-    furthest_station['weather_stn_id']))
-print('Lat: {0}, Long: {1}' .format(
-    furthest_station['weather_stn_lat'],
-    furthest_station['weather_stn_long']))
-furthest_weather = get(weather).json()['items']
-pprint(furthest_weather)
+def print_furthest():
+    furthest_station = find_furthest()
+    weather_url = weather
+    weather_url = weather_url + str(furthest_station['weather_stn_id'])
+
+    print('Furthest weather station is {0} (ID: {1})' .format(
+        furthest_station['weather_stn_name'],
+        furthest_station['weather_stn_id']))
+    print('Lat: {0}, Long: {1}' .format(
+        furthest_station['weather_stn_lat'],
+        furthest_station['weather_stn_long']))
+    furthest_weather = get(weather_url).json()['items']
+    pprint(furthest_weather)

@@ -35,15 +35,20 @@ def find_closest():
             closest_station = station
     return closest_station
 
-# closest station
-closest_station = find_closest()
-weather = weather + str(closest_station['weather_stn_id'])
+def find_closest_station_id():
+    closest_station = find_closest()
+    return closest_station['weather_stn_id']
 
-print('Closest weather station is {0} (ID: {1})' .format(
-    closest_station['weather_stn_name'],
-    closest_station['weather_stn_id']))
-print('Lat: {0}, Long: {1}' .format(
-    closest_station['weather_stn_lat'],
-    closest_station['weather_stn_long']))
-closest_weather = get(weather).json()['items']
-pprint(closest_weather)
+def print_closest():
+    closest_station = find_closest()
+    weather_url = weather
+    weather_url = weather_url + str(closest_station['weather_stn_id'])
+
+    print('Closest weather station is {0} (ID: {1})' .format(
+        closest_station['weather_stn_name'],
+        closest_station['weather_stn_id']))
+    print('Lat: {0}, Long: {1}' .format(
+        closest_station['weather_stn_lat'],
+        closest_station['weather_stn_long']))
+    closest_weather = get(weather_url).json()['items']
+    pprint(closest_weather)

@@ -24,6 +24,8 @@ sudo apt-get install nmap
 # Requests is an elegant and simple HTTP library for Python
 # http://docs.python-requests.org/en/master/
 sudo apt-get install python3-requests
+# Matplotlib is a Python 2D plotting library: https://matplotlib.org/
+sudo apt-get install python3-matplotlib
 ```
 
 ### Updating
