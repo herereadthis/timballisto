@@ -2,8 +2,16 @@ mcd () {
 	mkdir $1;cd $1
 }
 
+# I store all my github repos in a folder called ~/repos
+repo () {
+	cd ~/repos;cd $1
+}
+
+# go to home directory
 alias ~='cd ~/'
+# go up one directory level
 alias ..='cd ../'
+# go to desktop
 alias desk='cd ~/Desktop'
 
 # git commands

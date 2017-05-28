@@ -20,12 +20,15 @@ sudo apt-get install xclip
 # the option will show up under "Preferences" from the Desktop menu.
 sudo apt-get install xscreensaver
 # Network Mapper tool for network discovery
-sudp apt-get install nmap
+sudo apt-get install nmap
+# Requests is an elegant and simple HTTP library for Python
+# http://docs.python-requests.org/en/master/
+sudo apt-get install python3-requests
 ```
 
 ### Updating
 
-```
+```bash
 # download the package lists from repositories and "updates" them to get
 # information on the newest versions
 sudo apt-get update
@@ -34,12 +37,6 @@ sudo apt-get upgrade
 # upgrade your distribution
 sudo apt-get dist-upgrade
 ```
-
-```bash
-# what is my IP address?
-hostname -I
-# discover other devices on my subnet
-nmap -sn 192.168.1.0/24
 
 ### Set up Github
 
@@ -93,8 +90,11 @@ nmap -sn 192.168.1.0/24
 
 [Copy the bash script from this repo's resources directory](https://github.com/herereadthis/lutra/blob/master/resources/.bash_aliases)
 
-```
+```bash
 cd ~
+# paste into this new file, so you don't have to mess with .bashrc
 touch .bash_aliases
+# relaunch bash
+exec bash
 ```
  
