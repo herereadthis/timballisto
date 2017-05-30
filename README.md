@@ -11,6 +11,13 @@ sudo halt
 sudo reboot
 ```
 
+### Change the default password
+```bash
+# The default user on a Rapberry Pi is pi, password: raspberry
+# Change the sudo user's password
+passwd
+```
+
 ### Install these
 
 ```bash
