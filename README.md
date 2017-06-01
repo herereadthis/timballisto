@@ -14,7 +14,7 @@ sudo reboot
 ### Change the default password
 ```bash
 # The default user on a Rapberry Pi is pi, password: raspberry
-# Change the sudo user's password
+# Change the sudoer password
 passwd
 ```
 
@@ -52,12 +52,8 @@ sudo apt-get dist-upgrade
 ```bash
 git config --global user.name "herereadthis"
 git config --global user.email "herereadthis@email.com"
-```
 
-### Generate Github SSH keys
-
-```bash
-# generate keys
+# Generate Github SSH keys
 cd ~
 mkdir .ssh
 cd .ssh

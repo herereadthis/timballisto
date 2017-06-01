@@ -1,0 +1,1 @@
+These files follow along with the ["Raspberry Pi Workshop for Beginers"'(https://core-electronics.com.au/tutorials/raspberry-pi-workshop-for-beginners.html) tutorial by [Core Electronics](https://core-electronics.com.au/)
