@@ -1,12 +1,15 @@
+# tutorial here:
+# https://www.raspberrypi.org/learning/getting-started-with-the-twitter-api/
+
 import random
 # sudo pip3 install twython --upgrade
 from twython import Twython
 from auth import (
-    twitter_consumer_key as consumer_key,
-    twitter_consumer_secret as consumer_secret,
-    twitter_access_token as access_token,
-    twitter_access_token_secret as access_token_secret
-    )
+    consumer_key,
+    consumer_secret,
+    access_token,
+    access_token_secret
+)
 
 twitter = Twython(
     consumer_key,
@@ -29,7 +32,7 @@ message = random.choice(messages)
 # twitter.update_status(status=message)
 
 #how to upload status with image
-with open('./resources/images/babbage_1024x1024.jpg', 'rb') as photo:
+with open('./../resources/images/babbage_1024x1024.jpg', 'rb') as photo:
     response = twitter.upload_media(media=photo)
     twitter.update_status(status=message, media_ids = [response['media_id']])
 
