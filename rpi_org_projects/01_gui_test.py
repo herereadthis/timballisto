@@ -11,6 +11,7 @@ def say_my_name():
 def change_text_size(slider_value):
     welcome_message.font_size(slider_value)
 
+# the GUI app begins here.
 app = App("Hello world")
 
 # text widget

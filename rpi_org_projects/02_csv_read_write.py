@@ -1,6 +1,7 @@
 # https://www.raspberrypi.org/learning/shakespearean-insult-generator/worksheet/
 
 import random
+from guizero import App, Text, PushButton
 
 """
 output the entire file
@@ -31,6 +32,19 @@ def insult_me():
     word_c = random.choice(list_c)
     
     insult = 'Thou %s %s %s!' % (word_a, word_b, word_c)
-    print(insult)
+    return insult
 
-insult_me()
+def new_insult():
+    new_insult = insult_me()
+    message.set(new_insult)
+
+app_title = 'Shakespearean Insult Generator'
+
+# documentation at https://lawsie.github.io/guizero/text/
+app = App(app_title, width=600, height=200)
+
+message = Text(app, text=insult_me(), size=20)
+
+button = PushButton(app, new_insult, text='Insult me again')
+
+app.display()
