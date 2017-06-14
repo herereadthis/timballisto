@@ -29,7 +29,7 @@ def insult_me():
     word_a = random.choice(list_a)
     word_b = random.choice(list_b)
     word_c = random.choice(list_c)
-    # insult = 'Thou' + word_a + word_b + word_b
+    
     insult = 'Thou %s %s %s!' % (word_a, word_b, word_c)
     print(insult)
 
