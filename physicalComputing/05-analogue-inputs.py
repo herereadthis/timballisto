@@ -7,15 +7,44 @@
 #
 # Go into Raspberry Pi Configuration > Interfaces > enable SPI
 
-
-
-from gpiozero import MCP3008
+from gpiozero import MCP3008, PWMLED
 import math
 from time import sleep
 
-pot = MCP3008(0)
+pot1 = MCP3008(0)
+pot2 = MCP3008(1)
 
-while True:
-    pot_value = round(pot.value * 100)
-    print(pot_value)
-    sleep(0.1)
+led = PWMLED(21)
+
+def fader():
+    while True:
+        pot1_value = round(pot1.value, 2)
+        # led.source = pot.values
+        led.value = pot1_value
+        print(pot1_value)
+        sleep(0.1)
+
+def blinker():
+    while True:
+        pot1_value = round(pot1.value, 2)
+        pot2_value = round(pot2.value, 2)
+        print(pot1_value, pot2_value)
+        led.blink(
+            on_time=pot1_value,
+            off_time=pot2_value,
+            n=1,
+            background=False
+        )
+
+def pulser():
+    while True:
+        pot1_value = round(pot1.value, 2)
+        pot2_value = round(pot2.value, 2)
+        print(pot1_value, pot2_value)
+        led.pulse(
+            fade_in_time=pot1_value,
+            fade_out_time=pot2_value,
+            n=1,
+            background=False
+        )
+        
