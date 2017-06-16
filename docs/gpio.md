@@ -1,6 +1,8 @@
 # GPIO
 
-<table border="1">
+Rasberry Pi 3 Pinout - here are the GPIO (General Purpose Input/Output)
+
+<table>
     <tbody>
         <tr>
             <td colspan="2"></td>
@@ -13,7 +15,7 @@
             <td colspan="2" rowspan="3"></td>
         </tr>
         <tr>
-            <td rowspan="2">I2C</td>
+            <td rowspan="2">I<sup>2</sup>C</td>
             <td>SDA</td>
             <td>02</td>
             <td>3</td>
@@ -153,3 +155,10 @@
         </tr>
     </tbody>
 </table>
+
+### I<sup>2</sup>C
+
+### SPI
+
+### PCM
+
