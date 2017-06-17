@@ -12,7 +12,7 @@ import math
 from time import sleep
 
 # How to wire an MCP3008 Analogue-to-Digital Converter (ADC)
-# The side with the notch is 0, the other side is 8.
+# The side with the notch is 16, the other side is 9.
 # if the notch is facing to your left, connect wires from the raspberry pi from
 # the side that is to the top of the notch (start from top left is pin 16, top
 # right is 09)

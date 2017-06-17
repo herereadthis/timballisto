@@ -2,7 +2,7 @@
 
 Rasberry Pi 3 Pinout - here are the GPIO (General Purpose Input/Output)
 
-<table border="1">
+<table>
     <tbody>
         <tr>
             <td colspan="2"></td>
@@ -18,80 +18,80 @@ Rasberry Pi 3 Pinout - here are the GPIO (General Purpose Input/Output)
             <td align="right" rowspan="2">I<sup>2</sup>C</td>
             <td align="right">SDA</td>
             <td align="right"><strong>02</strong></td>
-            <td>03</td>
-            <td>04</td>
+            <td>`03`</td>
+            <td>`04`</td>
             <td><strong>5.0V</strong></td>
         </tr>
         <tr>
             <td align="right">SCL</td>
             <td align="right"><strong>03</strong></td>
-            <td>05</td>
-            <td>06</td>
+            <td>`05`</td>
+            <td>`06`</td>
             <td><strong>GND</strong></td>
         </tr>
         <tr>
             <td colspan="2" rowspan="6"></td>
             <td align="right"><strong>04</strong></td>
-            <td>07</td>
-            <td>08</td>
+            <td>`07`</td>
+            <td>`08`</td>
             <td><strong>14</strong></td>
             <td>TXD</td>
             <td rowspan="2">UART</td>
         </tr>
         <tr>
             <td align="right"><strong>GND</strong></td>
-            <td>09</td>
-            <td>10</td>
+            <td>`09`</td>
+            <td>`10`</td>
             <td><strong>15</strong></td>
             <td>RXD</td>
         </tr>
         <tr>
             <td align="right"><strong>17</strong></td>
-            <td>11</td>
-            <td>12</td>
+            <td>`11`</td>
+            <td>`12`</td>
             <td><strong>18</strong></td>
             <td>CLK</td>
             <td>PCM</td>
         </tr>
         <tr>
             <td align="right"><strong>27</strong></td>
-            <td>13</td>
-            <td>14</td>
+            <td>`13`</td>
+            <td>`14`</td>
             <td><strong>GND</strong></td>
             <td colspan="2" rowspan="5"></td>
         </tr>
         <tr>
             <td align="right"><strong>22</strong></td>
-            <td>15</td>
-            <td>16</td>
+            <td>`15`</td>
+            <td>`16`</td>
             <td><strong>23</strong></td>
         </tr>
         <tr>
             <td align="right"><strong>3.3V</strong></td>
-            <td>17</td>
-            <td>18</td>
+            <td>`17`</td>
+            <td>`18`</td>
             <td><strong>24</strong></td>
         </tr>
         <tr>
             <td align="right" rowspan="3">SPI</td>
             <td align="right">MOSI</td>
             <td align="right"><strong>10</strong></td>
-            <td>19</td>
-            <td>20</td>
+            <td>`19`</td>
+            <td>`20`</td>
             <td><strong>GND</strong></td>
         </tr>
         <tr>
             <td align="right">MISO</td>
             <td align="right"><strong>09</strong></td>
-            <td>21</td>
-            <td>22</td>
+            <td>`21`</td>
+            <td>`22`</td>
             <td><strong>25</strong></td>
         </tr>
         <tr>
             <td align="right">SCLK</td>
             <td align="right"><strong>11</strong></td>
-            <td>23</td>
-            <td>24</td>
+            <td>`23`</td>
+            <td>`24`</td>
             <td><strong>08</strong></td>
             <td>CE0</td>
             <td rowspan="2">SPI</td>
@@ -99,59 +99,59 @@ Rasberry Pi 3 Pinout - here are the GPIO (General Purpose Input/Output)
         <tr>
             <td colspan="2" rowspan="5"></td>
             <td align="right"><strong>GND</strong></td>
-            <td>25</td>
-            <td>26</td>
+            <td>`25`</td>
+            <td>`26`</td>
             <td><strong>07</strong></td>
             <td>CE1</td>
         </tr>
         <tr>
             <td align="right"><strong>ID SD</strong></td>
-            <td>27</td>
-            <td>28</td>
+            <td>`27`</td>
+            <td>`28`</td>
             <td><strong>ID SC</strong></td>
             <td colspan="2" rowspan="5"></td>
         </tr>
         <tr>
             <td align="right"><strong>05</strong></td>
-            <td>29</td>
-            <td>30</td>
+            <td>`29`</td>
+            <td>`30`</td>
             <td><strong>GND</strong></td>
         </tr>
         <tr>
             <td align="right"><strong>06</strong></td>
-            <td>31</td>
-            <td>32</td>
+            <td>`31`</td>
+            <td>`32`</td>
             <td><strong>12</strong></td>
         </tr>
         <tr>
             <td align="right"><strong>13</strong></td>
-            <td>33</td>
-            <td>34</td>
+            <td>`33`</td>
+            <td>`34`</td>
             <td><strong>GND</strong></td>
         </tr>
         <tr>
             <td align="right">PCM</td>
             <td align="right">FS</td>
             <td align="right"><strong>19</strong></td>
-            <td>35</td>
-            <td>36</td>
+            <td>`35`</td>
+            <td>`36`</td>
             <td><strong>16</strong></td>
         </tr>
         <tr>
             <td align="right" colspan="2" rowspan="2"></td>
             <td align="right"><strong>26</strong></td>
-            <td>37</td>
-            <td>38</td>
+            <td>`37`</td>
+            <td>`38`</td>
             <td><strong>20</strong></td>
-            <td>DIN</td>
+            <td>D<sub>IN</sub></td>
             <td rowspan="2">PCM</td>
         </tr>
         <tr>
             <td align="right"><strong>GND</strong></td>
-            <td>39</td>
-            <td>40</td>
+            <td>`39`</td>
+            <td>`40`</td>
             <td><strong>21</strong></td>
-            <td>DOUT</td>
+            <td>D<sub>OUT</sub></td>
         </tr>
     </tbody>
 </table>
