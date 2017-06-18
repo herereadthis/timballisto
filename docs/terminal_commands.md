@@ -1,5 +1,14 @@
 # Useful Commands in Terminal
 
+## Pi-Specific Stuff
+
+```bash
+# Turn off a Raspberry Pi
+sudo halt
+# Restart a Raspberry Pi
+sudo reboot
+```
+
 ## Moving Around
 
 ```bash

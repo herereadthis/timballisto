@@ -1,6 +1,8 @@
 # More Documentation
 
-* [Useful terminal commands](https://github.com/herereadthis/lutra/blob/master/docs/terminal_commands.md)
+* [Do these things first](https://github.com/herereadthis/lutra/blob/master/docs/do_first.md) when you get a Raspberry Pi
+* [Useful terminal commands](https://github.com/herereadthis/lutra/blob/master/docs/terminal_commands.md) - including how to turn off a Pi
 * [Restore an SD Card](https://github.com/herereadthis/lutra/blob/master/docs/restore_image.md)
+* [Set up Github](https://github.com/herereadthis/lutra/blob/master/docs/github_setup.md) to get and share code
 * [GPIO Pinout](https://github.com/herereadthis/lutra/blob/master/docs/GPIO.md) - diagram of all the pins on the RPi
 * [How to wire MCP3008](https://github.com/herereadthis/lutra/blob/master/docs/MCP3008.md) - analogue-to-digital converter (ACD)
