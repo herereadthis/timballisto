@@ -44,6 +44,7 @@ sudo apt-get dist-upgrade
 cd ~
 # paste into this new file, so you don't have to mess with .bashrc
 touch .bash_aliases
+
 # relaunch bash
 exec bash
 ```
@@ -56,6 +57,7 @@ exec bash
 ```bash
 # what is my IP address?
 hostname -I
+
 # scan the whole subnet for other devices
 nmap -sn 192.168.1.0/24
 ```

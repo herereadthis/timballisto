@@ -6,7 +6,7 @@ This repo is for me to keep track of whatever I'm doing with my Raspberry Pi.
 
 ### Run this first
 
-````bash
+```bash
 # get a bunch of files
 python3 download_stuff.py
 ```

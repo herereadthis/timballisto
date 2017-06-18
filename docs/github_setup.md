@@ -6,23 +6,30 @@ forward in the history of their code. Additionally other users - or
 collaborators - can contribute code to the respository. Github is the most
 popular and widely used way to share code.
 
-### Set up Github
+### Set up Github Configuration
 
 ```bash
 git config --global user.name "herereadthis"
 git config --global user.email "herereadthis@email.com"
+```
 
-# Generate Github SSH keys
+### Generate Github SSH keys
+
+```bash
+# Create hidden ssh directory
 cd ~
 mkdir .ssh
 cd .ssh
 ssh-keygen -t rsa -b 4096 -C "herereadthos@email.com"
+
 # you will be prompted to create a file; the id_rsa default is fine
 # you will also be prompted to create a passphrase; create it
 # start the ssh-agent
 eval "$(ssh-agent -s)"
+
 # add SSH private key to the ssh-agent
 ssh-add id_rsa
+
 #copy the SSH key
 xclip -sel clip < id_rsa.pub
 ```

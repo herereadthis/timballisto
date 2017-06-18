@@ -5,6 +5,7 @@
 ```bash
 # Turn off a Raspberry Pi
 sudo halt
+
 # Restart a Raspberry Pi
 sudo reboot
 ```
@@ -14,6 +15,7 @@ sudo reboot
 ```bash
 # open the current directory from inside terminal
 xdg-open .
+
 # open a file with the default text editor
 xdg-open filename.md
 ```
@@ -23,6 +25,7 @@ xdg-open filename.md
 ```bash
 # list all packages
 pip freeze
+
 # method 2, will show you a whole lot more
 python3 # open python shell
 help('modules')
