@@ -2,3 +2,4 @@
 *.pyo
 downloads/
 .DS_Store
+*city.list.json*
