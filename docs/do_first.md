@@ -11,15 +11,19 @@ passwd
 
 ```bash
 # xclip allows you to copy + paste from command line
-sudo apt-get install xclip 
+sudo apt-get install xclip
+
 # X Windows screensaver application
 # the option will show up under "Preferences" from the Desktop menu.
 sudo apt-get install xscreensaver
+
 # Network Mapper tool for network discovery
 sudo apt-get install nmap
+
 # Requests is an elegant and simple HTTP library for Python
 # http://docs.python-requests.org/en/master/
 sudo apt-get install python3-requests
+
 # Matplotlib is a Python 2D plotting library: https://matplotlib.org/
 sudo apt-get install python3-matplotlib
 ```
@@ -30,8 +34,10 @@ sudo apt-get install python3-matplotlib
 # download the package lists from repositories and "updates" them to get
 # information on the newest versions
 sudo apt-get update
+
 # upgrade your packages
 sudo apt-get upgrade
+
 # upgrade your distribution
 sudo apt-get dist-upgrade
 ```
