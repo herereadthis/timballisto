@@ -20,7 +20,7 @@ git config --global user.email "herereadthis@email.com"
 cd ~
 mkdir .ssh
 cd .ssh
-ssh-keygen -t rsa -b 4096 -C "herereadthos@email.com"
+ssh-keygen -t rsa -b 4096 -C "herereadthis@email.com"
 
 # you will be prompted to create a file; the id_rsa default is fine
 # you will also be prompted to create a passphrase; create it
@@ -41,4 +41,11 @@ and select "New SSH key." Paste your key there and save.
 # test your connection
 ssh -T git@github.com
 # verify by typing yes
+```
+
+Remember when cloning a repo, use the `git@github` method
+
+```bash
+# this uses the SSH protocol
+git clone git@github:herereadthis/lutra.git
 ```
