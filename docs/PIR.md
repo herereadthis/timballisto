@@ -1,0 +1,1 @@
+PIR - Pyroelectric ("Passive") InfraRed Sensor
