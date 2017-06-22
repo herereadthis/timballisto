@@ -11,6 +11,9 @@ This repo is for me to keep track of whatever I'm doing with my Raspberry Pi.
 python3 download_stuff.py
 ```
 
+### Documentation
+
+
 * [Do these things first](https://github.com/herereadthis/lutra/blob/master/docs/do_first.md) when you get a Raspberry Pi
 * [Useful terminal commands](https://github.com/herereadthis/lutra/blob/master/docs/terminal_commands.md) - including how to turn off a Pi
 * [Restore an SD Card](https://github.com/herereadthis/lutra/blob/master/docs/restore_image.md)
