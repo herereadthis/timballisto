@@ -26,6 +26,9 @@ sudo apt-get install python3-requests
 
 # Matplotlib is a Python 2D plotting library: https://matplotlib.org/
 sudo apt-get install python3-matplotlib
+
+# Command line interface for testing internet bandwidth
+sudo pip install speedtest-cli
 ```
 
 ### Updating
@@ -74,6 +77,7 @@ nmap -sn 192.168.1.0/24
 
 ### Static IP Address
 
+* *[NOTE] The following doesn't work. Keeping here anyway until I figure out how to make it work. DO NOT DO THIS SECTION*
 * Get your Pi to [boot up with the same IP address each time](https://www.raspberrypi.org/learning/networking-lessons/rpi-static-ip-address/], which could be useful for making a self-contained netwrk or building a standalone project.
 * You will will be editing your DHCP configuration. DHCP stands for Dynamic Host Configuration Protocol
 
