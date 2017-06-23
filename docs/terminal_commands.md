@@ -30,3 +30,13 @@ pip freeze
 python3 # open python shell
 help('modules')
 ```
+
+## Networking
+
+```bash
+# what is my IP address?
+hostname -I
+
+# scan the whole subnet for other devices
+nmap -sn 192.168.1.0/24
+```

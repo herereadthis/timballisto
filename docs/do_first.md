@@ -72,3 +72,29 @@ nmap -sn 192.168.1.0/24
 * Cloud Connection: [Register an account with RealVNC](https://www.realvnc.com/raspberrypi/#sign-up). Then go to VNC Server on Raspberry Pi (top right corner), and sign into VNC Viewer on your other machine.
 * Virtual Desktop: In RPi terminal run ```vncserver``` and it will generate an IP address. Use that address in VNC viewer. Run ```vncserver -kill :<display-number>``` to kill.
 
+### Static IP Address
+
+* Get your Pi to [boot up with the same IP address each time](https://www.raspberrypi.org/learning/networking-lessons/rpi-static-ip-address/], which could be useful for making a self-contained netwrk or building a standalone project.
+* You will will be editing your DHCP configuration. DHCP stands for Dynamic Host Configuration Protocol
+
+```bash
+# Edit dhcpcd, which is the DHCP client daemon.
+# It gets the host info (IP, netast, broadcast address, etc) fro a DHCP server 
+# and configures the network machine on which is running.
+sudo nano /etc/dhcpcd.conf
+
+# paste the following at the bottom of the configuration file.
+# "NUM" must be between 2 and 255
+
+interface eth0
+
+static ip_address=192.168.0.NUM/24
+static routers=192.168.0.1
+static domain_name_servers=192.168.0.1
+
+interface wlan0
+
+static ip_address=192.168.0.NUM/24
+static routers=192.168.0.1
+static domain_name_servers=192.168.0.1
+```
