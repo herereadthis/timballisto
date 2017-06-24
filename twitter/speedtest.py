@@ -1,7 +1,7 @@
 """Use SpeedTest CLI to send a tweet."""
 import os
 import subprocess
-import pprint
+from pprint import pprint
 import json
 import time
 import datetime
@@ -17,11 +17,15 @@ def convertJsonStringToDict(string):
     return json.loads(string)
 
 
-def test():
+def convertBitsToMbit(bit, decimal_places = 2):
+    """Converts bits to megabits (Mbit)."""
+    mbit = bit / 2**20
+    specification = '{0:.%sf}' % (decimal_places)
+    return float(specification.format(mbit))
 
-        #run speedtest-cli
+
+def test():
         print('running test')
-        #a = os.popen("python /home/pi/speedtest/speedtest-cli --simple").read()
         speedtest_output = subprocess.check_output(['speedtest-cli', '--json'])
         print('ran')
 
@@ -29,26 +33,19 @@ def test():
         speedtest_data = convertJsonStringToDict(speedtest_string)
 
         pprint(speedtest_data)
+        print('\n\n')
 
-        
+        upload_speed = 'Upload Speed: %sMbits/s' % (
+            convertBitsToMbit(speedtest_data['upload'])
+        )
+        download_speed = 'Download Speed: %sMbits/s' % (
+            convertBitsToMbit(speedtest_data['download'])
+        )
 
-        """
-        #split the 3 line result (ping,down,up)
-        lines = a.split('\n')
-        ts = time.time()
-        date =datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
-        #if speedtest could not connect set the speeds to 0
-        if "Cannot" in a:
-                p = 100
-                d = 0
-                u = 0
-        #extract the values for ping down and up values
-        else:
-                p = lines[0][6:11]
-                d = lines[1][10:14]
-                u = lines[2][8:12]
-        print(date,p, d, u)
-        """
+        print(upload_speed)
+        print(download_speed)
+
+    
 
 
 test()
