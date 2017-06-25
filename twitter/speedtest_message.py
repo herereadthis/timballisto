@@ -1,10 +1,10 @@
 """Use SpeedTest CLI to send a tweet."""
-import os
+# import os
 import subprocess
 from pprint import pprint
 import json
-import time
-import datetime
+# import time
+# import datetime
 
 tracking_file_path = './speedtest_tracking.json'
 
@@ -30,12 +30,11 @@ def bits_to_mbit(bit, decimal_places=2):
 def append_and_write(existing_list, new_dict, file):
     """Create a new list with new entry and write to file."""
     existing_list.append(new_dict)
-
-    
     json.dump(existing_list, file)
 
 
 def record_speedtest(data):
+    """Record the speedtest to a file."""
     try:
         with open(tracking_file_path, 'r+') as jsonfile:
             try:
@@ -44,16 +43,18 @@ def record_speedtest(data):
                 jsonfile.seek(0)
                 jsonfile.truncate(0)
                 append_and_write(tracking_data, data, jsonfile)
-                
+
             except ValueError:
                 print('data file has been corrupted')
+
     except FileNotFoundError:
         with open(tracking_file_path, 'w+') as jsonfile:
             tracking_data = []
             append_and_write(tracking_data, data, jsonfile)
-            
 
-def test():
+
+def run_speedtest():
+    """Run speed test and record the result."""
     try:
         print('Running speedtest....')
         speedtest_output = subprocess.check_output(['speedtest-cli', '--json'])
@@ -61,9 +62,6 @@ def test():
 
         speedtest_string = bytes_to_string(speedtest_output)
         speedtest_data = json_string_to_dict(speedtest_string)
-
-        pprint(speedtest_data)
-        print('\n\n')
 
         upload_speed = 'Upload Speed: %sMbits/s' % (
             bits_to_mbit(speedtest_data['upload'])
@@ -81,15 +79,14 @@ def test():
 
         record_speedtest(simple_data)
 
-        
     except subprocess.CalledProcessError:
         print('Unable to run speedtest-cli...Wifi or Internet is down.')
-        
+
     except Exception as inst:
         # To Do: handle all the various exceptions
         print(type(inst))
         print(inst.args)
         print(inst)
 
-        
-test()
+
+run_speedtest()

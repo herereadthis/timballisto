@@ -29,6 +29,11 @@ pip freeze
 # method 2, will show you a whole lot more
 python3 # open python shell
 help('modules')
+
+# lint a file 
+pep8 --first PATH/TO/file.py
+# lint a file, very detailed
+pep8 --show-source --show-pep8 PATH/TO/file.py
 ```
 
 ## Networking

@@ -29,6 +29,9 @@ sudo apt-get install python3-matplotlib
 
 # Command line interface for testing internet bandwidth
 sudo pip install speedtest-cli
+
+# Python linter to check if files are written correctly
+sudo pip install pep8
 ```
 
 ### Updating

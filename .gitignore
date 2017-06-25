@@ -4,3 +4,4 @@ downloads/
 .DS_Store
 *city.list.json*
 twitter/speedtest_tracking.json
+*.idea/
