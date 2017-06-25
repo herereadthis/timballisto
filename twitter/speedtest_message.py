@@ -45,6 +45,7 @@ def append_and_write(existing_list, new_dict, file):
 
 
 def record_speedtest(data):
+    """Make a record of this speed test to compare with past tests."""
     try:
         with open(tracking_file_path, 'r+') as jsonfile:
             try:
@@ -120,4 +121,6 @@ def send_speed_tweet():
         print('unable to get speed data')
 
 
-send_speed_tweet()
+# Check to see if this file is run as a module (import) or not
+if __name__ == '__main__':
+    send_speed_tweet()

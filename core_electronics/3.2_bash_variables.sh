@@ -3,6 +3,7 @@
 # Demo of decision making
 
 # how to make variables
+# note variable assignment has no spaces
 a=5
 b=200
 # $ symbol to access a variable
@@ -14,6 +15,7 @@ c=$(($a*$b))
 let c=a*b
 
 # if statment
+# Must use this structure with spaces
 if [ $a -gt $b ]
 then
   # Do something

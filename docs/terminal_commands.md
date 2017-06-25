@@ -13,6 +13,10 @@ sudo reboot
 ## Moving Around
 
 ```bash
+# Where am I now? (Print Working Directory)
+pwd
+
+
 # open the current directory from inside terminal
 xdg-open .
 

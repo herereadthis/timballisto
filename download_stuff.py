@@ -29,7 +29,9 @@ def get_file_and_unzip(file_url, output_path):
         outfile.write(decompressed_file.read())
 
 
-get_file_and_unzip(
-    'http://bulk.openweathermap.org/sample/city.list.json.gz',
-    'downloads/city.list.json'
-)
+# Check to see if this file is run as a module (import) or not
+if __name__ == '__main__':
+    get_file_and_unzip(
+        'http://bulk.openweathermap.org/sample/city.list.json.gz',
+        'downloads/city.list.json'
+    )
