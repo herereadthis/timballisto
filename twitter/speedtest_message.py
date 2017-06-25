@@ -1,10 +1,21 @@
 """Use SpeedTest CLI to send a tweet."""
-# import os
 import subprocess
 from pprint import pprint
 import json
-# import time
-# import datetime
+from twython import Twython
+from auth import (
+    consumer_key,
+    consumer_secret,
+    access_token,
+    access_token_secret
+)
+
+twitter = Twython(
+    consumer_key,
+    consumer_secret,
+    access_token,
+    access_token_secret
+    )
 
 tracking_file_path = './speedtest_tracking.json'
 
@@ -34,7 +45,6 @@ def append_and_write(existing_list, new_dict, file):
 
 
 def record_speedtest(data):
-    """Record the speedtest to a file."""
     try:
         with open(tracking_file_path, 'r+') as jsonfile:
             try:
@@ -46,7 +56,6 @@ def record_speedtest(data):
 
             except ValueError:
                 print('data file has been corrupted')
-
     except FileNotFoundError:
         with open(tracking_file_path, 'w+') as jsonfile:
             tracking_data = []
@@ -55,20 +64,22 @@ def record_speedtest(data):
 
 def run_speedtest():
     """Run speed test and record the result."""
+    upload_mbits = None
+    download_mbits = None
+
     try:
         print('Running speedtest....')
         speedtest_output = subprocess.check_output(['speedtest-cli', '--json'])
-        print('Speedtest ran. ')
+        print('Speedtest ran.\n\n')
 
         speedtest_string = bytes_to_string(speedtest_output)
         speedtest_data = json_string_to_dict(speedtest_string)
 
-        upload_speed = 'Upload Speed: %sMbits/s' % (
-            bits_to_mbit(speedtest_data['upload'])
-        )
-        download_speed = 'Download Speed: %sMbits/s' % (
-            bits_to_mbit(speedtest_data['download'])
-        )
+        upload_mbits = bits_to_mbit(speedtest_data['upload'])
+        download_mbits = bits_to_mbit(speedtest_data['download'])
+
+        upload_speed = 'Upload Speed: %sMbpss' % (upload_mbits)
+        download_speed = 'Download Speed: %sMbps' % (download_mbits)
 
         print(upload_speed)
         print(download_speed)
@@ -88,5 +99,25 @@ def run_speedtest():
         print(inst.args)
         print(inst)
 
+    return {
+        'up': upload_mbits,
+        'down': download_mbits
+    }
 
-run_speedtest()
+
+def send_speed_tweet():
+    """Send a tweet with speed test numbers."""
+    speeds = run_speedtest()
+
+    if speeds['up'] is not None and speeds['down'] is not None:
+        message = 'Raspberry Pi Internet speed test'
+        message = '%s: upload: %sMbps, download: %sMbps' % (
+            message, speeds['up'], speeds['down']
+        )
+        print(message)
+        twitter.update_status(status=message)
+    else:
+        print('unable to get speed data')
+
+
+send_speed_tweet()
