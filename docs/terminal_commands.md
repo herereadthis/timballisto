@@ -10,6 +10,16 @@ sudo halt
 sudo reboot
 ```
 
+## Bash
+
+```bash
+# Get the manual for commands
+man
+
+# example: the manual for the date command
+man date
+```
+
 ## Moving Around
 
 ```bash
