@@ -5,19 +5,6 @@ from pprint import pprint
 import json
 import time
 import datetime
-import speedtest as st
-
-servers = []
-
-s = st.Speedtest()
-s.get_servers(servers)
-s.get_best_server()
-s.download()
-s.upload()
-s.share()
-
-results_dict = s.results.dict()
-
 
 tracking_file_path = './speedtest_tracking.json'
 
@@ -40,19 +27,31 @@ def bits_to_mbit(bit, decimal_places=2):
     return float(specification.format(mbit))
 
 
+def append_and_write(existing_list, new_dict, file):
+    """Create a new list with new entry and write to file."""
+    existing_list.append(new_dict)
+
+    
+    json.dump(existing_list, file)
+
+
 def record_speedtest(data):
     try:
-        file = open(tracking_file_path, 'r')
-        print('tracking file exists')
-        # json.load is for loading a file.
-        tracking_list = json.load(file)
+        with open(tracking_file_path, 'r+') as jsonfile:
+            try:
+                tracking_data = json.load(jsonfile)
+                # this seek and truncate will wipe the previous JSON
+                jsonfile.seek(0)
+                jsonfile.truncate(0)
+                append_and_write(tracking_data, data, jsonfile)
+                
+            except ValueError:
+                print('data file has been corrupted')
     except FileNotFoundError:
-        file = open(tracking_file_path, 'w')
-        print('creating tracking file')
-        tracking_list = []
-        
-    print(tracking_list)
-
+        with open(tracking_file_path, 'w+') as jsonfile:
+            tracking_data = []
+            append_and_write(tracking_data, data, jsonfile)
+            
 
 def test():
     try:
@@ -76,13 +75,12 @@ def test():
         print(upload_speed)
         print(download_speed)
 
+        # list comprehension to pick the keys we need from the result
         keys = ['download', 'upload', 'timestamp']
-
         simple_data = {key: speedtest_data[key] for key in keys}
 
         record_speedtest(simple_data)
 
-        pprint(simple_data)
         
     except subprocess.CalledProcessError:
         print('Unable to run speedtest-cli...Wifi or Internet is down.')
@@ -92,9 +90,6 @@ def test():
         print(type(inst))
         print(inst.args)
         print(inst)
+
         
-
-    
-
-
 test()
