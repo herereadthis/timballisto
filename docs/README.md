@@ -2,7 +2,7 @@
 
 * [Do these things first](https://github.com/herereadthis/lutra/blob/master/docs/do_first.md) when you get a Raspberry Pi
 * [Useful terminal commands](https://github.com/herereadthis/lutra/blob/master/docs/terminal_commands.md) - including how to turn off a Pi
-* [How to schedule tasks](https://github.com/herereadthis/lutra/blob/master/docs/scheduling.md) when booting up or periodically (csron)
+* [How to schedule tasks](https://github.com/herereadthis/lutra/blob/master/docs/scheduling.md) when booting up or periodically (cron)
 * [Restore an SD Card](https://github.com/herereadthis/lutra/blob/master/docs/restore_image.md)
 * [Set up Github](https://github.com/herereadthis/lutra/blob/master/docs/github_setup.md) to get and share code
 * [GPIO Pinout](https://github.com/herereadthis/lutra/blob/master/docs/GPIO.md) - diagram of all the pins on the RPi

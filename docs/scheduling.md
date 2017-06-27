@@ -41,8 +41,8 @@ crontab -e
             <td>*</td>
             <td>*</td>
             <td>*</td>
-            <td>sudo reboot</td>
-            <td>10 0 * * * sudo reboot</td>
+            <td><code>sudo reboot</code></td>
+            <td><code>10 0 * * * sudo reboot</code></td>
         </tr>
         <tr>
             <td>Run a backup script every Monday at 3:00AM</td>
@@ -51,8 +51,8 @@ crontab -e
             <td>*</td>
             <td>*</td>
             <td>Mon</td>
-            <td>/backup_script.sh</td>
-            <td>0 3 * * Mon /backup_script.sh</td>
+            <td><code>/backup_script.sh</code></td>
+            <td><code>0 3 * * Mon /backup_script.sh</code></td>
         </tr>
         <tr>
             <td>Run a Python script at 10AM & 10PM on weekends</td>
@@ -61,8 +61,8 @@ crontab -e
             <td>*</td>
             <td>*</td>
             <td>Sat,Sun</td>
-            <td>python3 /my_script.py</td>
-            <td>0 10,22, * *  6,0 python3 /my_script.py</td>
+            <td><code>python3 /my_script.py</code></td>
+            <td><code>0 10,22, * *  6,0 python3 /my_script.py</code></td>
         </tr>
     </tbody>
 </table>
