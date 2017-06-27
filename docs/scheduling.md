@@ -20,6 +20,12 @@ echo -e '\n********\n'
 crontab -e
 ```
 
+* `m` - minute, 0-59
+* `h` - hour, 0-23
+* `dom` - day of month, 1-31
+* `mon` - month, 1-12
+* `dow` - day of week 0-6, or Sun-Sat
+
 #### Examples
 
 <table>
@@ -30,7 +36,6 @@ crontab -e
         <th>dom</th>
         <th>mon</th>
         <th>dow</th>
-        <th>command</th>
         <th>full example</th>
     </thead>
     <tbody>
@@ -41,7 +46,6 @@ crontab -e
             <td>*</td>
             <td>*</td>
             <td>*</td>
-            <td><code>sudo reboot</code></td>
             <td><code>10 0 * * * sudo reboot</code></td>
         </tr>
         <tr>
@@ -51,7 +55,6 @@ crontab -e
             <td>*</td>
             <td>*</td>
             <td>Mon</td>
-            <td><code>/backup_script.sh</code></td>
             <td><code>0 3 * * Mon /backup_script.sh</code></td>
         </tr>
         <tr>
@@ -61,7 +64,6 @@ crontab -e
             <td>*</td>
             <td>*</td>
             <td>Sat,Sun</td>
-            <td><code>python3 /my_script.py</code></td>
             <td><code>0 10,22, * *  6,0 python3 /my_script.py</code></td>
         </tr>
     </tbody>
