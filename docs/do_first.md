@@ -78,6 +78,22 @@ nmap -sn 192.168.1.0/24
 * Cloud Connection: [Register an account with RealVNC](https://www.realvnc.com/raspberrypi/#sign-up). Then go to VNC Server on Raspberry Pi (top right corner), and sign into VNC Viewer on your other machine.
 * Virtual Desktop: In RPi terminal run ```vncserver``` and it will generate an IP address. Use that address in VNC viewer. Run ```vncserver -kill :<display-number>``` to kill.
 
+
+### Scheduling
+
+[Read the docs on scheduling](https://github.com/herereadthis/lutra/blob/master/docs/scheduling.md) for a more detailed explanation.
+
+```bash
+# open cron jobs
+crontab -e
+
+# paste the following, which will:
+# update all packages every Monday at 3AM
+0 3 * * 1 sudo apt-get update && sudo apt-get -y upgrade
+```
+
+
+
 ### Static IP Address
 
 * *[NOTE] The following doesn't work. Keeping here anyway until I figure out how to make it work. DO NOT DO THIS SECTION*
