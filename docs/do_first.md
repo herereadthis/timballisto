@@ -1,5 +1,10 @@
 # Do These Things When You Get a Raspberry Pi
 
+### Set Preferences
+
+* Go to Main Menu > Preferences > Raspberry Pi Configuration
+* Go to Localisation, then change Locale, Timezone, Keyboard, and WiFi Country
+
 ### Change the default password
 ```bash
 # The default user on a Rapberry Pi is pi, password: raspberry
@@ -114,8 +119,6 @@ crontab -e
 # update all packages every Monday at 3AM
 0 3 * * 1 sudo apt-get update && sudo apt-get -y upgrade
 ```
-
-
 
 ### Static IP Address
 
