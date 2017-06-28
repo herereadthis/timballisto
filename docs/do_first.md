@@ -62,7 +62,30 @@ exec bash
 ```
 
 
-### Virtual Network computing
+### Networking
+
+#### Hostnames
+
+You will probably end up having multiple Pis on your network, so you should give each a unique name. The name can only use letters `a-zA-Z`, numbers `0-9`, and dash `-`
+
+```bash
+sudo nano /etc/hosts
+# Find the line that says this:
+127.0.1.1       raspberrypi
+# And replace with this:
+127.0.1.1       mynewhostname
+
+sudo nano /etc/hostname
+# This file is only 1 line.
+# Replace 'raspberrypi' with new hostname
+
+# Reboot the pi and test the new hostname
+# You'll also notice the prompt in terminal has changed.
+hostname
+
+```
+
+#### Virtual Network Computing
 
 [VNC Conect from RealVNC is included with Raspbian](https://www.raspberrypi.org/documentation/remote-access/vnc/README.md). The packages are `realvnc-vnc-server` and `realvnc-vnc-viewer` In Menu > Preferences > RPi Config > Interfaces, enable VNC.
 
