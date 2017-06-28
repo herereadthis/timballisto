@@ -1,10 +1,16 @@
 # More Documentation
 
+### Coding and Software
+
 * [Do these things first](https://github.com/herereadthis/lutra/blob/master/docs/do_first.md) when you get a Raspberry Pi
 * [Useful terminal commands](https://github.com/herereadthis/lutra/blob/master/docs/terminal_commands.md) - including how to turn off a Pi
 * [How to schedule tasks](https://github.com/herereadthis/lutra/blob/master/docs/scheduling.md) when booting up or periodically (cron)
 * [Restore an SD Card](https://github.com/herereadthis/lutra/blob/master/docs/restore_image.md)
 * [Set up Github](https://github.com/herereadthis/lutra/blob/master/docs/github_setup.md) to get and share code
+* [Docker](https://github.com/herereadthis/lutra/blob/master/docs/docker.md) containers for shipping code
+
+### Sensors and Circuitry
+
 * [GPIO Pinout](https://github.com/herereadthis/lutra/blob/master/docs/GPIO.md) - diagram of all the pins on the RPi
 * [How to wire MCP3008](https://github.com/herereadthis/lutra/blob/master/docs/MCP3008.md) - analogue-to-digital converter (ACD)
 * [HC-SR04](https://github.com/herereadthis/lutra/blob/master/docs/HC-SR04.md) - an ultrasonic distance sensor
