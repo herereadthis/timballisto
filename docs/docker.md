@@ -27,4 +27,26 @@ sudo systemctl start docker
 
 # Enable Docker client to be used by root user
 sudo usermod -aG docker pi
+
+# The standard documentation says to run this:
+docker run hello-world
+# but it will fail with this output:
+standard_init_linux.go:178: exec user process caused "exec format error"
+# The problem is hello-world is an image for Intel x86_64 processors
+
+# Test for Pi ARM 
+docker run arm32v7/hello-world
+```
+
+### Commands
+
+```bash
+# Login
+docker login
+
+# Check version
+docker --version
+
+# list the images you've downloaded or ran
+docker images
 ```
