@@ -14,6 +14,10 @@ def load_city_json():
     with open('../downloads/city.list.json') as data_file:
         return json.load(data_file)
 
+def string_in_string(sub_string, parent_string):
+    """determine if one string is inside another."""
+    return sub_string == parent_string
+
 
 def get_city_id():
     """Filter the list of cities to grab ID from city name."""
@@ -22,7 +26,7 @@ def get_city_id():
                  'travelling?')
     city_id = False
     # list comprehension
-    possible_cities = [d for d in data if d['name'] == city]
+    possible_cities = [d for d in data if string_in_string(d['name'], city)]
 
     pprint(possible_cities)
 
@@ -41,7 +45,7 @@ def get_city_id():
 
 def get_weather_data(city_id):
     """Get the weather forecast given a city ID."""
-    api_url = ('http://api.openweathermap.org/data/2.5/forecast?id=%s',
-               '&APPID=%s') % (city_id, open_weather_map_key)
+    url = 'http://api.openweathermap.org/data/2.5/forecast?id=%s&APPID=%s'
+    api_url = (url) % (city_id, open_weather_map_key)
 
     return api_url

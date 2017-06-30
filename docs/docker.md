@@ -10,7 +10,8 @@
 
 
 * An **image** is a standalone package of software that includes everything needed to run it (e.g. code, runtime, libraries, env variables, config)
-* An **container** is a runtime instance of an image - what the image becomes in memory when it is executed. 
+* An **container** is a runtime instance of an image - what the image becomes in memory when it is executed.
+* A **service** is a piece of the app that runs an image in a specific way.
 
 
 ### Installation
