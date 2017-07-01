@@ -16,17 +16,18 @@ def load_city_json():
 
 def string_in_string(sub_string, parent_string):
     """determine if one string is inside another."""
-    return sub_string == parent_string
+    return sub_string.lower() in parent_string.lower()
 
 
 def get_city_id():
     """Filter the list of cities to grab ID from city name."""
+    print('Loading city list...')
     data = load_city_json()
     city = input('What is the closest city to the place to where you are' +
                  'travelling?')
     city_id = False
     # list comprehension
-    possible_cities = [d for d in data if string_in_string(d['name'], city)]
+    possible_cities = [d for d in data if string_in_string(city, d['name'])]
 
     pprint(possible_cities)
 
@@ -49,3 +50,19 @@ def get_weather_data(city_id):
     api_url = (url) % (city_id, open_weather_map_key)
 
     return api_url
+
+
+def forecast():
+    """Run the main thing."""
+    city_id = get_city_id()
+
+    if city_id != False:
+        url = get_weather_data(city_id)
+        print(url)
+    else:
+        print('No Luck today.')
+
+
+if __name__ == '__main__':
+    forecast()
+
