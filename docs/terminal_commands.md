@@ -8,6 +8,12 @@ sudo halt
 
 # Restart a Raspberry Pi
 sudo reboot
+
+# View the Pi's current frequency (clock speed) in MHz
+echo $(($(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq)/1000))
+
+# View core temperature in Celsius
+echo $(($(cat /sys/class/thermal/thermal_zone0/temp)/1000))
 ```
 
 ## Bash

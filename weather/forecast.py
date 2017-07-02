@@ -48,8 +48,8 @@ def get_weather_data(city_id):
     """Get the weather forecast given a city ID."""
     url = 'http://api.openweathermap.org/data/2.5/forecast?id=%s&APPID=%s'
     api_url = (url) % (city_id, open_weather_map_key)
-
-    return api_url
+    weather_data = get(api_url)
+    return weather_data.json()
 
 
 def forecast():
@@ -57,8 +57,10 @@ def forecast():
     city_id = get_city_id()
 
     if city_id != False:
-        url = get_weather_data(city_id)
-        print(url)
+        weather_data = get_weather_data(city_id)
+        pprint(weather_data['list'][0]['dt_txt'])
+        print('\n')
+        pprint(weather_data['list'][1]['dt_txt'])
     else:
         print('No Luck today.')
 

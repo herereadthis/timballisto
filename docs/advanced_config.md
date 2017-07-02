@@ -12,3 +12,24 @@ sudo nano /home/pi/.config/lxpanel/LXDE-pi/panels/panel
 ```
 
 ### Raspberry Pi Configuration
+
+```bash
+# open config.txt in text editor
+xdg-open /boot/config.txt
+# or
+sudo nano /boot/config.txt
+
+# you can overclock the ARM if you change arm_freq
+arm_freq=1200
+
+# list all non-zero integer config options
+vcgencmd get_config int
+
+# list all non-null string config options
+vcgencmd get_config str
+
+# get the clock speed
+vcgencmd get_config arm_freq
+```
+
+* There is tons of [documentation on raspberrypi.org](https://www.raspberrypi.org/documentation/configuration/config-txt/overclocking.md) on overclocking
