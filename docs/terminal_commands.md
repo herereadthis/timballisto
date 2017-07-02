@@ -18,8 +18,27 @@ sudo reboot
 # See CPU usage
 top
 
+# Details about the processor
+cat cpuinfo
+
+# see disk usage of a particular directory
+cd PATH/TO/DIRECTORY
+du -hs
+
+# How much space is on the drive?
+df -h
+
 # See memory (RAM) usage
 free -h
+# Expressed in MB
+free -m
+# Very detailed
+cat /proc/meminfo
+
+# different ways to get uptime
+uptime
+cat /proc/uptime
+w
 
 # View the Pi's current frequency (clock speed) in MHz
 echo $(($(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq)/1000))
