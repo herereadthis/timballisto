@@ -2,12 +2,24 @@
 
 ## Pi-Specific Stuff
 
+### On/Off
+
 ```bash
 # Turn off a Raspberry Pi
 sudo halt
 
 # Restart a Raspberry Pi
 sudo reboot
+```
+
+### Monitoring
+
+```bash
+# See CPU usage
+top
+
+# See memory (RAM) usage
+free -h
 
 # View the Pi's current frequency (clock speed) in MHz
 echo $(($(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq)/1000))
@@ -31,7 +43,6 @@ man date
 ```bash
 # Where am I now? (Print Working Directory)
 pwd
-
 
 # open the current directory from inside terminal
 xdg-open .

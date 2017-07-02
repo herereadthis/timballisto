@@ -9,6 +9,20 @@ Please note: you have to be absolutely sure of what you are doing or you could t
 ```bash
 # Config file for LXPanel
 sudo nano /home/pi/.config/lxpanel/LXDE-pi/panels/panel
+
+# Example of temperature plugin
+Plugin {
+  type=thermal
+  Config {
+    NormalColor=#00ff00
+    Warning1Color=#fff000
+    Warning2Color=#ff0000
+    AutomaticLevels=1
+    Warning1Temp=140
+    Warning2Temp=145
+    AutomaticSensor=1
+  }
+}
 ```
 
 ### Raspberry Pi Configuration
