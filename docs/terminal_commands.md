@@ -12,6 +12,19 @@ sudo halt
 sudo reboot
 ```
 
+### Services
+
+```bash
+# See bluetooth status
+sudo systemctl status bluetooth
+
+# Stop bluetooth service
+sudo systemctl stop bluetooth
+
+# Start bluetooth service
+sudo systemctl start bluetooth
+```
+
 ### Monitoring
 
 ```bash
@@ -19,7 +32,7 @@ sudo reboot
 top
 
 # Details about the processor
-cat cpuinfo
+cat /proc/cpuinfo
 
 # see disk usage of a particular directory
 cd PATH/TO/DIRECTORY
