@@ -26,6 +26,10 @@ node-v6.11.0-linux-armv7l/bin/node -v
 cd node-v6.11.0-linux-armv7l/
 sudo cp -R * /usr/local/
 
+# Clean up
+cd ~
+rm -rf node-v6.11.0*
+
 # Add to PATH
 export PATH=$PATH:/usr/local/bin
 
@@ -35,4 +39,10 @@ npm -v
 
 # Make sure that PATH is in .bashrc or .bash_aliases
 PATH=$PATH:/usr/local/bin
+
+# start node REPL
+node
+
+# Test by getting the date
+new Date()
 ```

@@ -1,36 +1,27 @@
 # Do These Things When You Get a Raspberry Pi
 
-### Set Preferences
+## Set Preferences
 
 * Go to Main Menu > Preferences > Raspberry Pi Configuration
 * Go to Localisation, then change Locale, Timezone, Keyboard, and WiFi Country
 
-### Change the default password
+## Change the default password
 ```bash
 # The default user on a Rapberry Pi is pi, password: raspberry
 # Change the sudoer password
 passwd
 ```
 
-### Install these
+## Install these
+
+### Highly recommended
 
 ```bash
 # xclip allows you to copy + paste from command line
 sudo apt-get install xclip
 
-# X Windows screensaver application
-# the option will show up under "Preferences" from the Desktop menu.
-sudo apt-get install xscreensaver
-
 # Network Mapper tool for network discovery
 sudo apt-get install nmap
-
-# Requests is an elegant and simple HTTP library for Python
-# http://docs.python-requests.org/en/master/
-sudo apt-get install python3-requests
-
-# Matplotlib is a Python 2D plotting library: https://matplotlib.org/
-sudo apt-get install python3-matplotlib
 
 # Command line interface for testing internet bandwidth
 sudo pip install speedtest-cli
@@ -39,7 +30,25 @@ sudo pip install speedtest-cli
 sudo pip install pep8
 ```
 
-### Updating
+### Good to have
+
+```bash
+# X Windows screensaver application
+# the option will show up under "Preferences" from the Desktop menu.
+sudo apt-get install xscreensaver
+
+# Requests is an elegant and simple HTTP library for Python
+# http://docs.python-requests.org/en/master/
+sudo apt-get install python3-requests
+
+# Matplotlib is a Python 2D plotting library: https://matplotlib.org/
+sudo apt-get install python3-matplotlib
+
+# Libudev provides API to instrospect and enumerate devices
+sudo apt-get install libudev-dev
+```
+
+## Updating
 
 ```bash
 # download the package lists from repositories and "updates" them to get
@@ -53,7 +62,7 @@ sudo apt-get upgrade
 sudo apt-get dist-upgrade
 ```
 
-### Bash Aliases
+## Bash Aliases
 
 [Copy the bash script from this repo's resources directory](https://github.com/herereadthis/lutra/blob/master/resources/.bash_aliases)
 
@@ -67,9 +76,9 @@ exec bash
 ```
 
 
-### Networking
+## Networking
 
-#### Hostnames
+### Hostnames
 
 You will probably end up having multiple Pis on your network, so you should give each a unique name. The name can only use letters `a-zA-Z`, numbers `0-9`, and dash `-`
 
@@ -90,7 +99,7 @@ hostname
 
 ```
 
-#### Virtual Network Computing
+### Virtual Network Computing
 
 [VNC Conect from RealVNC is included with Raspbian](https://www.raspberrypi.org/documentation/remote-access/vnc/README.md). The packages are `realvnc-vnc-server` and `realvnc-vnc-viewer` In Menu > Preferences > RPi Config > Interfaces, enable VNC.
 
@@ -107,7 +116,7 @@ nmap -sn 192.168.1.0/24
 * Virtual Desktop: In RPi terminal run ```vncserver``` and it will generate an IP address. Use that address in VNC viewer. Run ```vncserver -kill :<display-number>``` to kill.
 
 
-### Scheduling
+## Scheduling
 
 [Read the docs on scheduling](https://github.com/herereadthis/lutra/blob/master/docs/scheduling.md) for a more detailed explanation.
 
@@ -120,30 +129,54 @@ crontab -e
 0 3 * * 1 sudo apt-get update && sudo apt-get -y upgrade
 ```
 
-### Static IP Address
+## Static IP Address
 
-* *[NOTE] The following doesn't work. Keeping here anyway until I figure out how to make it work. DO NOT DO THIS SECTION*
 * Get your Pi to [boot up with the same IP address each time](https://www.raspberrypi.org/learning/networking-lessons/rpi-static-ip-address/], which could be useful for making a self-contained netwrk or building a standalone project.
 * You will will be editing your DHCP configuration. DHCP stands for Dynamic Host Configuration Protocol
 
 ```bash
+# Every network has its own configuration; see how yours is numbered
+ifconfig wlan0
+# Look at "inet addr" For example, mine is 192.168.1.15
+# Note the first three number sets. The last is the one we want to control
+# this command also gets your IP
+hostname -I
+
+# Find the IP address of your router, with the first 3 number sets from above
+# like so: ###.###.#.0/24
+nmap -sn 192.168.1/24
+# My router (same for you if you have Verizon FiOS) is 192.168.1.1
+11234567892123456789312345678941234567895123456789612345678971234567898123456789
+
+# Find the IP address of your DNS
+cat /etc/resolv.conf
+
 # Edit dhcpcd, which is the DHCP client daemon.
 # It gets the host info (IP, netast, broadcast address, etc) fro a DHCP server 
 # and configures the network machine on which is running.
 sudo nano /etc/dhcpcd.conf
 
 # paste the following at the bottom of the configuration file.
-# "NUM" must be between 2 and 255
+
+# interface is network interface, wired = eth0, wireless = wlan0
+# static ip_address is what the static IP for the RPi will be.
+# I want 18 for ethernet, 19 for wifi
+# static routers is the router's IP address, determined previously
+# static domain_name_servers is the DNS, determined previously
 
 interface eth0
 
-static ip_address=192.168.0.NUM/24
-static routers=192.168.0.1
-static domain_name_servers=192.168.0.1
+static ip_address=192.168.1.18/24
+static routers=192.168.1.1
+static domain_name_servers=192.168.1.1
 
 interface wlan0
 
-static ip_address=192.168.0.NUM/24
-static routers=192.168.0.1
-static domain_name_servers=192.168.0.1
+static ip_address=192.168.1.19/24
+static routers=192.168.1.1
+static domain_name_servers=192.168.1.1
+
+# After saving, reboot and then confirm changes happened
+ifconfig
+ping www.raspberrypi.org
 ```

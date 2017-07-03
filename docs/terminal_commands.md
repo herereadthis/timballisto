@@ -107,4 +107,7 @@ hostname -I
 
 # scan the whole subnet for other devices
 nmap -sn 192.168.1.0/24
+
+# Find the IP address of your DNS
+cat /etc/resolv.conf
 ```
