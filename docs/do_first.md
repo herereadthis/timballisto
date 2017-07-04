@@ -146,7 +146,6 @@ hostname -I
 # like so: ###.###.#.0/24
 nmap -sn 192.168.1/24
 # My router (same for you if you have Verizon FiOS) is 192.168.1.1
-11234567892123456789312345678941234567895123456789612345678971234567898123456789
 
 # Find the IP address of your DNS
 cat /etc/resolv.conf

@@ -105,6 +105,9 @@ pep8 --show-source --show-pep8 PATH/TO/file.py
 # what is my IP address?
 hostname -I
 
+I am on WiFi, how else can I get my IP?
+hostname -I | awk '{print $1}'
+
 # scan the whole subnet for other devices
 nmap -sn 192.168.1.0/24
 
