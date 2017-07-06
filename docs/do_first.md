@@ -28,6 +28,13 @@ sudo pip install speedtest-cli
 
 # Python linter to check if files are written correctly
 sudo pip install pep8
+
+# Utility for interacting with PyPi: Python Package Index
+sudo pip install twine
+
+# All the above, condensed
+sudo apt-get install xclip nmap
+sudo pip install speedtest-cli pep8 twine
 ```
 
 ### Good to have
@@ -46,6 +53,9 @@ sudo apt-get install python3-matplotlib
 
 # Libudev provides API to instrospect and enumerate devices
 sudo apt-get install libudev-dev
+
+# All the above, condensed
+sudo apt-get install xscreensaver python3-requests python3-matplotlib libudev-devs
 ```
 
 ## Updating
@@ -60,6 +70,13 @@ sudo apt-get upgrade
 
 # upgrade your distribution
 sudo apt-get dist-upgrade
+
+# There is a mismatch between the pip installation and requests
+# When installing stuff, you might get this error:
+# "ImportError: cannot import name IncompleteRead"
+sudo pip install --upgrade requests
+sudo apt-get remove pip
+sudo easy_install pip
 ```
 
 ## Bash Aliases

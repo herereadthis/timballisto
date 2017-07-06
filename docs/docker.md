@@ -1,5 +1,7 @@
 # Docker on Raspberry Pi
 
+* There's a sample Docker repository at [hereradthis/raspberry-pi-hello-world](https://hub.docker.com/r/herereadthis/raspberry-pi-hello-world/).
+
 ### What is Docker?
 
 * Docker packages an application into an isolated “container,” with libaries and settings, but without a full operating system, unlike a virtual machine (VM). Things stay lightweight.
@@ -36,7 +38,8 @@ standard_init_linux.go:178: exec user process caused "exec format error"
 # The problem is hello-world is an image for Intel x86_64 processors
 
 # Test for Pi ARM 
-docker run arm32v7/hello-world
+docker run herereadthis/raspberry-pi-hello-world
+
 ```
 
 ### Commands
