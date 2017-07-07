@@ -4,6 +4,10 @@ mcd () {
 	mkdir $1;cd $1
 }
 
+open () {
+	xdg-open $1
+}
+
 # I store all my github repos in a folder called ~/repos
 repo () {
 	cd ~/repos;cd $1

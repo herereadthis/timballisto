@@ -14,6 +14,19 @@ passwd
 
 ## Install these
 
+### Pip is messed up
+
+Currently, Rasbian Jessie comes with two versions of Python, `2.7` and `3.4`. When you run `pip install <packagename>`, it will default all installations to `/usr/local/lib/python2.7/dist-packages`. We don't want this because you're going to get `ImportError: No module named 'packagename'` for just about anything you install. By properly installing Pip, all future installs will instead go to `3.4`. I suppose you can mess with `PATH` or always specify `python3.4 -m pip install <packagename>` but that gets old.
+
+```bash
+# This solved a lot of problems for me. 
+# I recommend it; you don't have to if you're not comfortable
+sudo pip uninstall pip
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3 get-pip.py
+rm get-pip.py
+```
+
 ### Highly recommended
 
 ```bash
