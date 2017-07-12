@@ -23,6 +23,12 @@ class Player:
         """Fetch the dice result."""
         return self.dice
 
+    def get_sum(self):
+        """Get the sum."""
+        result = self.get_dice()
+        if result != []:
+            return sum(result)
+
     def get_result(self):
         """Print the result in a pretty format."""
         result = self.get_dice()
@@ -30,5 +36,5 @@ class Player:
             return 'has not rolled'
         else:
             rolled = 'rolled %s, %s, %s' % (result[0], result[1], result[2])
-            roll_sum = sum(result)
+            roll_sum = self.get_sum()
             return '%s for %s total' % (rolled, roll_sum)
