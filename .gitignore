@@ -5,3 +5,4 @@ downloads/
 *city.list.json*
 twitter/speedtest_tracking.json
 *.idea/
+.cache/

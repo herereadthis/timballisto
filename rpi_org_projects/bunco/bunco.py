@@ -9,13 +9,14 @@ class Player:
     def __init__(self):
         """Initialize stuff."""
         self.dice = []
+        self.dice_count = 3
 
     # This is a set method
     def roll(self):
         """Role the dice."""
         # clear dice settings when rolling
         self.dice = []
-        for i in range(3):
+        for i in range(self.dice_count):
             self.dice.append(randint(1, 6))
 
     # This is get method
