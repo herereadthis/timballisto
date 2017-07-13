@@ -1,21 +1,25 @@
+"""Find the closest weather station."""
+
 # https://www.raspberrypi.org/learning/fetching-the-weather/worksheet2/
 
 # Python HTTP requests
 from requests import get
-import json
+# import json
 # “pretty-print” arbitrary Python data structures
 from pprint import pprint
 # from the created haversine file in this directory
 from haversine import haversine
 
-stations = 'https://apex.oracle.com/pls/apex/raspberrypi/weatherstation/getallstations'
-weather = 'https://apex.oracle.com/pls/apex/raspberrypi/weatherstation/getlatestmeasurements/'
+base_url = 'https://apex.oracle.com/pls/apex/raspberrypi/weatherstation/'
+stations = base_url + 'getallstations'
+weather = base_url + 'getlatestmeasurements/'
 
 # latitude and longitude of intersection of Washington St and Broad St
 my_lat = 38.882252
 my_lon = -77.171082
 
 all_stations = get(stations).json()['items']
+
 
 def find_closest():
     # the longest distance between any two points on earth is 20036km
@@ -35,9 +39,11 @@ def find_closest():
             closest_station = station
     return closest_station
 
+
 def find_closest_station_id():
     closest_station = find_closest()
     return closest_station['weather_stn_id']
+
 
 def print_closest():
     closest_station = find_closest()
@@ -52,3 +58,7 @@ def print_closest():
         closest_station['weather_stn_long']))
     closest_weather = get(weather_url).json()['items']
     pprint(closest_weather)
+
+
+if __name__ == '__main__':
+    print_closest()

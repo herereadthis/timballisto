@@ -1,4 +1,4 @@
-# 2.4 breath and LED, based on 2.2
+# 2.4 breath an LED, based on 2.2
 
 # package to control GPIO
 import RPi.GPIO as GPIO
@@ -23,8 +23,8 @@ duty = 0
 # the chip - Broadcom Numbering System
 GPIO.setmode(GPIO.BCM)
 # tell the pins what we want them to do
-GPIO.setup(ledPin, GPIO.OUT) # output
-GPIO.setup(pwmPin, GPIO.OUT) # output
+GPIO.setup(ledPin, GPIO.OUT)  # output
+GPIO.setup(pwmPin, GPIO.OUT)  # output
 # activate with an internal pull up resister
 GPIO.setup(buttonPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
@@ -39,14 +39,16 @@ GPIO.output(ledPin, GPIO.LOW)
 # start the duty cycle
 pwm.start(duty)
 
+
 def mapFun(x, inLow, inHigh, outLow, outHigh):
-    inRange =  inHigh - inLow
+    inRange = inHigh - inLow
     outRange = outHigh - outLow
     # normalizing.
     # saying if x = 0, then x is 0% of the inRange
     inScale = (x - inLow) / inRange
     # the output is a percentage of the inRange added to outLow
     return outLow + (inScale * outRange)
+
 
 x = 0
 
@@ -62,15 +64,12 @@ try:
         duty = mapFun(math.sin(x), -1, 1, 0, 100)
         x += step
         pwm.ChangeDutyCycle(duty)
-        #print(duty)
+        # print(duty)
         time.sleep(0.01)
         if x >= 2 * math.pi:
             x = 0
-
 
 except KeyboardInterrupt:
     pwm.stop()
     GPIO.cleanup()
     print('Halted Cleanly')
-
-            

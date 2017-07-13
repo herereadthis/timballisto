@@ -2,20 +2,22 @@
 
 # Python HTTP requests
 from requests import get
-import json
+# import json
 # “pretty-print” arbitrary Python data structures
 from pprint import pprint
 # from the created haversine file in this directory
 from haversine import haversine
 
-stations = 'https://apex.oracle.com/pls/apex/raspberrypi/weatherstation/getallstations'
-weather = 'https://apex.oracle.com/pls/apex/raspberrypi/weatherstation/getlatestmeasurements/'
+base_url = 'https://apex.oracle.com/pls/apex/raspberrypi/weatherstation/'
+stations = base_url + 'getallstations'
+weather = base_url + 'getlatestmeasurements/'
 
 # latitude and longitude of intersection of Washington St and Broad St
 my_lat = 38.882252
 my_lon = -77.171082
 
 all_stations = get(stations).json()['items']
+
 
 def find_furthest():
     # the shortest distance between any two points on earth is 0km
@@ -34,9 +36,11 @@ def find_furthest():
             furthest_station = station
     return furthest_station
 
-def find_closest_station_id():
+
+def find_furthest_station_id():
     furthest_station = find_furthest()
     return furthest_station['weather_stn_id']
+
 
 def print_furthest():
     furthest_station = find_furthest()
@@ -51,3 +55,7 @@ def print_furthest():
         furthest_station['weather_stn_long']))
     furthest_weather = get(weather_url).json()['items']
     pprint(furthest_weather)
+
+
+if __name__ == '__main__':
+    print_furthest()

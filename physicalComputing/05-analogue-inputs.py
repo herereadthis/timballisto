@@ -1,14 +1,18 @@
-# https://www.raspberrypi.org/learning/physical-computing-with-python/analogue/
+"""
+Use SPI to control analogue imputs.
 
-# SPI
-# The Serial Peripheral Interface(SPI) is a communication protocol to transfer
-# data between micro-computers like the Raspberry Pi and peripheral devices.
-# These devices may be either sensors or actuators.
-#
-# Go into Raspberry Pi Configuration > Interfaces > enable SPI
+https://www.raspberrypi.org/learning/physical-computing-with-python/analogue/
+
+SPI
+The Serial Peripheral Interface(SPI) is a communication protocol to transfer
+data between micro-computers like the Raspberry Pi and peripheral devices.
+These devices may be either sensors or actuators.
+
+Go into Raspberry Pi Configuration > Interfaces > enable SPI
+"""
 
 from gpiozero import MCP3008, PWMLED
-import math
+# import math
 from time import sleep
 
 # How to wire an MCP3008 Analogue-to-Digital Converter (ADC)
@@ -35,7 +39,9 @@ pot2 = MCP3008(1)
 
 led = PWMLED(21)
 
+
 def fader():
+    """Control fader."""
     while True:
         pot1_value = round(pot1.value, 2)
         # led.source = pot.values
@@ -43,7 +49,9 @@ def fader():
         print(pot1_value)
         sleep(0.1)
 
+
 def blinker():
+    """Control blinker."""
     while True:
         pot1_value = round(pot1.value, 2)
         pot2_value = round(pot2.value, 2)
@@ -55,7 +63,9 @@ def blinker():
             background=False
         )
 
+
 def pulser():
+    """Control pulser."""
     while True:
         pot1_value = round(pot1.value, 2)
         pot2_value = round(pot2.value, 2)
@@ -66,4 +76,3 @@ def pulser():
             n=1,
             background=False
         )
-        

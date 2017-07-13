@@ -13,12 +13,16 @@ from auth import (
 # modify the default behavior of TwythonStreamer
 # Since it is a class, extend it by creating a new class which inherits the
 # functionality of TwythonStreamer, and modify any parts we may need to
+
+
 class MyStreamer(TwythonStreamer):
+
     def on_success(self, data):
         if 'text' in data:
             username = data['user']['screen_name']
             tweet = data['text']
             print('@%s: %s' % (username, tweet))
+
 
 stream = MyStreamer(
     consumer_key,

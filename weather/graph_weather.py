@@ -1,8 +1,11 @@
+"""Graph the weather."""
+
 # https://www.raspberrypi.org/learning/graphing-the-weather/worksheet/
 
 # Python HTTP requests
 from requests import get
-from pprint import pprint
+# from pprint import pprint
+
 # pyplot rovides a MATLAB-like plotting framework.
 import matplotlib.pyplot as plt
 # The dateutil module provides extensions to the standard datetime module.
@@ -10,7 +13,8 @@ from dateutil import parser
 from closest_station import find_closest_station_id
 
 closest_stn_id = find_closest_station_id()
-api_url = 'https://apex.oracle.com/pls/apex/raspberrypi/weatherstation/getallmeasurements/'
+api_url = 'https://apex.oracle.com/'
+api_url = api_url + 'pls/apex/raspberrypi/weatherstation/getallmeasurements/'
 # url = api_url + str(closest_stn_id)
 # Test Brompton Academy
 url = api_url + str(505307)
@@ -41,7 +45,7 @@ timestamps = [
 
 # create a plot of timestamps against temperature and show it
 plt.plot(timestamps, temperatures)
-## Set the axis labels
+# Set the axis labels
 plt.ylabel('Temperature')
 plt.xlabel('Time')
 plt.show()

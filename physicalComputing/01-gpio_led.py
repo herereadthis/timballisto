@@ -1,4 +1,4 @@
-# control the lighting of an LED using the GPIO pins
+"""Control the lighting of an LED using the GPIO pins."""
 
 # https://learning.raspberrypi.org/en/projects/physical-computing
 
@@ -11,7 +11,7 @@ from time import sleep
 # from the 330 ohm resistor to an LED, then back to ground (GND) pin
 led = LED(17)
 
-for num in range(0,20,1):
+for num in range(0, 20, 1):
     # on() turns the LED on
     led.on()
     # sleep is do nothing for # seconds

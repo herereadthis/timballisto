@@ -16,7 +16,7 @@ twitter = Twython(
     consumer_secret,
     access_token,
     access_token_secret
-    )
+)
 
 messages = [
     'Hello world!',
@@ -25,15 +25,15 @@ messages = [
     'How\'s it going?',
     'Have you been here before?',
     'Get a hair cut!'
-    ]
+]
 message = random.choice(messages)
 
 # how to upload just a status
 # twitter.update_status(status=message)
 
-#how to upload status with image
+# how to upload status with image
 with open('./../resources/images/babbage_1024x1024.jpg', 'rb') as photo:
     response = twitter.upload_media(media=photo)
-    twitter.update_status(status=message, media_ids = [response['media_id']])
+    twitter.update_status(status=message, media_ids=[response['media_id']])
 
 print('Tweeted: %s' % message)

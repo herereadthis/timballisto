@@ -1,6 +1,6 @@
 """Use SpeedTest CLI to send a tweet."""
 import subprocess
-from pprint import pprint
+# from pprint import pprint
 import json
 from twython import Twython
 from auth import (
@@ -15,7 +15,7 @@ twitter = Twython(
     consumer_secret,
     access_token,
     access_token_secret
-    )
+)
 
 tracking_file_path = './speedtest_tracking.json'
 

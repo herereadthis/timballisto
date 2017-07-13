@@ -6,7 +6,7 @@ def get_uptime(readable=True):
     with open('/proc/uptime', 'r') as f:
         uptime_seconds = float(f.readline().split()[0])
         if readable:
-            uptime_string = str(timedelta(seconds = uptime_seconds))
+            uptime_string = str(timedelta(seconds=uptime_seconds))
             return uptime_string
         else:
             return uptime_seconds

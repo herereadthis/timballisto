@@ -32,5 +32,6 @@ def main():
     except TypeError:
         print('Must be number.')
 
+
 if __name__ == '__main__':
     main()

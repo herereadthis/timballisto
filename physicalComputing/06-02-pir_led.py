@@ -41,20 +41,19 @@ def led_test():
 
 
 def pir_led():
-    """trigger the led with the pir sensor."""
+    """Trigger the led with the pir sensor."""
     try:
         while True:
             i = GPIO.input(pirPin)
 
             if i == 0:
-                print("nNo intruders",i)
+                print("No intruders", i)
                 GPIO.output(ledPin, 0)
                 time.sleep(0.1)
             elif i == 1:
-                print("intruder detected",i)
+                print("intruder detected", i)
                 GPIO.output(ledPin, 1)
                 time.sleep(0.1)
-                
+
     except KeyboardInterrupt:
         GPIO.cleanup()
-

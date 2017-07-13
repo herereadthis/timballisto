@@ -22,8 +22,8 @@ duty = 75
 # the chip - Broadcom Numbering System
 GPIO.setmode(GPIO.BCM)
 # tell the pins what we want them to do
-GPIO.setup(ledPin, GPIO.OUT) # output
-GPIO.setup(pwmPin, GPIO.OUT) # output
+GPIO.setup(ledPin, GPIO.OUT)  # output
+GPIO.setup(pwmPin, GPIO.OUT)  # output
 # activate with an internal pull up resister
 GPIO.setup(buttonPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
@@ -65,13 +65,6 @@ except KeyboardInterrupt:
     pwm.stop()
     # clean up
     GPIO.cleanup()
-
-
-
-
-
-
-
 
 
 GPIO.cleanup()

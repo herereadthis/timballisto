@@ -1,14 +1,10 @@
-# https://www.raspberrypi.org/learning/shakespearean-insult-generator/worksheet/
+"""Generate insults. Also demo of how to read from a csv file."""
+
+# raspberrypi.org/learning/shakespearean-insult-generator/worksheet/
 
 import random
 from guizero import App, Text, PushButton
 
-"""
-output the entire file
-with open('insults.csv', 'r') as f:
-    contents = f.read()
-    print(contents)
-"""
 
 list_a = []
 list_b = []
@@ -26,17 +22,28 @@ with open('insults.csv', 'r') as f:
         list_c.append(words[2].strip())
 
 
+def get_content():
+    """Output the entire file."""
+    with open('insults.csv', 'r') as f:
+        contents = f.read()
+        print(contents)
+
+
 def insult_me():
+    """Make an insult."""
     word_a = random.choice(list_a)
     word_b = random.choice(list_b)
     word_c = random.choice(list_c)
-    
+
     insult = 'Thou %s %s %s!' % (word_a, word_b, word_c)
     return insult
 
+
 def new_insult():
+    """Make a new insult."""
     new_insult = insult_me()
     message.set(new_insult)
+
 
 app_title = 'Shakespearean Insult Generator'
 

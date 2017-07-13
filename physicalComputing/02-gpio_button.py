@@ -1,4 +1,4 @@
-# control a button, which can also control an LED
+"""Control a button, which can also control an LED."""
 
 # https://learning.raspberrypi.org/en/projects/physical-computing
 
@@ -21,4 +21,3 @@ print('you pushed me')
 led.on()
 sleep(3)
 led.off()
-

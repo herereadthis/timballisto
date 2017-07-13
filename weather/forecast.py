@@ -1,7 +1,7 @@
 """Use OpenWeatherMap to do weather forecasting."""
 
 from requests import get
-from datetime import datetime, timedelta
+# from datetime import datetime, timedelta
 import json
 from pprint import pprint
 from auth import (
@@ -13,6 +13,7 @@ def load_city_json():
     """Parse the city list JSON into a list."""
     with open('../downloads/city.list.json') as data_file:
         return json.load(data_file)
+
 
 def string_in_string(sub_string, parent_string):
     """determine if one string is inside another."""
@@ -56,7 +57,7 @@ def forecast():
     """Run the main thing."""
     city_id = get_city_id()
 
-    if city_id != False:
+    if city_id is not False:
         weather_data = get_weather_data(city_id)
         pprint(weather_data['list'][0]['dt_txt'])
         print('\n')
@@ -67,4 +68,3 @@ def forecast():
 
 if __name__ == '__main__':
     forecast()
-

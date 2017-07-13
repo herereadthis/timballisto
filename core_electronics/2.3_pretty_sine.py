@@ -1,15 +1,18 @@
+"""Print a sine wave into terminal."""
+
 import math
 import time
+
+
+def sin(x):
+    """Return the sine of x."""
+    return math.sin(x)
+
 
 # number of cycles to run animation
 number_cycle = 5
 # pi
 pi = math.pi
-
-# return the sine of x
-def sin(x):
-    return math.sin(x)
-
 x = 0
 
 while x < (number_cycle * 2 * pi):

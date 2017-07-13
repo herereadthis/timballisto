@@ -1,15 +1,21 @@
+"""Get started with guis."""
+
 # https://www.raspberrypi.org/learning/getting-started-with-guis/worksheet/
 
 # module that helps to create GUIs
 from guizero import App, Text, TextBox, PushButton, Slider, Picture
 
-# this function refers to the Text widget welcome_message and sets its value to
-# what was typed into the TextBox widget my_name
+
 def say_my_name():
+    """Refer to the Text widget welcome_message and sets its value."""
+    # to what was typed into the TextBox widget my_name.
     welcome_message.set(my_name.get())
 
+
 def change_text_size(slider_value):
+    """Adjust the size of the text."""
     welcome_message.font_size(slider_value)
+
 
 # the GUI app begins here.
 app = App("Hello world")
@@ -21,7 +27,7 @@ welcome_message = Text(
     size=40,
     font="Times New Roman",
     color="lightblue"
-    )
+)
 
 my_name = TextBox(app)
 
