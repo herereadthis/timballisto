@@ -15,7 +15,6 @@ python:
 
 # command to install dependencies
 install:
-  - sudo pip install .
   # - sudo pip install pytest
   - sudo pip install flake8
 
