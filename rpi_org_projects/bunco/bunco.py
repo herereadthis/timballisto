@@ -39,3 +39,22 @@ class Player:
             rolled = 'rolled %s, %s, %s' % (result[0], result[1], result[2])
             roll_sum = self.get_sum()
             return '%s for %s total' % (rolled, roll_sum)
+
+
+class CheatSwappedDice(Player):
+    """Cheat with swapped dice."""
+
+    def cheat(self):
+        """Take last die and make it 6."""
+        # -1 means take last in array
+        self.dice[-1] = 6
+
+
+class CheatLoadedDice(Player):
+    """Cheat by making dice higher value."""
+
+    def cheat(self):
+        """Raise value of each die."""
+        for index, die in enumerate(self.dice):
+            if die < 6:
+                self.dice[index] = die + 1
