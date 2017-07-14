@@ -2,6 +2,7 @@
 import subprocess
 # from pprint import pprint
 import json
+import errno
 from twython import Twython
 from auth import (
     consumer_key,
@@ -57,10 +58,14 @@ def record_speedtest(data):
 
             except ValueError:
                 print('data file has been corrupted')
-    except FileNotFoundError:
-        with open(tracking_file_path, 'w+') as jsonfile:
-            tracking_data = []
-            append_and_write(tracking_data, data, jsonfile)
+    except OSError as e:
+        if e.errno == errno.ENOENT:
+            # The proper way to do FileNotFoundError, a subclass of OSError
+            with open(tracking_file_path, 'w+') as jsonfile:
+                tracking_data = []
+                append_and_write(tracking_data, data, jsonfile)
+        else:
+            raise e
 
 
 def run_speedtest():

@@ -1,6 +1,7 @@
 import pytest
 from bunco import Player
 
+
 @pytest.fixture
 def response():
     """Test fixture."""
