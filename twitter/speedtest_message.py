@@ -126,6 +126,40 @@ def send_speed_tweet():
         print('unable to get speed data')
 
 
+class SpeedStatus:
+    """Create SpeedTest class."""
+
+    def __init__(self):
+        """Initialize stuff."""
+        self.tracking_file_path = './speedtest_tracking.json'
+        self.twitter = Twython(
+            consumer_key,
+            consumer_secret,
+            access_token,
+            access_token_secret
+        )
+
+    def bytes_to_string(self, bytes_string):
+        """Convert Bytes object to a Python string."""
+        return str(bytes_string, 'utf-8')
+
+    def json_string_to_dict(self, string):
+        """Convert a string representation of JSON data to Python dictionary."""
+        # json.loads is for loading from a string.
+        return json.loads(string)
+
+    def bits_to_mbit(self, bit, decimal_places=2):
+        """Convert bits to megabits (Mbit)."""
+        mbit = bit / 2**20
+        specification = '{0:.%sf}' % (decimal_places)
+        return float(specification.format(mbit))
+
+    def append_and_write(self, existing_list, new_dict, file):
+        """Create a new list with new entry and write to file."""
+        existing_list.append(new_dict)
+        json.dump(existing_list, file)
+
+
 # Check to see if this file is run as a module (import) or not
 if __name__ == '__main__':
     send_speed_tweet()
