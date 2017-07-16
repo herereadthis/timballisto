@@ -1,7 +1,7 @@
 """Use SpeedTest CLI to send a tweet."""
 
 import subprocess
-# from pprint import pprint
+from pprint import pprint
 import json
 import errno
 from twython import Twython
@@ -12,120 +12,7 @@ from auth import (
     access_token_secret
 )
 
-twitter = Twython(
-    consumer_key,
-    consumer_secret,
-    access_token,
-    access_token_secret
-)
-
 tracking_file_path = './speedtest_tracking.json'
-
-
-# def bytes_to_string(bytes_string):
-#     """Convert Bytes object to a Python string."""
-#     return str(bytes_string, 'utf-8')
-
-
-# def json_string_to_dict(string):
-#     """Convert a string representation of JSON data to Python dictionary."""
-#     # json.loads is for loading from a string.
-#     return json.loads(string)
-
-
-# def bits_to_mbit(bit, decimal_places=2):
-#     """Convert bits to megabits (Mbit)."""
-#     mbit = bit / 2**20
-#     specification = '{0:.%sf}' % (decimal_places)
-#     return float(specification.format(mbit))
-
-
-# def append_and_write(existing_list, new_dict, file):
-#     """Create a new list with new entry and write to file."""
-#     existing_list.append(new_dict)
-#     json.dump(existing_list, file)
-
-
-# def record_speedtest(data):
-#     """Make a record of this speed test to compare with past tests."""
-#     try:
-#         with open(tracking_file_path, 'r+') as jsonfile:
-#             try:
-#                 tracking_data = json.load(jsonfile)
-#                 # this seek and truncate will wipe the previous JSON
-#                 jsonfile.seek(0)
-#                 jsonfile.truncate(0)
-#                 append_and_write(tracking_data, data, jsonfile)
-
-#             except ValueError:
-#                 print('data file has been corrupted')
-#     except OSError as e:
-#         if e.errno == errno.ENOENT:
-#             # The proper way to do FileNotFoundError, a subclass of OSError
-#             with open(tracking_file_path, 'w+') as jsonfile:
-#                 tracking_data = []
-#                 append_and_write(tracking_data, data, jsonfile)
-#         else:
-#             raise e
-
-"""
-def run_speedtest():
-    # Run speed test and record the result.
-    upload_mbits = None
-    download_mbits = None
-
-    try:
-        print('Running speedtest....')
-        speedtest_output = subprocess.check_output(['speedtest-cli', '--json'])
-        print('Speedtest ran.\n\n')
-
-        speedtest_string = bytes_to_string(speedtest_output)
-        speedtest_data = json_string_to_dict(speedtest_string)
-
-        upload_mbits = bits_to_mbit(speedtest_data['upload'])
-        download_mbits = bits_to_mbit(speedtest_data['download'])
-
-        upload_speed = 'Upload Speed: %sMbpss' % (upload_mbits)
-        download_speed = 'Download Speed: %sMbps' % (download_mbits)
-
-        print(upload_speed)
-        print(download_speed)
-
-        # list comprehension to pick the keys we need from the result
-        keys = ['download', 'upload', 'timestamp']
-        simple_data = {key: speedtest_data[key] for key in keys}
-
-        record_speedtest(simple_data)
-
-    except subprocess.CalledProcessError:
-        print('Unable to run speedtest-cli...Wifi or Internet is down.')
-
-    except Exception as inst:
-        # To Do: handle all the various exceptions
-        print(type(inst))
-        print(inst.args)
-        print(inst)
-
-    return {
-        'up': upload_mbits,
-        'down': download_mbits
-    }
-"""
-
-
-# def send_speed_tweet():
-#     """Send a tweet with speed test numbers."""
-#     speeds = run_speedtest()
-
-#     if speeds['up'] is not None and speeds['down'] is not None:
-#         message = 'Raspberry Pi Internet speed test'
-#         message = '%s: upload: %sMbps, download: %sMbps' % (
-#             message, speeds['up'], speeds['down']
-#         )
-#         print(message)
-#         twitter.update_status(status=message)
-#     else:
-#         print('unable to get speed data')
 
 
 class SpeedStatus:
@@ -142,7 +29,8 @@ class SpeedStatus:
         )
         self.upload_mbits = None
         self.download_mbits = None
-        self.speedtest_data = {}
+        self.speedtest_data_full = {}
+        self.speedtest_data_simple = {}
 
     def set_tracking_file_path(self, filepath=tracking_file_path):
         """Set the filepath of the history file."""
@@ -163,9 +51,9 @@ class SpeedStatus:
         specification = '{0:.%sf}' % (decimal_places)
         return float(specification.format(mbit))
 
-    def append_and_write(self, existing_list, new_dict, file):
+    def append_and_write(self, existing_list, file):
         """Create a new list with new entry and write to file."""
-        existing_list.append(new_dict)
+        existing_list.append(self.speedtest_data_simple)
         json.dump(existing_list, file)
 
     def set_up_down_speeds(self):
@@ -179,13 +67,17 @@ class SpeedStatus:
 
             speedtest_string = self.bytes_to_string(speedtest_output)
 
-            self.speedtest_data = self.json_string_to_dict(speedtest_string)
-            self.upload_mbits = self.bits_to_mbit(
-                self.speedtest_data['upload']
-            )
-            self.download_mbits = self.bits_to_mbit(
-                self.speedtest_data['download']
-            )
+            # the full data is not yet really needed, but keeping it anyway.
+            full_data = self.json_string_to_dict(speedtest_string)
+
+            # list comprehension to pick the keys we need from the result
+            keys = ['download', 'upload', 'timestamp']
+            simple_data = {key: full_data[key] for key in keys}
+
+            self.speedtest_data_simple = simple_data
+            self.speedtest_data_full = full_data
+            self.upload_mbits = self.bits_to_mbit(simple_data['upload'])
+            self.download_mbits = self.bits_to_mbit(simple_data['download'])
 
         except Exception as inst:
             # To Do: handle all the various exceptions
@@ -193,68 +85,25 @@ class SpeedStatus:
             print(inst.args)
             print(inst)
 
-    def get_up_down_speeds(self):
+    def print_up_down_speeds(self):
         """Get up and down speeds."""
-        upload_speed = 'Upload Speed: %sMbpss' % (self.upload_mbits)
+        upload_speed = 'Upload Speed: %sMbps' % (self.upload_mbits)
         download_speed = 'Download Speed: %sMbps' % (self.download_mbits)
 
         print(upload_speed)
         print(download_speed)
+        pprint(self.speedtest_data_simple)
 
-    def run_speedtest(self):
-        """Run speed test and record the result."""
-        upload_mbits = None
-        download_mbits = None
-
-        try:
-            print('Running speedtest....')
-            speedtest_output = subprocess.check_output(
-                ['speedtest-cli', '--json']
-            )
-            print('Speedtest ran.\n\n')
-
-            speedtest_string = self.bytes_to_string(speedtest_output)
-            speedtest_data = self.json_string_to_dict(speedtest_string)
-
-            upload_mbits = self.bits_to_mbit(speedtest_data['upload'])
-            download_mbits = self.bits_to_mbit(speedtest_data['download'])
-
-            upload_speed = 'Upload Speed: %sMbpss' % (upload_mbits)
-            download_speed = 'Download Speed: %sMbps' % (download_mbits)
-
-            print(upload_speed)
-            print(download_speed)
-
-            # list comprehension to pick the keys we need from the result
-            keys = ['download', 'upload', 'timestamp']
-            simple_data = {key: speedtest_data[key] for key in keys}
-
-            self.record_speedtest(simple_data)
-
-        except subprocess.CalledProcessError:
-            print('Unable to run speedtest-cli...Wifi or Internet is down.')
-
-        except Exception as inst:
-            # To Do: handle all the various exceptions
-            print(type(inst))
-            print(inst.args)
-            print(inst)
-
-        return {
-            'up': upload_mbits,
-            'down': download_mbits
-        }
-
-    def record_speedtest(self, data):
+    def record_speedtest(self):
         """Make a record of this speed test to compare with past tests."""
         try:
-            with open(tracking_file_path, 'r+') as jsonfile:
+            with open(self.tracking_file_path, 'r+') as jsonfile:
                 try:
                     tracking_data = json.load(jsonfile)
                     # this seek and truncate will wipe the previous JSON
                     jsonfile.seek(0)
                     jsonfile.truncate(0)
-                    self.append_and_write(tracking_data, data, jsonfile)
+                    self.append_and_write(tracking_data, jsonfile)
 
                 except ValueError:
                     print('data file has been corrupted')
@@ -263,12 +112,27 @@ class SpeedStatus:
                 # The proper way to do FileNotFoundError, a subclass of OSError
                 with open(tracking_file_path, 'w+') as jsonfile:
                     tracking_data = []
-                    self.append_and_write(tracking_data, data, jsonfile)
+                    self.append_and_write(tracking_data, jsonfile)
             else:
                 raise e
+
+    def send_speed_tweet(self):
+        """Send a tweet with speed test numbers."""
+        if self.upload_mbits is not None and self.download_mbits is not None:
+            message = 'Raspberry Pi Internet speed test'
+            message = '%s: upload: %sMbps, download: %sMbps' % (
+                message, self.upload_mbits, self.download_mbits
+            )
+            print(message)
+            self.twitter.update_status(status=message)
+        else:
+            print('unable to get speed data')
 
 
 # Check to see if this file is run as a module (import) or not
 if __name__ == '__main__':
     # send_speed_tweet()
     status = SpeedStatus()
+    status.set_up_down_speeds()
+    status.record_speedtest()
+    status.send_speed_tweet()
