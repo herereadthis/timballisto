@@ -18,15 +18,10 @@ tracking_file_path = './speedtest_tracking.json'
 class SpeedStatus:
     """Create SpeedTest class."""
 
-    def __init__(self):
+    def __init__(self, key, secret, token, token_secret):
         """Initialize stuff."""
         self.tracking_file_path = tracking_file_path
-        self.twitter = Twython(
-            consumer_key,
-            consumer_secret,
-            access_token,
-            access_token_secret
-        )
+        self.twitter = Twython(key, secret, token, token_secret)
         self.upload_mbits = None
         self.download_mbits = None
         self.speedtest_data_full = {}
@@ -132,7 +127,12 @@ class SpeedStatus:
 # Check to see if this file is run as a module (import) or not
 if __name__ == '__main__':
     # send_speed_tweet()
-    status = SpeedStatus()
+    status = SpeedStatus(
+        consumer_key,
+        consumer_secret,
+        access_token,
+        access_token_secret
+    )
     status.set_up_down_speeds()
     status.record_speedtest()
     status.send_speed_tweet()
