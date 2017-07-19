@@ -67,8 +67,15 @@ sudo apt-get install python3-matplotlib
 # Libudev provides API to instrospect and enumerate devices
 sudo apt-get install libudev-dev
 
+# Super simple Google Spreadsheets Python API
+sudo pip install gspread
+
+# Python library for accessing resources protected by OAuth 2.0
+sudo pip install oauth2client
+
 # All the above, condensed
 sudo apt-get install xscreensaver python3-requests python3-matplotlib libudev-devs
+sudo pip install gspread oauth2client
 ```
 
 ## Updating
