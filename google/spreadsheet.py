@@ -1,6 +1,7 @@
 """Update a spreadsheet with gspread."""
 
 import gspread
+from datetime import datetime
 # Official recommendation - currently incompatible with gspread.
 # from google.oauth2 import service_account
 from oauth2client.service_account import ServiceAccountCredentials
@@ -28,7 +29,7 @@ class Spreadsheet:
         )
         self.gc = gspread.authorize(self.credentials)
 
-    def set_spreadsheet(self, spreadsheet_id, worksheet_index=0):
+    def set_worksheet(self, spreadsheet_id, worksheet_index=0):
         """Pick a spreadsheet to update.
 
         Remember to:
@@ -44,6 +45,13 @@ class Spreadsheet:
         return self.worksheet.acell(cell).value
 
 
-file_to_update = Spreadsheet(drive_api)
-file_to_update.set_spreadsheet(spreadsheet_id)
-print(file_to_update.get_value('A1'))
+spreadsheet = Spreadsheet(drive_api)
+spreadsheet.set_worksheet(spreadsheet_id)
+timestamp = datetime.utcnow()
+local_now = datetime.now()
+# print(datetime.utcnow())
+current_date = local_now.strftime('%Y-%m-%d')
+current_time = local_now.strftime('%H:%M:%S')
+print(local_now.strftime('%Y-%m-%d'))
+print(local_now.strftime('%H:%M:%S'))
+spreadsheet.worksheet.append_row([current_date, current_time])
