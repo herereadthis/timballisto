@@ -1,5 +1,8 @@
 PATH=$PATH:/usr/local/bin
 
+# start virtualenvwrapper
+alias sourcev='source /usr/local/bin/virtualenvwrapper.sh'
+
 mcd () {
 	mkdir $1;cd $1
 }

@@ -93,10 +93,10 @@ pip freeze
 python3 # open python shell
 help('modules')
 
-# lint a file 
-pep8 --first PATH/TO/file.py
-# lint a file, very detailed
-pep8 --show-source --show-pep8 PATH/TO/file.py
+# lint a file
+flake8 path/to/file.py
+# lint files in a directory
+flake8 .
 ```
 
 ## Networking

@@ -35,6 +35,9 @@ class Spreadsheet:
 
         Remember to:
         * Actually create the spreadsheet
+        * Give the spreadsheet only 1 row, 5 columns
+        * Name the columns, start date, start time, end date, end time, and
+        * duration
         * Share the spreadsheet with the email provided in credentials JSON
         """
         self.worksheet = self.gc.open_by_key(spreadsheet_id).get_worksheet(

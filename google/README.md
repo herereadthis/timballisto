@@ -22,3 +22,6 @@ sudo pip install oauth2client
 * Find the link to "Credentials" to create a new "Service Account Key."
 * Then find the link to "Enable" and click on that
 * Create a new service account, probably "Project > Owner" and give it an account name. Choose "JSON" key type and create.
+* Save these credentials; **do not save in version control!**
+* Create and name a new spreadsheet. Make a note of its ID, which you can find in the URL.
+* Find the button to share. Add the email that is included in the credentials JSON.

@@ -10,6 +10,7 @@
 * [Set up Github](https://github.com/herereadthis/lutra/blob/master/docs/github_setup.md) to get and share code
 * [Docker](https://github.com/herereadthis/lutra/blob/master/docs/docker.md) containers for shipping code
 * [NodeJS and NPM](https://github.com/herereadthis/lutra/blob/master/docs/node_js.md) installation and usage
+* [Python Virtual Environments](https://github.com/herereadthis/lutra/blob/master/docs/virtualenv.md) for isolating dependencies
 
 ### Sensors and Circuitry
 

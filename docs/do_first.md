@@ -40,14 +40,14 @@ sudo apt-get install nmap
 sudo pip install speedtest-cli
 
 # Python linter to check if files are written correctly
-sudo pip install pep8
+sudo pip install flake8
 
-# Utility for interacting with PyPi: Python Package Index
-sudo pip install twine
+# Manage virtual environments to isolate Python projects from one another
+sudo pip install virtualenv virtualenvwrapper
 
 # All the above, condensed
 sudo apt-get install xclip nmap
-sudo pip install speedtest-cli pep8 twine
+sudo pip install speedtest-cli flake8 twine virtualenv virtualenvwrapper
 ```
 
 ### Good to have
@@ -70,12 +70,15 @@ sudo apt-get install libudev-dev
 # Super simple Google Spreadsheets Python API
 sudo pip install gspread
 
+# Utility for interacting with PyPi: Python Package Index
+sudo pip install twine
+
 # Python library for accessing resources protected by OAuth 2.0
 sudo pip install oauth2client
 
 # All the above, condensed
 sudo apt-get install xscreensaver python3-requests python3-matplotlib libudev-devs
-sudo pip install gspread oauth2client
+sudo pip install gspread oauth2client twine
 ```
 
 ## Updating
