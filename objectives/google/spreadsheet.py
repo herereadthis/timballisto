@@ -66,30 +66,31 @@ class Spreadsheet:
         )
 
 
-timestamp = datetime.utcnow()
-local_now = datetime.now()
+if __name__ == '__main__':
+    timestamp = datetime.utcnow()
+    local_now = datetime.now()
 
-current_date = local_now.strftime('%Y-%m-%d')
-current_time = local_now.strftime('%H:%M:%S')
-print('Time and date: %s %s' % (current_date, current_time))
+    current_date = local_now.strftime('%Y-%m-%d')
+    current_time = local_now.strftime('%H:%M:%S')
+    print('Time and date: %s %s' % (current_date, current_time))
 
-# Begin the spreadsheet instance.
-spreadsheet = Spreadsheet(drive_api)
-spreadsheet.set_worksheet(spreadsheet_id)
-row_count = spreadsheet.worksheet.row_count
+    # Begin the spreadsheet instance.
+    spreadsheet = Spreadsheet(drive_api)
+    spreadsheet.set_worksheet(spreadsheet_id)
+    row_count = spreadsheet.worksheet.row_count
 
-spreadsheet.set_cell_position(row_count)
-c = spreadsheet.cell_pos
-end_date_cell_value = spreadsheet.get_value(c['end_date'])
+    spreadsheet.set_cell_position(row_count)
+    c = spreadsheet.cell_pos
+    end_date_cell_value = spreadsheet.get_value(c['end_date'])
 
-# If no end timer entry is found, add to last row
-if end_date_cell_value == '':
-    print('End Timer')
-    duration = spreadsheet.get_duration_formula()
-    spreadsheet.worksheet.update_acell(c['end_date'], current_date)
-    spreadsheet.worksheet.update_acell(c['end_time'], current_time)
-    spreadsheet.worksheet.update_acell(c['duration'], duration)
-# Else, create new row with start timer entry
-else:
-    print('Start Timer')
-    spreadsheet.worksheet.append_row([current_date, current_time])
+    # If no end timer entry is found, add to last row
+    if end_date_cell_value == '':
+        print('End Timer')
+        duration = spreadsheet.get_duration_formula()
+        spreadsheet.worksheet.update_acell(c['end_date'], current_date)
+        spreadsheet.worksheet.update_acell(c['end_time'], current_time)
+        spreadsheet.worksheet.update_acell(c['duration'], duration)
+    # Else, create new row with start timer entry
+    else:
+        print('Start Timer')
+        spreadsheet.worksheet.append_row([current_date, current_time])
