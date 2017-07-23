@@ -76,9 +76,12 @@ sudo pip install twine
 # Python library for accessing resources protected by OAuth 2.0
 sudo pip install oauth2client
 
+# A packet manipulation program & library, e.g., sniff for stuff on your wifi
+sudo pip install scapy
+
 # All the above, condensed
 sudo apt-get install xscreensaver python3-requests python3-matplotlib libudev-devs
-sudo pip install gspread oauth2client twine
+sudo pip install gspread oauth2client twine scapy
 ```
 
 ## Updating
