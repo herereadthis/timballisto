@@ -4,6 +4,9 @@
 # Install Scapy, a packet manipulation program & library
 sudo pip install scapy
 sudo pip3 install scapy-python3
+
+# needed for scapy sniff to work
+sudo apt-get install tcpdump
 ```
 
 ## Enable the Dash button and capture MAC address
