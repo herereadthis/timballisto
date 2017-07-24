@@ -1,4 +1,4 @@
-# I<sup>2</sup>C
+# I<sup>2</sup>C Tutorial
 
 * I<sup>2</sup>C (a.k.a. I2C, IIC) is a communication protocol that runs over a two wire bus. 
 * Connect to the Raspberry Pi `GPIO` pins: `SDA` (serial data) and `SCL` (serial clock).
@@ -61,10 +61,11 @@ sudo nano /etc/modprobe.d/raspi-blacklist.conf
 
 Plug in an I<sup>2</sup>C device to confirm it's working. The whole point of using this interface that it's simple stupid.
 
-* Connect `Vcc` to `5v`
-* Connect `GND` to `GND`
-* Connect `SDA` to `SDA`
-* Connect `SCL` to `SCL`
+* Connect `Vcc` to `5v` (#02)
+* Connect `GND` to `GND` (#06)
+* Connect `SDA` to `SDA` (#03)
+* Connect `SCL` to `SCL` (#05)
+* Refer to [GPIO Pinout](https://github.com/herereadthis/lutra/blob/master/docs/GPIO.md) doc for assistance.
 
 ```bash
 # One of these commands will work. On my RPi3, the first command worked
