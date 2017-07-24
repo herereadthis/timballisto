@@ -10,6 +10,11 @@ sudo halt
 
 # Restart a Raspberry Pi
 sudo reboot
+
+# Get GPIO Information
+python3
+import RPi.GPIO as GPIO
+print(GPIO.RPI_INFO)
 ```
 
 ### Services

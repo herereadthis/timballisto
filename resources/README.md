@@ -16,6 +16,10 @@ cd ~
 chmod 600 ~/.pypirc
 ```
 
+## Configuration Files
+
+* /etc/[modules](https://github.com/herereadthis/lutra/blob/master/resources/modules) - loading kernal drivers (enables I2C, SPI, etc.)
+
 ## Other Useful files
 
 * [secret.json](https://github.com/herereadthis/lutra/blob/master/resources/secret.json) - provides all authentication for Lutra projects
