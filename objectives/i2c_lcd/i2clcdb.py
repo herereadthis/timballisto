@@ -1,25 +1,14 @@
-#  _____ _____ _____ __ __ _____ _____
-# |     |   __|     |  |  |     |     |
-# |  |  |__   |  |  |_   _|  |  |  |  |
-# |_____|_____|_____| |_| |_____|_____|
-#
-# Project Tutorial Url:http://osoyoo.com/?p=1031
-#
 import smbus
 import time
 
 # Define some device parameters
 I2C_ADDR = 0x3f  # I2C device address, if any error, change this to 0x27
-LCD_WIDTH = 16   # Maximum characters per line
+LCD_WIDTH = 16  # Maximum characters per line
+LCD_HEIGHT = 2  # Can also be 4 for 20x4 displays
 
 # Define some device constants
 LCD_CHR = 1  # Mode - Sending data
 LCD_CMD = 0  # Mode - Sending command
-
-LCD_LINE_1 = 0x80  # LCD RAM address for the 1st line
-LCD_LINE_2 = 0xC0  # LCD RAM address for the 2nd line
-LCD_LINE_3 = 0x94  # LCD RAM address for the 3rd line
-LCD_LINE_4 = 0xD4  # LCD RAM address for the 4th line
 
 LCD_BACKLIGHT = 0x08  # On
 # LCD_BACKLIGHT = 0x00  # Off
@@ -30,15 +19,19 @@ ENABLE = 0b00000100  # Enable bit
 E_PULSE = 0.0005
 E_DELAY = 0.0005
 
-# Open I2C interface
-# bus = smbus.SMBus(0)  # Rev 1 Pi uses 0
-# bus = smbus.SMBus(1)  # Rev 2 Pi uses 1
-
 
 class I2cLcd:
 
-    def __init__(self):
+    def __init__(self, lcd_width=LCD_WIDTH, lcd_height=LCD_HEIGHT):
+        # Maximum characters per line
+        self.lcd_width = lcd_width
+        self.lcd_height = lcd_height
+
+        # Open I2C interface
+        # Rev 2 Pi uses 1
         self.bus = smbus.SMBus(1)
+        # Rev 1 Pi uses 0
+        # self.bus = smbus.SMBus(0)
 
         # Initialise display
         self.lcd_byte(0x33, LCD_CMD)  # 110011 Initialise
@@ -49,6 +42,9 @@ class I2cLcd:
         self.lcd_byte(0x28, LCD_CMD)
         self.lcd_byte(0x01, LCD_CMD)  # 000001 Clear display
         time.sleep(E_DELAY)
+        self.lines = []
+        for i in range(self.lcd_height):
+            self.lines.append('')
 
     def lcd_byte(self, bits, mode):
         bits_high = mode | (bits & 0xF0) | LCD_BACKLIGHT
@@ -70,37 +66,46 @@ class I2cLcd:
         self.bus.write_byte(I2C_ADDR, (bits & ~ENABLE))
         time.sleep(E_DELAY)
 
-    def lcd_string(self, message, line):
-        # Send string to display
+    def format_message(self, message):
+        """Format to be no more than width of LCD, or fill up with spaces."""
+        return message.ljust(self.lcd_width, ' ')
 
-        message = message.ljust(LCD_WIDTH, " ")
+    def set_line(self, line, text):
+        self.lines[line - 1] = self.format_message(text)
 
-        self.lcd_byte(line, LCD_CMD)
+    def display_message(self):
+        lcd_line_1 = 0x80  # LCD RAM address for the 1st line
+        lcd_line_2 = 0xC0  # LCD RAM address for the 2nd line
+        lcd_line_3 = 0x94  # LCD RAM address for the 3rd line
+        lcd_line_4 = 0xD4  # LCD RAM address for the 4th line
 
-        for i in range(LCD_WIDTH):
-            self.lcd_byte(ord(message[i]), LCD_CHR)
+        ram_addresses = [lcd_line_1, lcd_line_2, lcd_line_3, lcd_line_4]
+
+        for index, line in enumerate(self.lines):
+            self.lcd_byte(ram_addresses[index], LCD_CMD)
+
+            for i in range(self.lcd_width):
+                self.lcd_byte(ord(line[i]), LCD_CHR)
 
 
 def main():
     # Main program block
 
     # Initialise display
-    # lcd_init()
-    i2c_lcd = I2cLcd()
+    i2c_lcd = I2cLcd(16, 2)
 
     try:
         while True:
-            # Send some test
-            i2c_lcd.lcd_string("77777", LCD_LINE_1)
-            i2c_lcd.lcd_string("la la la", LCD_LINE_2)
-
+            i2c_lcd.set_line(1, 'hello asdf')
+            i2c_lcd.set_line(2, 'lorem ipsum sit')
+            i2c_lcd.display_message()
             time.sleep(3)
 
-            # Send some more text
-            i2c_lcd.lcd_string("What are you", LCD_LINE_1)
-            i2c_lcd.lcd_string("doing???", LCD_LINE_2)
-
+            i2c_lcd.set_line(1, 'Be kind, rewind.')
+            i2c_lcd.set_line(2, 'Party On, Dudes!')
+            i2c_lcd.display_message()
             time.sleep(3)
+
     except KeyboardInterrupt:
         pass
     finally:
