@@ -30,7 +30,7 @@ Rasberry Pi 3 Pinout - here are the GPIO (General Purpose Input/Output)
             <td><strong>GND</strong></td>
         </tr>
         <tr>
-            <td colspan="2">W1</td>
+            <td align="right" colspan="2">W1</td>
             <td align="right"><strong>04</strong></td>
             <td>07</td>
             <td>08</td>

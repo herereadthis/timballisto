@@ -34,5 +34,6 @@ python3 download_stuff.py
 * [HC-SR04](https://github.com/herereadthis/lutra/blob/master/docs/HC-SR04.md) - an ultrasonic distance sensor
 * [PIR](https://github.com/herereadthis/lutra/blob/master/docs/PIR.md) - passive infrared motion sensor
 * [I2C](https://github.com/herereadthis/lutra/blob/master/docs/i2c.md) - communication protocol using `SDA` and `SCL` pins
+* [DS18B20](https://github.com/herereadthis/lutra/blob/master/docs/DS18B20.md) thermometer sensor
 
  
