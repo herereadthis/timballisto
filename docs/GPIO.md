@@ -30,7 +30,7 @@ Rasberry Pi 3 Pinout - here are the GPIO (General Purpose Input/Output)
             <td><strong>GND</strong></td>
         </tr>
         <tr>
-            <td colspan="2" rowspan="6"></td>
+            <td colspan="2">W1</td>
             <td align="right"><strong>04</strong></td>
             <td>07</td>
             <td>08</td>
@@ -39,6 +39,7 @@ Rasberry Pi 3 Pinout - here are the GPIO (General Purpose Input/Output)
             <td rowspan="2">UART</td>
         </tr>
         <tr>
+            <td colspan="2" rowspan="5"></td>
             <td align="right"><strong>GND</strong></td>
             <td>09</td>
             <td>10</td>
@@ -97,7 +98,7 @@ Rasberry Pi 3 Pinout - here are the GPIO (General Purpose Input/Output)
             <td rowspan="2">SPI</td>
         </tr>
         <tr>
-            <td colspan="2" rowspan="5"></td>
+            <td rowspan="5"></td>
             <td align="right"><strong>GND</strong></td>
             <td>25</td>
             <td>26</td>
@@ -163,6 +164,12 @@ More information avalable at [pinout.xyz](https://pinout.xyz/pinout/)
 * Pins: `GPIO2` (#3) and `GPIO3` (#5)
 * I<sup>2</sup>C allows data exchange between microcontrollers and peripherals with a minimum of wiring
 
+### W1 - 1-Wire
+
+* Pin: `GPIO4` (#7)
+* 1-wire is a device communication data bus system, developed by Dallas Semiconductor.
+* It provides low speed data, signalling and power over a single signal wire.
+
 ### UART 0 Universal Asynchronous Receiver/Transmitter
 
 * Pins: `GPIO2` (#8) and `GPIO3` (#10)
@@ -170,12 +177,12 @@ More information avalable at [pinout.xyz](https://pinout.xyz/pinout/)
 
 ### SPI - Serial Peripheral Interface
 
-* Pins: `GPIO10` (#19), `GPI09` (#21), `GPI11` (#23), `GPI08` (#24), and `GPI07` (#26)
+* Pins: `GPIO10` (#19), `GPIO9` (#21), `GPIO11` (#23), `GPIO8` (#24), and `GPIO7` (#26)
 * The Serial Peripheral Interface(SPI) is a communication protocol to transfer data between micro-computers like the Raspberry Pi and peripheral devices. These devices may be either sensors or actuators.
 
 ### PCM - Pulse-code Modulation
 
-* Pins: `GPIO18` (#12), `GPI19` (#35), `GPI38` (#37), and `GPI21` (#40)
+* Pins: `GPIO18` (#12), `GPIO19` (#35), `GPIO38` (#37), and `GPIO21` (#40)
 * PCM (Pulse-code Modulation) is a digital representation of sampled analog.
 
 
