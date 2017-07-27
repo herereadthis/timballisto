@@ -96,13 +96,13 @@ def main():
 
     try:
         while True:
-            i2c_lcd.set_line(1, 'hello asdf')
-            i2c_lcd.set_line(2, 'lorem ipsum sit')
+            i2c_lcd.set_line(1, 'Em yeu chong!')
+            i2c_lcd.set_line(2, 'An com chua?')
             i2c_lcd.display_message()
             time.sleep(3)
 
-            i2c_lcd.set_line(1, 'Be kind, rewind.')
-            i2c_lcd.set_line(2, 'Party On, Dudes!')
+            i2c_lcd.set_line(1, 'Khong Biet!!!')
+            i2c_lcd.set_line(2, 'Ai Biet Chong?')
             i2c_lcd.display_message()
             time.sleep(3)
 

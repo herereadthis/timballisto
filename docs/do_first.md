@@ -79,8 +79,11 @@ sudo pip install oauth2client
 # A packet manipulation program & library, e.g., sniff for stuff on your wifi
 sudo pip install scapy
 
+# Thermometer driver using 1-wire communication
+sudo apt-get install python3-w1thermsensor
+
 # All the above, condensed
-sudo apt-get install xscreensaver python3-requests python3-matplotlib libudev-devs
+sudo apt-get install xscreensaver python3-requests python3-matplotlib libudev-devs python3-w1thermsensor
 sudo pip install gspread oauth2client twine scapy
 ```
 

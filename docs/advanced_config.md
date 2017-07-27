@@ -29,12 +29,11 @@ Plugin {
 
 ```bash
 # open config.txt in text editor
-xdg-open /boot/config.txt
-# or
 sudo nano /boot/config.txt
+```
 
-# you can overclock the ARM if you change arm_freq
-arm_freq=1200
+```bash
+# Commands
 
 # list all non-zero integer config options
 vcgencmd get_config int
