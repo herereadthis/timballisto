@@ -40,7 +40,7 @@ class I2cLcd:
         self.lcd_byte(0x0C, LCD_CMD)  # 001100 Display On,Cursor Off, Blink Off
         # 101000 Data length, number of lines, font size
         self.lcd_byte(0x28, LCD_CMD)
-        self.lcd_byte(0x01, LCD_CMD)  # 000001 Clear display
+        self.clear_display()
         time.sleep(E_DELAY)
         self.lines = []
         for i in range(self.lcd_height):
@@ -73,7 +73,7 @@ class I2cLcd:
     def set_line(self, line, text):
         self.lines[line - 1] = self.format_message(text)
 
-    def display_message(self):
+    def display_message(self, duration):
         lcd_line_1 = 0x80  # LCD RAM address for the 1st line
         lcd_line_2 = 0xC0  # LCD RAM address for the 2nd line
         lcd_line_3 = 0x94  # LCD RAM address for the 3rd line
@@ -87,30 +87,13 @@ class I2cLcd:
             for i in range(self.lcd_width):
                 self.lcd_byte(ord(line[i]), LCD_CHR)
 
+        self.hold_display(duration)
 
-def main():
-    # Main program block
+    def hold_display(self, duration=0):
+        """Display the message for x seconds."""
+        time.sleep(duration)
 
-    # Initialise display
-    i2c_lcd = I2cLcd(16, 2)
-
-    try:
-        while True:
-            i2c_lcd.set_line(1, 'Em yeu chong!')
-            i2c_lcd.set_line(2, 'An com chua?')
-            i2c_lcd.display_message()
-            time.sleep(3)
-
-            i2c_lcd.set_line(1, 'Khong Biet!!!')
-            i2c_lcd.set_line(2, 'Ai Biet Chong?')
-            i2c_lcd.display_message()
-            time.sleep(3)
-
-    except KeyboardInterrupt:
-        pass
-    finally:
-        i2c_lcd.lcd_byte(0x01, LCD_CMD)
-
-
-if __name__ == '__main__':
-    main()
+    def clear_display(self):
+        """End the display and clean up."""
+        # 000001 Clear display
+        self.lcd_byte(0x01, LCD_CMD)
