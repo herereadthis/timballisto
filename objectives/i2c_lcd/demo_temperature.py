@@ -1,5 +1,11 @@
 from i2c_lcd import I2cLcd
 from w1thermsensor import W1ThermSensor
+from datetime import datetime
+
+
+def get_time():
+    local_now = datetime.now()
+    return local_now.strftime('%I:%M:%S %p')
 
 
 def main():
@@ -10,16 +16,21 @@ def main():
     try:
         while True:
             celsius = sensor.get_temperature(W1ThermSensor.DEGREES_C)
-            temp_msg = '%s Celsius' % (round(celsius, 1))
+            farenheit = sensor.get_temperature(W1ThermSensor.DEGREES_F)
+            temp_msg = '%sC - %sF' % (round(celsius, 1), round(farenheit, 1))
             lcd.set_line(1, 'Temperature:')
             lcd.set_line(2, temp_msg)
             lcd.display_message(3)
 
-            farenheit = sensor.get_temperature(W1ThermSensor.DEGREES_F)
-            temp_msg = '%s Farenheit' % (round(farenheit, 1))
-            lcd.set_line(1, 'Temperature')
-            lcd.set_line(2, temp_msg)
-            lcd.display_message(3)
+            local_now = datetime.now()
+            current_date = local_now.strftime('%a, %d %b %Y')
+            lcd.set_line(1, current_date)
+            lcd.set_line(2, get_time())
+            lcd.display_message(1)
+            lcd.set_line(2, get_time())
+            lcd.display_message(1)
+            lcd.set_line(2, get_time())
+            lcd.display_message(0.5)
 
     except KeyboardInterrupt:
         pass
