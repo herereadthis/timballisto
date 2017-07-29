@@ -26,6 +26,7 @@ python3 download_stuff.py
 * [Docker](https://github.com/herereadthis/lutra/blob/master/docs/docker.md) containers for shipping code
 * [NodeJS and NPM](https://github.com/herereadthis/lutra/blob/master/docs/node_js.md) installation and usage
 * [Python Virtual Environments](https://github.com/herereadthis/lutra/blob/master/docs/virtualenv.md) for isolating dependencies
+* [RTL-SDR](https://github.com/herereadthis/lutra/blob/master/docs/rtl_sdr.md) - Software Defined Radio
 
 ### Sensors and Circuitry
 
