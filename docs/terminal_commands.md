@@ -28,6 +28,14 @@ sudo systemctl stop bluetooth
 
 # Start bluetooth service
 sudo systemctl start bluetooth
+
+# Screenshots
+# To take a screenshot, set the command on a delay and then select your window
+# -u means active window, -d means delay, -e is exec
+# screenshot will be saved to current pwd in 3s. Alt+Tab to target window.
+scrot -u -d 3
+# screenshot will be saved to desktop
+scrot -u -d 3 -e 'mv $f ~/Desktop'
 ```
 
 ### Monitoring

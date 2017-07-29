@@ -1,5 +1,10 @@
 PATH=$PATH:/usr/local/bin
 
+# Take a screenshot. Alt+Tab to the window you want after running this command.
+screenshot () {
+    scrot -u -d 3 -e 'mv $f ~/Desktop'
+}
+
 # start virtualenvwrapper
 alias sourcev='source /usr/local/bin/virtualenvwrapper.sh'
 
