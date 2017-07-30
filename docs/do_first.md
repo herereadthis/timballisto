@@ -175,6 +175,34 @@ crontab -e
 0 3 * * 1 sudo apt-get update && sudo apt-get -y upgrade
 ```
 
+## Dropbox
+
+The official Dropbox client supports only x86 computers; RPi is ARM. [Guides exist](https://www.hackster.io/dmitry21/run-dropbox-on-raspberry-pi-5449b4) to launch a guest x86 system with the [32-bit Debian](https://www.dropbox.com/install), but doing so seems lame.
+
+```bash
+# Install Dropox Uploader, a bash script
+cd /PATH/TO/REPOS
+git clone https://github.com/andreafabrizi/Dropbox-Uploader.git
+cd Dropbox-Uploader/
+
+# give exec permission
+chmod +x dropbox_uploader.sh
+./dropbox_uploader.sh
+
+# First run-through will ask for configuration
+# Config will be stored in ~/.dropbox_uploader
+# Usage / Flags: -s is skip existing file, default is overwite
+
+# upload a file from a directory to remote dropbox
+./dropbox_uploader.sh upload /PATH/TO/local_file /REMOTE/PATH
+./dropbox_uploader.sh upload /PATH/* /
+
+# download
+./dropbox_uploader.sh download /PATH/TO/remote_file
+
+# Other commands: delete copy, mkdir, space, list
+```
+
 ## Static IP Address
 
 * Get your Pi to [boot up with the same IP address each time](https://www.raspberrypi.org/learning/networking-lessons/rpi-static-ip-address/], which could be useful for making a self-contained netwrk or building a standalone project.
