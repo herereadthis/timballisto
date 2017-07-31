@@ -177,7 +177,7 @@ crontab -e
 
 ## Dropbox
 
-The official Dropbox client supports only x86 computers; RPi is ARM. [Guides exist](https://www.hackster.io/dmitry21/run-dropbox-on-raspberry-pi-5449b4) to launch a guest x86 system with the [32-bit Debian](https://www.dropbox.com/install), but doing so seems lame.
+The official Dropbox client supports only x86 computers; RPi is ARM. [Guides exist](https://www.hackster.io/dmitry21/run-dropbox-on-raspberry-pi-5449b4) to launch a guest x86 system with the [32-bit Debian](https://www.dropbox.com/install), but doing so seems lame. Instead, go get [Dropbox API keys](https://www.dropbox.com/developers/apps/create) and do the following:
 
 ```bash
 # Install Dropox Uploader, a bash script
