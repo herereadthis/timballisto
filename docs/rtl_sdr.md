@@ -62,25 +62,61 @@ The RTL-SDR dongles have a maximum range of about 20 MHz to 2 GHz so we are only
     </thead>
     <tbody>
         <tr>
-            <td>High Frequency</td>
+            <td>[High Frequency](#High-Frequency)</td>
             <td>HF</td>
-            <td>3-30 MHz</td>
-            <td>100 m - 10 m</td>
+            <td>7</td>
+            <td>3–30 MHz</td>
+            <td>100 m – 10 m</td>
             <td>
                 <ul>
                     <li>Shortwave broadcasts</li>
-                    <li>asdf</li>
+                    <li>Citizens' band radio,</li>
+                    <li>Amateur radio</li>
+                    <li>Over-the-horizon aviation communications</li>
+                    <li>RFID</li>
+                    <li>Over-the-horizon radar</li>
+                    <li>ALE (Automatic Link Establishment) HF radio</li>
+                    <li>NVIS (Near vertical incidence skywave)</li>
+                    <li>Marine and mobile radio telephony</li>
                 </ul>
             </td>
         </tr>
         <tr>
-            <td>asdf</td>
-            <td>asdf</td>
-            <td>asdf</td>
-            <td>asdf</td>
+            <td>[Very High Frequency](#Very-High-Frequency)</td>
+            <td>VHF</td>
+            <td>8</td>
+            <td>30–300 MHz</td>
+            <td>10 m – 1 m</td>
             <td>
                 <ul>
-                    <li>asdf</li>
+                    <li>FM radio</li>
+                    <li>TV broadcasts</li>
+                    <li>Line-of-sight aircraft communication</li>
+                    <li>Land mobile and maritime mobile</li>
+                    <li>Amateur radio</li>
+                    <li>Weather radio</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>[Ultra High Frequency](#Ultra-High-Frequency)</td>
+            <td>UHF</td>
+            <td>9</td>
+            <td>300–3000 MHz</td>
+            <td>1 m – 100 mm</td>
+            <td>
+                <ul>
+                    <li>TV broadcasts</li>
+                    <li>Microwave ovens/devices/communications</li>
+                    <li>Radio Astronomy</li>
+                    <li>Mobile Phones</li>
+                    <li>Wireless LAN, Bluetooth, Zigbee</li>
+                    <li>GPS</li>
+                    <li>2-way radios (e.g. walkie talkies)</li>
+                    <li>Amateur radio</li>
+                    <li>Satellite radio</li>
+                    <li>Remote control systems</li>
+                    <li>ADSB (air traffic positioning)</li>
                 </ul>
             </td>
         </tr>
