@@ -1,6 +1,6 @@
 # RTL-SDR
 
-SDR is software-defined radio. We are going to get radio signals, and then use the Raspberry Pi to interpret the signals.
+RTL-SDR is software-defined radio using a DVB-TV tuner based on the RTL2832U chipset. We are going to get radio signals, and then use the Raspberry Pi to interpret the signals.
 
 ## Installation
 
@@ -43,11 +43,11 @@ cd gqrx-2.6-rpi3-2
 ./setup_gqrx.sh
 
 # Run the application
-run_gqrx.sh
+./run_gqrx.sh
 ```
 ## Radio Spectrum
 
-The RTL-SDR dongles have a maximum range of about 20 MHz to 2 GHz so we are only focus on those frequencies.
+The SDR dongles have a maximum range of about 20–1800 MHz so we are only going to focus on those frequencies.
 
 <table>
     <thead>
@@ -60,7 +60,10 @@ The RTL-SDR dongles have a maximum range of about 20 MHz to 2 GHz so we are only
     </thead>
     <tbody>
         <tr>
-            <td>HF<br />[High Frequency](#high-frequency)</td>
+            <td align="center">
+                <strong><a href="#user-content-high-frequency">High Frequency</a></strong>
+                <br />HF
+            </td>
             <td>3–30 MHz</td>
             <td>100 m – 10 m</td>
             <td>
@@ -78,7 +81,10 @@ The RTL-SDR dongles have a maximum range of about 20 MHz to 2 GHz so we are only
             </td>
         </tr>
         <tr>
-            <td>VHF<br />[Very High Frequency](#very-high-frequency)</td>
+            <td align="center">
+                <strong><a href="#user-content-very-high-frequency">Very High Frequency</a></strong>
+                <br />VHF
+            </td>
             <td>30–300 MHz</td>
             <td>10 m – 1 m</td>
             <td>
@@ -93,7 +99,10 @@ The RTL-SDR dongles have a maximum range of about 20 MHz to 2 GHz so we are only
             </td>
         </tr>
         <tr>
-            <td>UHF<br />[Ultra High Frequency](#ultra-high-frequency)</td>
+            <td align="center">
+                <strong><a href="#user-content-ultra-high-frequency">Ultra High Frequency</a></strong>
+                <br />UHF
+            </td>
             <td>300–3000 MHz</td>
             <td>1 m – 100 mm</td>
             <td>
@@ -132,3 +141,9 @@ The RTL-SDR dongles have a maximum range of about 20 MHz to 2 GHz so we are only
 * Known as "decimeter band"
 * Propagate by line-of-site propagation (LOS) so it can blocked by hills and large buildings, but not necessarily through walls
 * Signals can be degraded by atmospheric moisture
+
+## Hardware considerations
+
+### Impedence
+
+* SDR dongles will typically have an impedence of 75 Ohms, but any mismatch between 50 Ohm cables and the receiver will be minimal because we are not transmitting.
