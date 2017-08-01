@@ -53,8 +53,6 @@ The RTL-SDR dongles have a maximum range of about 20 MHz to 2 GHz so we are only
     <thead>
         <tr>
             <th>Band Name</th>
-            <th>Abbreviation</th>
-            <th>ITU Band</th>
             <th>Frequency</th>
             <th>Wavelength</th>
             <th>Example Usage</th>
@@ -62,9 +60,7 @@ The RTL-SDR dongles have a maximum range of about 20 MHz to 2 GHz so we are only
     </thead>
     <tbody>
         <tr>
-            <td>[High Frequency](#High-Frequency)</td>
-            <td>HF</td>
-            <td>7</td>
+            <td>HF<br />[High Frequency](#high-frequency)</td>
             <td>3–30 MHz</td>
             <td>100 m – 10 m</td>
             <td>
@@ -82,9 +78,7 @@ The RTL-SDR dongles have a maximum range of about 20 MHz to 2 GHz so we are only
             </td>
         </tr>
         <tr>
-            <td>[Very High Frequency](#Very-High-Frequency)</td>
-            <td>VHF</td>
-            <td>8</td>
+            <td>VHF<br />[Very High Frequency](#very-high-frequency)</td>
             <td>30–300 MHz</td>
             <td>10 m – 1 m</td>
             <td>
@@ -99,9 +93,7 @@ The RTL-SDR dongles have a maximum range of about 20 MHz to 2 GHz so we are only
             </td>
         </tr>
         <tr>
-            <td>[Ultra High Frequency](#Ultra-High-Frequency)</td>
-            <td>UHF</td>
-            <td>9</td>
+            <td>UHF<br />[Ultra High Frequency](#ultra-high-frequency)</td>
             <td>300–3000 MHz</td>
             <td>1 m – 100 mm</td>
             <td>
