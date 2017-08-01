@@ -122,3 +122,21 @@ The RTL-SDR dongles have a maximum range of about 20 MHz to 2 GHz so we are only
         </tr>
     </tbody>
 </table>
+
+### High Frequency
+
+* Known as "decameter band" and shortwave radio
+* Waves in this band can be reflected back to earth by the ionosphere, so can be used for intercontinental communications
+* Noise from electrical equipment has a great effect.
+
+### Very High Frequency
+
+* Waves are restricted to radio horizon, so less than 100 miles.
+* Less affected by atmospheric noise and interference from electrical equipment
+* Blocked by hills and mountains but less affected by buildings
+
+### Ultra High Frequency
+
+* Known as "decimeter band"
+* Propagate by line-of-site propagation (LOS) so it can blocked by hills and large buildings, but not necessarily through walls
+* Signals can be degraded by atmospheric moisture
