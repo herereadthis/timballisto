@@ -147,3 +147,61 @@ The SDR dongles have a maximum range of about 20–1800 MHz so we are only going
 ### Impedence
 
 * SDR dongles will typically have an impedence of 75 Ohms, but any mismatch between 50 Ohm cables and the receiver will be minimal because we are not transmitting.
+
+## Antennas
+
+<table>
+    <thead>
+        <tr>
+            <td>usage</td>
+            <td>Frequency</td>
+            <td>Wavelenth</td>
+            <td>Quarter Wave</td>
+            <td>Half Wave</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td>24.89-24.99 MHz</td>
+            <td>12 Meters</td>
+            <td>asdf</td>
+            <td>asdf</td>
+        </tr>
+        <tr>
+            <td>FM Radio</td>
+            <td>95 Mhz</td>
+            <td>315 cm</td>
+            <td>78.9 cm</td>
+            <td>158 cm</td>
+        </tr>
+        <tr>
+            <td>FM Radio</td>
+            <td>100 Mhz</td>
+            <td>300 cm</td>
+            <td>74.9 cm</td>
+            <td>150 m</td>
+        </tr>
+        <tr>
+            <td>NOAA</td>
+            <td>137 Mhz</td>
+            <td>219 cm</td>
+            <td>54.7 cm</td>
+            <td>109 cm</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>420-450 MHz</td>
+            <td>70 cm</td>
+            <td>17.5 cm</td>
+            <td>35 cm</td>
+        </tr>
+        <tr>
+            <td>ADS-B</td>
+            <td>1090 MHz</td>
+            <td>27.5 cm</td>
+            <td>6.5 cm</td>
+            <td>13.8 cm</td>
+        </tr>
+    </tbody>
+</table>

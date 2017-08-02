@@ -82,9 +82,12 @@ sudo pip install scapy
 # Thermometer driver using 1-wire communication
 sudo apt-get install python3-w1thermsensor
 
+# SMS communication
+sudo pip install twilio
+
 # All the above, condensed
 sudo apt-get install xscreensaver python3-requests python3-matplotlib libudev-devs python3-w1thermsensor
-sudo pip install gspread oauth2client twine scapy
+sudo pip install gspread oauth2client twine scapy twilio
 ```
 
 ## Updating
