@@ -164,37 +164,37 @@ The SDR dongles have a maximum range of about 20–1800 MHz so we are only going
         <tr>
             <td>FM Radio</td>
             <td>88.1 Mhz</td>
-            <td align="right">340.3 cm</td>
-            <td align="right">85.1 cm</td>
-            <td align="right">170.1 cm</td>
+            <td align="right"><code>340.3 cm</code></td>
+            <td align="right"><code>85.1 cm</code></td>
+            <td align="right"><code>170.1 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
             <td>90 Mhz</td>
-            <td align="right">333.1 cm</td>
-            <td align="right">83.3 cm</td>
-            <td align="right">166.5 cm</td>
+            <td align="right"><code>333.1 cm</code></td>
+            <td align="right"><code>83.3 cm</code></td>
+            <td align="right"><code>166.5 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
             <td>95 Mhz</td>
-            <td align="right">315.6 cm</td>
-            <td align="right">78.9 cm</td>
-            <td align="right">157.8 cm</td>
+            <td align="right"><code>315.6 cm</code></td>
+            <td align="right"><code>78.9 cm</code></td>
+            <td align="right"><code>157.8 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
             <td>97.5 Mhz</td>
-            <td align="right">307.5 cm</td>
-            <td align="right">76.9 cm</td>
-            <td align="right">153.7 cm</td>
+            <td align="right"><code>307.5 cm</code></td>
+            <td align="right"><code>76.9 cm</code></td>
+            <td align="right"><code>153.7 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
             <td>100 Mhz</td>
-            <td align="right">299.8 cm</td>
-            <td align="right">74.9 cm</td>
-            <td align="right">149.9 cm</td>
+            <td align="right"><code>299.8 cm</code></td>
+            <td align="right"><code>74.9 cm</code></td>
+            <td align="right"><code>149.9 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
@@ -206,37 +206,58 @@ The SDR dongles have a maximum range of about 20–1800 MHz so we are only going
         <tr>
             <td>FM Radio</td>
             <td>105 Mhz</td>
-            <td align="right">285.5 cm</td>
-            <td align="right">71.4 cm</td>
-            <td align="right">142.8 cm</td>
+            <td align="right"><code>285.5 cm</code></td>
+            <td align="right"><code>71.4 cm</code></td>
+            <td align="right"><code>142.8 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
             <td>107.9 Mhz</td>
-            <td align="right">277.8 cm</td>
-            <td align="right">69.5 cm</td>
-            <td align="right">138.9 cm</td>
+            <td align="right"><code>277.8 cm</code></td>
+            <td align="right"><code>69.5 cm</code></td>
+            <td align="right"><code>138.9 cm</code></td>
         </tr>
         <tr>
             <td><a href="http://www.airnav.com/airport/DCA">DCA UNICOM</a></td>
             <td>122.95 Mhz</td>
-            <td align="right">243.8 cm</td>
-            <td align="right">61.0 cm</td>
-            <td align="right">121.9 cm</td>
+            <td align="right"><code>243.8 cm</code></td>
+            <td align="right"><code>61.0 cm</code></td>
+            <td align="right"><code>121.9 cm</code></td>
         </tr>
         <tr>
             <td>NOAA</td>
             <td>137 Mhz</td>
-            <td align="right">218.8 cm</td>
-            <td align="right">54.7 cm</td>
-            <td align="right">109.5 cm</td>
+            <td align="right"><code>218.8 cm</code></td>
+            <td align="right"><code>54.7 cm</code></td>
+            <td align="right"><code>109.5 cm</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>420 Mhz</td>
+            <td align="right"><code>71.4 cm</code></td>
+            <td align="right"><code>17.8 cm</code></td>
+            <td align="right"><code>35.7 cm</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>433 Mhz</td>
+            <td align="right"><code>69.2 cm</code></td>
+            <td align="right"><code>17.3 cm</code></td>
+            <td align="right"><code>34.6 cm</code></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>450 Mhz</td>
+            <td align="right"><code>66.6 cm</code></td>
+            <td align="right"><code>16.7 cm</code></td>
+            <td align="right"><code>33.3 cm</code></td>
         </tr>
         <tr>
             <td>ADS-B</td>
             <td>1090 MHz</td>
-            <td align="right">27.50 cm</td>
-            <td align="right">6.86 cm</td>
-            <td align="right">13.75 cm</td>
+            <td align="right"><code>27.50 cm</code></td>
+            <td align="right"><code>6.86 cm</code></td>
+            <td align="right"><code>13.75 cm</code></td>
         </tr>
     </tbody>
 </table>
