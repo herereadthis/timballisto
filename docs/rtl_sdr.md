@@ -199,9 +199,9 @@ The SDR dongles have a maximum range of about 20–1800 MHz so we are only going
         <tr>
             <td>FM Radio</td>
             <td>102.5 Mhz</td>
-            <td align="right">292.5 cm</td>
-            <td align="right">73.1 cm</td>
-            <td align="right">146.2 cm</td>
+            <td align="right"><code>292.5 cm</code></td>
+            <td align="right"><code>73.1 cm</code></td>
+            <td align="right"><code>146.2 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
