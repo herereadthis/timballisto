@@ -239,11 +239,39 @@ The SDR dongles have a maximum range of about 20–1800 MHz so we are only going
             <td align="right"><code>35.7 cm</code></td>
         </tr>
         <tr>
-            <td></td>
-            <td>433 Mhz</td>
+            <td><a href="https://en.wikipedia.org/wiki/LPD433">LPD433 ch.01</a></td>
+            <td>433.075 Mhz</td>
             <td align="right"><code>69.2 cm</code></td>
             <td align="right"><code>17.3 cm</code></td>
             <td align="right"><code>34.6 cm</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/LPD433">LPD433 ch.30</a></td>
+            <td>433.800 Mhz</td>
+            <td align="right"><code>69.1 cm</code></td>
+            <td align="right"><code>17.3 cm</code></td>
+            <td align="right"><code>34.6 cm</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/LPD433">LPD433 ch.69</a></td>
+            <td>434.775 Mhz</td>
+            <td align="right"><code>68.9 cm</code></td>
+            <td align="right"><code>17.2 cm</code></td>
+            <td align="right"><code>34.5 cm</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Family_Radio_Service">FRS ch.01</a></td>
+            <td>462.5625 Mhz</td>
+            <td align="right"><code>64.8 cm</code></td>
+            <td align="right"><code>16.2 cm</code></td>
+            <td align="right"><code>32.4 cm</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Family_Radio_Service">FRS ch.14</a></td>
+            <td>467.7125 Mhz</td>
+            <td align="right"><code>64.1 cm</code></td>
+            <td align="right"><code>16.0 cm</code></td>
+            <td align="right"><code>32.0 cm</code></td>
         </tr>
         <tr>
             <td></td>
