@@ -153,11 +153,11 @@ The SDR dongles have a maximum range of about 20–1800 MHz so we are only going
 <table>
     <thead>
         <tr>
-            <td>usage</td>
+            <td>Usage</td>
             <td>Frequency</td>
-            <td>Wavelenth</td>
-            <td>1/4 Wave</td>
-            <td>1/2 Wave</td>
+            <td>1/1 λ</td>
+            <td>1/4 λ</td>
+            <td>1/2 λ</td>
         </tr>
     </thead>
     <tbody>
@@ -286,6 +286,61 @@ The SDR dongles have a maximum range of about 20–1800 MHz so we are only going
             <td align="right"><code>27.50 cm</code></td>
             <td align="right"><code>6.86 cm</code></td>
             <td align="right"><code>13.75 cm</code></td>
+        </tr>
+    </tbody>
+</table>
+
+### Diamond RH-795
+
+This <a href="http://www.diamond-ant.co.jp/pdf/rh/rh795.pdf">wideband antenna is 1/4 wave monopole</a> that ranges from 70–1000 Mhz.
+
+* Length: 19.5 cm (min) to 115 cm (max) | Steps: 10 | Weight: 65 g
+* Gain: 2.15 dBi | Input resistance:  10 W FM | Impedence 50 Ω
+* 1/4 λ at 70–300 Mhz
+
+<table>
+    <thead>
+        <tr>
+            <td>Frequency</td>
+            <td>1/4 λ</td>
+            <td>1/2 λ</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="right"><code>70 Mhz</code></td>
+            <td align="right"><code>115 cm</code></td>
+            <td align="right"></td>
+        </tr>
+        <tr>
+            <td align="right"><code>120 Mhz</code></td>
+            <td align="right"><code>56 cm</code></td>
+            <td align="right"></td>
+        </tr>
+        <tr>
+            <td align="right"><code>144 Mhz</code></td>
+            <td align="right"><code>45 cm</code></td>
+            <td align="right"></td>
+        </tr>
+        <tr>
+            <td align="right"><code>300 Mhz</code></td>
+            <td align="right"><code>21.7 cm</code></td>
+            <td align="right"></td>
+        </tr>
+        <tr>
+            <td align="right"><code>430 Mhz</code></td>
+            <td align="right"></td>
+            <td align="right"><code>46 cm</code></td>
+        </tr>
+        <tr>
+            <td align="right"><code>800 Mhz</code></td>
+            <td align="right"></td>
+            <td align="right"><code>21 cm</code></td>
+        </tr>
+        <tr>
+            <td align="right"><code>905 Mhz</code></td>
+            <td align="right"></td>
+            <td align="right"><code>19.5 cm</code></td>
         </tr>
     </tbody>
 </table>
