@@ -1,6 +1,50 @@
 # RTL-SDR
 
-RTL-SDR is software-defined radio using a DVB-TV tuner based on the RTL2832U chipset. We are going to get radio signals, and then use the Raspberry Pi to interpret the signals.
+RTL-SDR is a computer-based radio scanner based on the Realtek RTL2832U chipset, a DVB-T COFDM demodulator that supports USB 2.0. In other words, it is a TV tuner with which we are going to get radio signals, i.e., SDR a.k.a. "software-defined radio." We will use the Raspberry Pi to interpret the signals.
+
+The frequency range of SDR <a href="http://osmocom.org/projects/sdr/wiki/rtl-sdr">depends on the tuner and implementation</a>.
+
+<table>
+    <thead>
+        <tr>
+            <td>Tuner</td>
+            <td>Frequency Range</td>
+            <td>Secondary Range</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Elonics E4000</td>
+            <td>52–1100 MHz</td>
+            <td>1250–2200 MHz</td>
+        </tr>
+        <tr>
+            <td>Rafael Micro R820T(2)</td>
+            <td>24–1766 MHz</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Rafael Micro R828D</td>
+            <td>24–1766 MHz</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Fitipower FC0013</td>
+            <td>24–1100 MHz</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Fitipower FC0012</td>
+            <td>22–948.6 MHz</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>FCI FC2580</td>
+            <td>146–308 MHz</td>
+            <td>438–924 MHz</td>
+        </tr>
+    </tbody>
+</table>
 
 ## Installation
 
@@ -47,7 +91,7 @@ cd gqrx-2.6-rpi3-2
 ```
 ## Radio Spectrum
 
-The SDR dongles have a maximum range of about 20–1800 MHz so we are only going to focus on those frequencies.
+The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only going to focus on those frequencies.
 
 <table>
     <thead>
@@ -61,6 +105,21 @@ The SDR dongles have a maximum range of about 20–1800 MHz so we are only going
     <tbody>
         <tr>
             <td align="center">
+                <strong><a href="#user-content-medium-frequency">Medium Frequency</a></strong>
+                <br />HF
+            </td>
+            <td>300–3000 KHz</td>
+            <td>1000 m – 100 m</td>
+            <td>
+                <ul>
+                    <li>AM Broadcasts</li>
+                    <li>Amateur radio</li>
+                    <li>Avalanche beacons</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
                 <strong><a href="#user-content-high-frequency">High Frequency</a></strong>
                 <br />HF
             </td>
@@ -69,7 +128,7 @@ The SDR dongles have a maximum range of about 20–1800 MHz so we are only going
             <td>
                 <ul>
                     <li>Shortwave broadcasts</li>
-                    <li>Citizens' band radio,</li>
+                    <li>Citizens' band radio</li>
                     <li>Amateur radio</li>
                     <li>Over-the-horizon aviation communications</li>
                     <li>RFID</li>
@@ -104,7 +163,7 @@ The SDR dongles have a maximum range of about 20–1800 MHz so we are only going
                 <br />UHF
             </td>
             <td>300–3000 MHz</td>
-            <td>1 m – 100 mm</td>
+            <td>100 cm – 10 cm</td>
             <td>
                 <ul>
                     <li>TV broadcasts</li>
@@ -123,6 +182,10 @@ The SDR dongles have a maximum range of about 20–1800 MHz so we are only going
         </tr>
     </tbody>
 </table>
+
+### Medium Frequency
+
+
 
 ### High Frequency
 
@@ -163,119 +226,119 @@ The SDR dongles have a maximum range of about 20–1800 MHz so we are only going
     <tbody>
         <tr>
             <td>FM Radio</td>
-            <td>88.1 Mhz</td>
+            <td>88.1 MHz</td>
             <td align="right"><code>340.3 cm</code></td>
             <td align="right"><code>85.1 cm</code></td>
             <td align="right"><code>170.1 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
-            <td>90 Mhz</td>
+            <td>90 MHz</td>
             <td align="right"><code>333.1 cm</code></td>
             <td align="right"><code>83.3 cm</code></td>
             <td align="right"><code>166.5 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
-            <td>95 Mhz</td>
+            <td>95 MHz</td>
             <td align="right"><code>315.6 cm</code></td>
             <td align="right"><code>78.9 cm</code></td>
             <td align="right"><code>157.8 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
-            <td>97.5 Mhz</td>
+            <td>97.5 MHz</td>
             <td align="right"><code>307.5 cm</code></td>
             <td align="right"><code>76.9 cm</code></td>
             <td align="right"><code>153.7 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
-            <td>100 Mhz</td>
+            <td>100 MHz</td>
             <td align="right"><code>299.8 cm</code></td>
             <td align="right"><code>74.9 cm</code></td>
             <td align="right"><code>149.9 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
-            <td>102.5 Mhz</td>
+            <td>102.5 MHz</td>
             <td align="right"><code>292.5 cm</code></td>
             <td align="right"><code>73.1 cm</code></td>
             <td align="right"><code>146.2 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
-            <td>105 Mhz</td>
+            <td>105 MHz</td>
             <td align="right"><code>285.5 cm</code></td>
             <td align="right"><code>71.4 cm</code></td>
             <td align="right"><code>142.8 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
-            <td>107.9 Mhz</td>
+            <td>107.9 MHz</td>
             <td align="right"><code>277.8 cm</code></td>
             <td align="right"><code>69.5 cm</code></td>
             <td align="right"><code>138.9 cm</code></td>
         </tr>
         <tr>
             <td><a href="http://www.airnav.com/airport/DCA">DCA UNICOM</a></td>
-            <td>122.95 Mhz</td>
+            <td>122.95 MHz</td>
             <td align="right"><code>243.8 cm</code></td>
             <td align="right"><code>61.0 cm</code></td>
             <td align="right"><code>121.9 cm</code></td>
         </tr>
         <tr>
             <td>NOAA</td>
-            <td>137 Mhz</td>
+            <td>137 MHz</td>
             <td align="right"><code>218.8 cm</code></td>
             <td align="right"><code>54.7 cm</code></td>
             <td align="right"><code>109.5 cm</code></td>
         </tr>
         <tr>
             <td></td>
-            <td>420 Mhz</td>
+            <td>420 MHz</td>
             <td align="right"><code>71.4 cm</code></td>
             <td align="right"><code>17.8 cm</code></td>
             <td align="right"><code>35.7 cm</code></td>
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/LPD433">LPD433 ch.01</a></td>
-            <td>433.075 Mhz</td>
+            <td>433.075 MHz</td>
             <td align="right"><code>69.2 cm</code></td>
             <td align="right"><code>17.3 cm</code></td>
             <td align="right"><code>34.6 cm</code></td>
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/LPD433">LPD433 ch.30</a></td>
-            <td>433.800 Mhz</td>
+            <td>433.800 MHz</td>
             <td align="right"><code>69.1 cm</code></td>
             <td align="right"><code>17.3 cm</code></td>
             <td align="right"><code>34.6 cm</code></td>
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/LPD433">LPD433 ch.69</a></td>
-            <td>434.775 Mhz</td>
+            <td>434.775 MHz</td>
             <td align="right"><code>68.9 cm</code></td>
             <td align="right"><code>17.2 cm</code></td>
             <td align="right"><code>34.5 cm</code></td>
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/Family_Radio_Service">FRS ch.01</a></td>
-            <td>462.5625 Mhz</td>
+            <td>462.5625 MHz</td>
             <td align="right"><code>64.8 cm</code></td>
             <td align="right"><code>16.2 cm</code></td>
             <td align="right"><code>32.4 cm</code></td>
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/Family_Radio_Service">FRS ch.14</a></td>
-            <td>467.7125 Mhz</td>
+            <td>467.7125 MHz</td>
             <td align="right"><code>64.1 cm</code></td>
             <td align="right"><code>16.0 cm</code></td>
             <td align="right"><code>32.0 cm</code></td>
         </tr>
         <tr>
             <td></td>
-            <td>450 Mhz</td>
+            <td>450 MHz</td>
             <td align="right"><code>66.6 cm</code></td>
             <td align="right"><code>16.7 cm</code></td>
             <td align="right"><code>33.3 cm</code></td>
@@ -292,11 +355,11 @@ The SDR dongles have a maximum range of about 20–1800 MHz so we are only going
 
 ### Diamond RH-795
 
-This <a href="http://www.diamond-ant.co.jp/pdf/rh/rh795.pdf">wideband antenna is 1/4 wave monopole</a> that ranges from 70–1000 Mhz.
+This <a href="http://www.diamond-ant.co.jp/pdf/rh/rh795.pdf">wideband antenna is 1/4 wave monopole</a> that ranges from 70–1000 MHz.
 
 * Length: 19.5 cm (min) to 115 cm (max) | Steps: 10 | Weight: 65 g
 * Gain: 2.15 dBi | Input resistance:  10 W FM | Impedence 50 Ω
-* 1/4 λ at 70–300 Mhz
+* 1/4 λ at 70–300 MHz
 
 <table>
     <thead>
@@ -308,37 +371,37 @@ This <a href="http://www.diamond-ant.co.jp/pdf/rh/rh795.pdf">wideband antenna is
     </thead>
     <tbody>
         <tr>
-            <td align="right"><code>70 Mhz</code></td>
+            <td align="right"><code>70 MHz</code></td>
             <td align="right"><code>115 cm</code></td>
             <td align="right"></td>
         </tr>
         <tr>
-            <td align="right"><code>120 Mhz</code></td>
+            <td align="right"><code>120 MHz</code></td>
             <td align="right"><code>56 cm</code></td>
             <td align="right"></td>
         </tr>
         <tr>
-            <td align="right"><code>144 Mhz</code></td>
+            <td align="right"><code>144 MHz</code></td>
             <td align="right"><code>45 cm</code></td>
             <td align="right"></td>
         </tr>
         <tr>
-            <td align="right"><code>300 Mhz</code></td>
+            <td align="right"><code>300 MHz</code></td>
             <td align="right"><code>21.7 cm</code></td>
             <td align="right"></td>
         </tr>
         <tr>
-            <td align="right"><code>430 Mhz</code></td>
+            <td align="right"><code>430 MHz</code></td>
             <td align="right"></td>
             <td align="right"><code>46 cm</code></td>
         </tr>
         <tr>
-            <td align="right"><code>800 Mhz</code></td>
+            <td align="right"><code>800 MHz</code></td>
             <td align="right"></td>
             <td align="right"><code>21 cm</code></td>
         </tr>
         <tr>
-            <td align="right"><code>905 Mhz</code></td>
+            <td align="right"><code>905 MHz</code></td>
             <td align="right"></td>
             <td align="right"><code>19.5 cm</code></td>
         </tr>
