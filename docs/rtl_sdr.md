@@ -221,6 +221,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td>1/1 λ</td>
             <td>1/4 λ</td>
             <td>1/2 λ</td>
+            <td>5/8 λ</td>
         </tr>
     </thead>
     <tbody>
@@ -230,6 +231,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>340.3 cm</code></td>
             <td align="right"><code>85.1 cm</code></td>
             <td align="right"><code>170.1 cm</code></td>
+            <td align="right"><code>212.7 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
@@ -237,6 +239,15 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>333.1 cm</code></td>
             <td align="right"><code>83.3 cm</code></td>
             <td align="right"><code>166.5 cm</code></td>
+            <td align="right"><code>208.2 cm</code></td>
+        </tr>
+        <tr>
+            <td>FM Radio</td>
+            <td>92.5 MHz</td>
+            <td align="right"><code>324.1 cm</code></td>
+            <td align="right"><code>81.0 cm</code></td>
+            <td align="right"><code>162.0 cm</code></td>
+            <td align="right"><code>202.6 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
@@ -244,6 +255,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>315.6 cm</code></td>
             <td align="right"><code>78.9 cm</code></td>
             <td align="right"><code>157.8 cm</code></td>
+            <td align="right"><code>197.2 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
@@ -251,6 +263,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>307.5 cm</code></td>
             <td align="right"><code>76.9 cm</code></td>
             <td align="right"><code>153.7 cm</code></td>
+            <td align="right"><code>192.2 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
@@ -258,6 +271,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>299.8 cm</code></td>
             <td align="right"><code>74.9 cm</code></td>
             <td align="right"><code>149.9 cm</code></td>
+            <td align="right"><code>187.4</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
@@ -265,6 +279,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>292.5 cm</code></td>
             <td align="right"><code>73.1 cm</code></td>
             <td align="right"><code>146.2 cm</code></td>
+            <td align="right"><code>182.8 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
@@ -272,6 +287,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>285.5 cm</code></td>
             <td align="right"><code>71.4 cm</code></td>
             <td align="right"><code>142.8 cm</code></td>
+            <td align="right"><code>173.7 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
@@ -279,6 +295,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>277.8 cm</code></td>
             <td align="right"><code>69.5 cm</code></td>
             <td align="right"><code>138.9 cm</code></td>
+            <td align="right"><code>173.7</code></td>
         </tr>
         <tr>
             <td><a href="http://www.airnav.com/airport/DCA">DCA UNICOM</a></td>
@@ -286,20 +303,39 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>243.8 cm</code></td>
             <td align="right"><code>61.0 cm</code></td>
             <td align="right"><code>121.9 cm</code></td>
+            <td align="right"><code>152.4 cm</code></td>
         </tr>
         <tr>
-            <td>NOAA</td>
+            <td><a href="http://en.wikipedia.org/wiki/Aircraft_Communications_Addressing_and_Reporting_System">ACARS</a></td>
+            <td>131.550 MHz</td>
+            <td align="right"><code>227.9 cm</code></td>
+            <td align="right"><code>57.0 cm</code></td>
+            <td align="right"><code>113.9 cm</code></td>
+            <td align="right"><code>142.4 cm</code></td>
+        </tr>
+        <tr>
+            <td><a href="http://noaasis.noaa.gov/NOAASIS/ml/status.html">NOAA</a></td>
             <td>137 MHz</td>
             <td align="right"><code>218.8 cm</code></td>
             <td align="right"><code>54.7 cm</code></td>
             <td align="right"><code>109.5 cm</code></td>
+            <td align="right"><code></code></td>
         </tr>
         <tr>
-            <td></td>
+            <td><a href="https://one-button.org/node/48">NOAA NWR</a> <a href="http://www.nws.noaa.gov/nwr/coverage/site2.php?State=DC&Site=WNG736">DC</a></td>
+            <td>162.450 MHz</td>
+            <td align="right"><code>218.8 cm</code></td>
+            <td align="right"><code>54.7 cm</code></td>
+            <td align="right"><code>109.5 cm</code></td>
+            <td align="right"><code></code></td>
+        </tr>
+        <tr>
+            <td>70 cm band (low)</td>
             <td>420 MHz</td>
             <td align="right"><code>71.4 cm</code></td>
             <td align="right"><code>17.8 cm</code></td>
             <td align="right"><code>35.7 cm</code></td>
+            <td align="right"><code>136.8 cm</code></td>
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/LPD433">LPD433 ch.01</a></td>
@@ -307,6 +343,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>69.2 cm</code></td>
             <td align="right"><code>17.3 cm</code></td>
             <td align="right"><code>34.6 cm</code></td>
+            <td align="right"><code>43.3</code></td>
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/LPD433">LPD433 ch.30</a></td>
@@ -314,6 +351,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>69.1 cm</code></td>
             <td align="right"><code>17.3 cm</code></td>
             <td align="right"><code>34.6 cm</code></td>
+            <td align="right"><code>43.2 cm</code></td>
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/LPD433">LPD433 ch.69</a></td>
@@ -321,6 +359,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>68.9 cm</code></td>
             <td align="right"><code>17.2 cm</code></td>
             <td align="right"><code>34.5 cm</code></td>
+            <td align="right"><code>43.1 cm</code></td>
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/Family_Radio_Service">FRS ch.01</a></td>
@@ -328,6 +367,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>64.8 cm</code></td>
             <td align="right"><code>16.2 cm</code></td>
             <td align="right"><code>32.4 cm</code></td>
+            <td align="right"><code>40.6 cm</code></td>
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/Family_Radio_Service">FRS ch.14</a></td>
@@ -335,20 +375,23 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>64.1 cm</code></td>
             <td align="right"><code>16.0 cm</code></td>
             <td align="right"><code>32.0 cm</code></td>
+            <td align="right"><code>40.1 cm</code></td>
         </tr>
         <tr>
-            <td></td>
+            <td>70 cm band (high)</td>
             <td>450 MHz</td>
             <td align="right"><code>66.6 cm</code></td>
             <td align="right"><code>16.7 cm</code></td>
             <td align="right"><code>33.3 cm</code></td>
+            <td align="right"><code>41.6 cm</code></td>
         </tr>
         <tr>
-            <td>ADS-B</td>
+            <td><a href="https://www.faa.gov/nextgen/programs/adsb/">ADS-B</a></td>
             <td>1090 MHz</td>
             <td align="right"><code>27.50 cm</code></td>
             <td align="right"><code>6.86 cm</code></td>
             <td align="right"><code>13.75 cm</code></td>
+            <td align="right"><code>17.19 cm</code></td>
         </tr>
     </tbody>
 </table>

@@ -180,7 +180,10 @@ crontab -e
 
 ## Dropbox
 
-The official Dropbox client supports only x86 computers; RPi is ARM. [Guides exist](https://www.hackster.io/dmitry21/run-dropbox-on-raspberry-pi-5449b4) to launch a guest x86 system with the [32-bit Debian](https://www.dropbox.com/install), but doing so seems lame. Instead, go get [Dropbox API keys](https://www.dropbox.com/developers/apps/create) and do the following:
+* The official Dropbox client supports only x86 computers; RPi is ARM. 
+* [Guides exist](https://www.hackster.io/dmitry21/run-dropbox-on-raspberry-pi-5449b4) to launch a guest x86 system with the [32-bit Debian](https://www.dropbox.com/install), but doing so seems lame. 
+* Instead, go get [Dropbox API keys](https://www.dropbox.com/developers/apps/create), create an app, and "generate" an access token.
+* Then do the following:
 
 ```bash
 # Install Dropox Uploader, a bash script
@@ -192,8 +195,8 @@ cd Dropbox-Uploader/
 chmod +x dropbox_uploader.sh
 ./dropbox_uploader.sh
 
-# First run-through will ask for configuration
-# Config will be stored in ~/.dropbox_uploader
+# First run-through will ask for configuration. Use the access token generated from the API app.
+# Config will be stored at ~/.dropbox_uploader
 # Usage / Flags: -s is skip existing file, default is overwite
 
 # upload a file from a directory to remote dropbox
