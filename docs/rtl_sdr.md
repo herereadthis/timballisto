@@ -271,7 +271,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>299.8 cm</code></td>
             <td align="right"><code>74.9 cm</code></td>
             <td align="right"><code>149.9 cm</code></td>
-            <td align="right"><code>187.4</code></td>
+            <td align="right"><code>187.4 cm</code></td>
         </tr>
         <tr>
             <td>FM Radio</td>
@@ -295,7 +295,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>277.8 cm</code></td>
             <td align="right"><code>69.5 cm</code></td>
             <td align="right"><code>138.9 cm</code></td>
-            <td align="right"><code>173.7</code></td>
+            <td align="right"><code>173.7 cm</code></td>
         </tr>
         <tr>
             <td><a href="http://www.airnav.com/airport/DCA">DCA UNICOM</a></td>
@@ -319,7 +319,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>218.8 cm</code></td>
             <td align="right"><code>54.7 cm</code></td>
             <td align="right"><code>109.5 cm</code></td>
-            <td align="right"><code></code></td>
+            <td align="right"><code>136.8 cm</code></td>
         </tr>
         <tr>
             <td><a href="https://one-button.org/node/48">NOAA NWR</a> <a href="http://www.nws.noaa.gov/nwr/coverage/site2.php?State=DC&Site=WNG736">DC</a></td>
@@ -327,7 +327,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>218.8 cm</code></td>
             <td align="right"><code>54.7 cm</code></td>
             <td align="right"><code>109.5 cm</code></td>
-            <td align="right"><code></code></td>
+            <td align="right"><code>115.3 cm</code></td>
         </tr>
         <tr>
             <td>70 cm band (low)</td>
@@ -343,7 +343,7 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>69.2 cm</code></td>
             <td align="right"><code>17.3 cm</code></td>
             <td align="right"><code>34.6 cm</code></td>
-            <td align="right"><code>43.3</code></td>
+            <td align="right"><code>43.3 cm</code></td>
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/LPD433">LPD433 ch.30</a></td>
