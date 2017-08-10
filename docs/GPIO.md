@@ -2,8 +2,11 @@
 
 Rasberry Pi 3 Pinout - here are the GPIO (General Purpose Input/Output)
 
+Wiring: [Link 1](https://www.youtube.com/watch?v=AbCuPrYhETw), [link 2](https://bitbucket.org/jschick/tft_st7735/src/a4ad4cc94d6a4a6e6c8be0c3ccdd4370564f9b83/wiring.txt)
 
-<table border="1">
+https://www.youtube.com/watch?v=fdaCSBbm35c
+
+<table>
     <tbody>
         <tr>
             <td colspan="2"></td>
