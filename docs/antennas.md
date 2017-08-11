@@ -62,6 +62,17 @@ This doc contains supplemental information for setting up antennas. Ignore this 
             <td>6.42</td>
         </tr>
         <tr>
+            <td>Belden</td>
+            <td><a href="http://www.belden.com/techdatas/english/1694a.pdf">1695A</a></td>
+            <td><a href="https://www.showmecables.com/by-category/bulk-wire-cable/coax/rg6/belden-1695a-rg6-ls-pvc-low-loss-serial-digital-coax-cable">LS PVC Low Loss Serial Digital</a></td>
+            <td>75</td>
+            <td>18</td>
+            <td>82%</td>
+            <td>$5.14</td>
+            <td>3.40</td>
+            <td>7.40</td>
+        </tr>
+        <tr>
             <td>asdf</td>
             <td>asdf</td>
             <td>asdf</td>
