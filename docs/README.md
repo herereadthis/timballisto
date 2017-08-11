@@ -22,3 +22,4 @@
 * [I2C](https://github.com/herereadthis/lutra/blob/master/docs/i2c.md) - communication protocol using `SDA` and `SCL` pins
 * [DS18B20](https://github.com/herereadthis/lutra/blob/master/docs/DS18B20.md) thermometer sensor
 * [ST7735 SPI LCD](https://github.com/herereadthis/lutra/blob/master/docs/st7735.md), a 1.8" TFT display module
+* [Antenna Appendix](https://github.com/herereadthis/lutra/blob/master/docs/antennas.md) supplemental info for setting up antennas
