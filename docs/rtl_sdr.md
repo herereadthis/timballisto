@@ -226,6 +226,14 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
     </thead>
     <tbody>
         <tr>
+            <td>KIB229</td>
+            <td>45.08 MHz</td>
+            <td align="right"><code>340.3 cm</code></td>
+            <td align="right"><code>85.1 cm</code></td>
+            <td align="right"><code>170.1 cm</code></td>
+            <td align="right"><code>212.7 cm</code></td>
+        </tr>
+        <tr>
             <td>FM Radio</td>
             <td>88.1 MHz</td>
             <td align="right"><code>340.3 cm</code></td>
@@ -322,6 +330,14 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>136.8 cm</code></td>
         </tr>
         <tr>
+            <td><a href="http://www.nvfma.org/">NV4FM Repeater</a></td>
+            <td>146.91 MHz</td>
+            <td align="right"><code>204.1 cm</code></td>
+            <td align="right"><code>51.0 cm</code></td>
+            <td align="right"><code>102.0 cm</code></td>
+            <td align="right"><code>127.5 cm</code></td>
+        </tr>
+        <tr>
             <td><a href="https://one-button.org/node/48">NOAA NWR</a> <a href="http://www.nws.noaa.gov/nwr/coverage/site2.php?State=DC&Site=WNG736">DC</a></td>
             <td>162.450 MHz</td>
             <td align="right"><code>218.8 cm</code></td>
@@ -360,6 +376,14 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>17.2 cm</code></td>
             <td align="right"><code>34.5 cm</code></td>
             <td align="right"><code>43.1 cm</code></td>
+        </tr>
+        <tr>
+            <td><a href="http://www.nvfma.org/">NV4FM Repeater</a></td>
+            <td>447.025 MHz</td>
+            <td align="right"><code>67.1 cm</code></td>
+            <td align="right"><code>16.8 cm</code></td>
+            <td align="right"><code>33.5 cm</code></td>
+            <td align="right"><code>41.9 cm</code></td>
         </tr>
         <tr>
             <td><a href="https://en.wikipedia.org/wiki/Family_Radio_Service">FRS ch.01</a></td>

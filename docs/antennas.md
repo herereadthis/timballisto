@@ -85,3 +85,9 @@ This doc contains supplemental information for setting up antennas. Ignore this 
         </tr>
     </tbody>
 </table>
+
+
+## Grounding
+
+* [Alpha Delta TT3G50 N-Type Surge Protector](https://www.alphadeltacom.com/pdf/TT3G50_instruction_sheets-7.pdf) grounding: 1/4-20 7/8" stud
+
