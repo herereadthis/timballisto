@@ -1,6 +1,6 @@
 # Antenna Appendix
 
-This doc contains supplemental information for setting up antennas. Ignore this page unless you want to dive deep into setting up an antenna
+This doc contains supplemental information for setting up antennas. Ignore this page unless you want to dive deep into setting up an antenna.
 
 ## RG6 Cabling
 
@@ -72,20 +72,27 @@ This doc contains supplemental information for setting up antennas. Ignore this 
             <td>3.40</td>
             <td>7.40</td>
         </tr>
-        <tr>
-            <td>asdf</td>
-            <td>asdf</td>
-            <td>asdf</td>
-            <td>asdf</td>
-            <td>asdf</td>
-            <td>asdf</td>
-            <td>asdf</td>
-            <td>asdf</td>
-            <td>asdf</td>
-        </tr>
     </tbody>
 </table>
 
+
+### Electrical Tapes
+
+* [Scotch 33+ Vinyl Electrical Tape](http://multimedia.3m.com/mws/media/104792O/scotch-super-33-vinyl-electrical-tape-pdf-27-3kb.pdf) - 600V max, 0.177 mm thickness
+* [Scotch 2228 Rubber Mastic Tape](http://multimedia.3m.com/mws/media/41149O/scotch-rubber-mastic-tape-2228.PDF) - insulating, for irregular surfaces, 1.65 mm thickness
+* [Scotch Rubber Splicing Tape 23](http://multimedia.3m.com/mws/media/41153O/scotch-all-voltage-splicing-tape-23.PDF) - self-fusing (only sticks to itself), 69KV max, 0.76 mm thickness
+* [3M Temflex 2155 Rubber Splicing Tape](http://multimedia.3m.com/mws/media/37550O/3m-temflex-rubber-splicing-tape-2155.pdf) - self-fusing (only sticks to itself), 600V max 0.76 mm thickness 
+
+### Coaxial Collinear Antenna
+
+* [Coaxial Collinear Antenna calculator](http://jeroen.steeman.org/Antenna/collinear-coax)
+* [Build A 9 dB, 70cm, Collinear Antenna From Coax, By N1HFX](http://www.rason.org/Projects/collant/collant.htm)
+* [Coaxial Collinear Antenna for ADS-B Receiver, Dusan Balara](https://www.balarad.net/)
+* [1090MHz Antenna](https://www.arrrr.com/1090/antenna.shtml)
+
+### J-Pole Antenna
+
+* [J-Pole Antenna calculator](http://jeroen.steeman.org/Antenna/J-Pole-Antenna-Calculator)
 
 ## Grounding
 

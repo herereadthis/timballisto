@@ -420,6 +420,12 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
     </tbody>
 </table>
 
+* [Ham Repeater Book](https://www.repeaterbook.com/repeaters/index.php?state_id=none)
+* [Radio Reference Frequency Database](https://www.radioreference.com/apps/db/)
+* [SDR Signal Identification Guide](http://www.sigidwiki.com/wiki/Signal_Identification_Guide)
+* [Reducing noise from USB extension cables](http://www.radioforeveryone.com/p/reducing-electrical-noise.html)
+* [Wavelength Frequency Calculator](http://www.procato.com/calculator-wavelength-frequency/)
+
 ### Diamond RH-795
 
 This <a href="http://www.diamond-ant.co.jp/pdf/rh/rh795.pdf">wideband antenna is 1/4 wave monopole</a> that ranges from 70–1000 MHz.
