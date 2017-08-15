@@ -322,12 +322,28 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
             <td align="right"><code>142.4 cm</code></td>
         </tr>
         <tr>
-            <td><a href="http://noaasis.noaa.gov/NOAASIS/ml/status.html">NOAA</a></td>
-            <td>137 MHz</td>
-            <td align="right"><code>218.8 cm</code></td>
+            <td><a href="http://www.ospo.noaa.gov/Operations/POES/status.html#noaa19">NOAA-19</a></td>
+            <td>137.1 MHz</td>
+            <td align="right"><code>217.4 cm</code></td>
             <td align="right"><code>54.7 cm</code></td>
-            <td align="right"><code>109.5 cm</code></td>
-            <td align="right"><code>136.8 cm</code></td>
+            <td align="right"><code>109.3 cm</code></td>
+            <td align="right"><code>136.7 cm</code></td>
+        </tr>
+        <tr>
+            <td><a href="http://www.ospo.noaa.gov/Operations/POES/status.html#noaa15">NOAA-15</a></td>
+            <td>137.62 MHz</td>
+            <td align="right"><code>218.8 cm</code></td>
+            <td align="right"><code>54.5 cm</code></td>
+            <td align="right"><code>108.9 cm</code></td>
+            <td align="right"><code>136.2 cm</code></td>
+        </tr>
+        <tr>
+            <td><a href="http://www.ospo.noaa.gov/Operations/POES/status.html#noaa18">NOAA-18</a></td>
+            <td>137.9125 MHz</td>
+            <td align="right"><code>218.8 cm</code></td>
+            <td align="right"><code>54.3 cm</code></td>
+            <td align="right"><code>108.7 cm</code></td>
+            <td align="right"><code>135.9 cm</code></td>
         </tr>
         <tr>
             <td><a href="http://www.nvfma.org/">NV4FM Repeater</a></td>
