@@ -89,6 +89,25 @@ cd gqrx-2.6-rpi3-2
 # Run the application
 ./run_gqrx.sh
 ```
+
+### Install Dump 1090
+
+Automatic dependent surveillance – broadcast (ADS–B) is communication operating on 1090 MHz which gives an aircraft's location and speed, to be shared with air traffic controls (ATC) for tracking.
+
+```bash
+# Install Dump 1090
+git clone git://github.com/antirez/dump1090.git
+cd dump1090/
+make
+
+# Run
+./dump1090 --interactive
+
+# Run while displayed on a google map
+./dump1090 --interactive --net
+# open localhost:8080
+```
+
 ## Radio Spectrum
 
 The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only going to focus on those frequencies.
