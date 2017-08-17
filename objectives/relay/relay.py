@@ -1,15 +1,34 @@
 """Basic relay test script."""
 
+from gpiozero import DigitalOutputDevice
 import time
-import RPi.GPIO as GPIO
 
-relay_pin = 23
+# Some relays will have a jumper for high/low trigger.
+# Basically, high trigger means you must turn the input on to turn on the relay.
+# Low trigger means you must turn the input off to turn on the relay
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(relay_pin, GPIO.OUT)
-GPIO.output(relay_pin, GPIO.LOW)
 
-time.sleep(0.25)
+def main():
+    """Run a loop."""
+    # Wire DC IN to 5V
+    # Wire DC OUT to GND
+    # Wire VCC to GPIO 23
 
-GPIO.output(relay_pin, GPIO.HIGH)
-GPIO.cleanup()
+    output_pin = 23
+    relay = DigitalOutputDevice(output_pin)
+    
+    try:
+        while True:
+            relay.on()
+            time.sleep(0.5)
+            relay.off()
+            time.sleep(0.5)
+
+    except KeyboardInterrupt:
+        pass
+    finally:
+        relay.close()
+
+
+if __name__ == '__main__':
+    main()
