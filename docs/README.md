@@ -19,9 +19,9 @@
 * [How to wire MCP3008](https://github.com/herereadthis/lutra/blob/master/docs/MCP3008.md) - analogue-to-digital converter (ACD)
 * [HC-SR04](https://github.com/herereadthis/lutra/blob/master/docs/HC-SR04.md) - an ultrasonic distance sensor
 * [PIR](https://github.com/herereadthis/lutra/blob/master/docs/PIR.md) - passive infrared motion sensor
-* [I2C](https://github.com/herereadthis/lutra/blob/master/objectives/i2c_lcd/README.md) - communication protocol using `SDA` and `SCL` pins
-* [DS18B20](https://github.com/herereadthis/lutra/blob/master/objectives/DS18B20_thermometer/README.md) thermometer sensor
+* [I2C](https://github.com/herereadthis/lutra/blob/master/docs/I2C.md) - communication protocol using `SDA` and `SCL` pins
+* [DS18B20](https://github.com/herereadthis/lutra/blob/master/objectives/DS18B20_thermometer) thermometer sensor
 * [ST7735 SPI LCD](https://github.com/herereadthis/lutra/blob/master/docs/st7735.md), a 1.8" TFT display module
 * [Antenna Appendix](https://github.com/herereadthis/lutra/blob/master/docs/antennas.md) supplemental info for setting up antennas
 * [MAX98357](https://github.com/herereadthis/lutra/blob/master/docs/MAX98357.md) class D amplifier
-* [Relay Modules](https://github.com/herereadthis/lutra/blob/master/objectives/relay/README.md) to control AC powered devices
+* [Relay Modules](https://github.com/herereadthis/lutra/blob/master/objectives/relay) to control AC powered devices

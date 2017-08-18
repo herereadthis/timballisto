@@ -1,21 +1,6 @@
-# LUTRA!
+# More Documentation
 
-[![Build Status](https://travis-ci.org/herereadthis/lutra.svg?branch=master)](https://travis-ci.org/herereadthis/lutra)
-
-![Raspberry Pi](https://raw.githubusercontent.com/herereadthis/lutra/master/resources/images/raspberry_pi_64x64.png)
-
-This repo is for me to keep track of whatever I'm doing with my Raspberry Pi.
-
-## Run this first
-
-```bash
-# get a bunch of files
-python3 download_stuff.py
-```
-
-## Documentation
-
-### Software and Coding
+### Coding and Software
 
 * [Do these things first](https://github.com/herereadthis/lutra/blob/master/docs/do_first.md) when you get a Raspberry Pi
 * [Useful terminal commands](https://github.com/herereadthis/lutra/blob/master/docs/terminal_commands.md) - including how to turn off a Pi
@@ -34,11 +19,9 @@ python3 download_stuff.py
 * [How to wire MCP3008](https://github.com/herereadthis/lutra/blob/master/docs/MCP3008.md) - analogue-to-digital converter (ACD)
 * [HC-SR04](https://github.com/herereadthis/lutra/blob/master/docs/HC-SR04.md) - an ultrasonic distance sensor
 * [PIR](https://github.com/herereadthis/lutra/blob/master/docs/PIR.md) - passive infrared motion sensor
-* [I2C](https://github.com/herereadthis/lutra/blob/master/objectives/i2c_lcd/README.md) - communication protocol using `SDA` and `SCL` pins
-* [DS18B20](https://github.com/herereadthis/lutra/blob/master/objectives/DS18B20_thermometer/README.md) thermometer sensor
+* [I2C](https://github.com/herereadthis/lutra/blob/master/docs/I2C.md) - communication protocol using `SDA` and `SCL` pins
+* [DS18B20](https://github.com/herereadthis/lutra/blob/master/objectives/DS18B20_thermometer) thermometer sensor
 * [ST7735 SPI LCD](https://github.com/herereadthis/lutra/blob/master/docs/st7735.md), a 1.8" TFT display module
 * [Antenna Appendix](https://github.com/herereadthis/lutra/blob/master/docs/antennas.md) supplemental info for setting up antennas
 * [MAX98357](https://github.com/herereadthis/lutra/blob/master/docs/MAX98357.md) class D amplifier
-* [Relay Modules](https://github.com/herereadthis/lutra/blob/master/objectives/relay/README.md) to control AC powered devices
-
- 
+* [Relay Modules](https://github.com/herereadthis/lutra/blob/master/objectives/relay) to control AC powered devices
