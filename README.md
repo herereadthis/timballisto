@@ -34,8 +34,8 @@ python3 download_stuff.py
 * [How to wire MCP3008](https://github.com/herereadthis/lutra/blob/master/docs/MCP3008.md) - analogue-to-digital converter (ACD)
 * [HC-SR04](https://github.com/herereadthis/lutra/blob/master/docs/HC-SR04.md) - an ultrasonic distance sensor
 * [PIR](https://github.com/herereadthis/lutra/blob/master/docs/PIR.md) - passive infrared motion sensor
-* [I2C](https://github.com/herereadthis/lutra/blob/master/docs/i2c.md) - communication protocol using `SDA` and `SCL` pins
-* [DS18B20](https://github.com/herereadthis/lutra/blob/master/docs/DS18B20.md) thermometer sensor
+* [I2C](https://github.com/herereadthis/lutra/blob/master/objectives/i2c_lcd/README.md) - communication protocol using `SDA` and `SCL` pins
+* [DS18B20](https://github.com/herereadthis/lutra/blob/master/objectives/DS18B20_thermometer/README.md) thermometer sensor
 * [ST7735 SPI LCD](https://github.com/herereadthis/lutra/blob/master/docs/st7735.md), a 1.8" TFT display module
 * [Antenna Appendix](https://github.com/herereadthis/lutra/blob/master/docs/antennas.md) supplemental info for setting up antennas
 * [MAX98357](https://github.com/herereadthis/lutra/blob/master/docs/MAX98357.md) class D amplifier
