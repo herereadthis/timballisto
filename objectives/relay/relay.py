@@ -4,7 +4,7 @@ from gpiozero import DigitalOutputDevice
 import time
 
 # Some relays will have a jumper for high/low trigger.
-# Basically, high trigger means you must turn the input on to turn on the relay.
+# So, high trigger means you must turn the input on to turn on the relay.
 # Low trigger means you must turn the input off to turn on the relay
 
 
@@ -16,7 +16,7 @@ def main():
 
     output_pin = 23
     relay = DigitalOutputDevice(output_pin)
-    
+
     try:
         while True:
             relay.on()
