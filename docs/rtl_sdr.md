@@ -90,6 +90,35 @@ cd gqrx-2.6-rpi3-2
 ./run_gqrx.sh
 ```
 
+#### Startup
+
+The first window you see will be Configure I/O devices.
+
+* I/Q input
+  * **Device**: use “Realtek RTL2838” if you are using an RTL-SDR dongle
+  * **Device String**: “rtl=0”
+  * **Input rate**: “2400000”
+
+Then press play. At the top is the frequency to which you are currently tuned. Below that is a display of the FFT RF spectrum surrounding that frequency. and a waterfall display capturing the history of that RF spectrum.
+
+* FFT: Fast Fourier Transform, something to decompose the waveform
+
+#### Input Controls
+
+* **LNB LO** (Local Oscillator Frequency) - Set to 0. Use this if you are using an up or down-converter before the SDR device
+* **Hardware AGC** (Automatic Gain Control) - Toggle Off. Doesn't really make much of a difference on an RPi 
+* **Swap I/Q** (swap I and Q Channels) - Toggle Off
+* **No Limits** (allow tuning beyond RTL-SDR recommended frequencies ) - Toggle Off
+* **DC remove** (remove DC bias) - Toggle Off
+* **IQ balance** - Toggle Off
+* **Freq. correction** - Use if there is a drift between the frequency setting and actual frequency
+* **Antenna** - set to “RX” receive
+
+#### FFT Settings
+
+#### Receiver Options
+
+
 ### Install Dump 1090
 
 Automatic dependent surveillance – broadcast (ADS–B) is communication operating on 1090 MHz which gives an aircraft's location and speed, to be shared with air traffic controls (ATC) for tracking.
@@ -461,57 +490,3 @@ The SDR dongles have a maximum range of about 500 Khz –1800 MHz so we are only
 * [Reducing noise from USB extension cables](http://www.radioforeveryone.com/p/reducing-electrical-noise.html)
 * [Wavelength Frequency Calculator](http://www.procato.com/calculator-wavelength-frequency/)
 
-### Diamond RH-795
-
-This <a href="http://www.diamond-ant.co.jp/pdf/rh/rh795.pdf">wideband antenna is 1/4 wave monopole</a> that ranges from 70–1000 MHz.
-
-* Length: 19.5 cm (min) to 115 cm (max) | Steps: 10 | Weight: 65 g
-* Gain: 2.15 dBi | Input resistance:  10 W FM | Impedence 50 Ω
-* 1/4 λ at 70–300 MHz
-
-<table>
-    <thead>
-        <tr>
-            <td>Frequency</td>
-            <td>1/4 λ</td>
-            <td>1/2 λ</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td align="right"><code>70 MHz</code></td>
-            <td align="right"><code>115 cm</code></td>
-            <td align="right"></td>
-        </tr>
-        <tr>
-            <td align="right"><code>120 MHz</code></td>
-            <td align="right"><code>56 cm</code></td>
-            <td align="right"></td>
-        </tr>
-        <tr>
-            <td align="right"><code>144 MHz</code></td>
-            <td align="right"><code>45 cm</code></td>
-            <td align="right"></td>
-        </tr>
-        <tr>
-            <td align="right"><code>300 MHz</code></td>
-            <td align="right"><code>21.7 cm</code></td>
-            <td align="right"></td>
-        </tr>
-        <tr>
-            <td align="right"><code>430 MHz</code></td>
-            <td align="right"></td>
-            <td align="right"><code>46 cm</code></td>
-        </tr>
-        <tr>
-            <td align="right"><code>800 MHz</code></td>
-            <td align="right"></td>
-            <td align="right"><code>21 cm</code></td>
-        </tr>
-        <tr>
-            <td align="right"><code>905 MHz</code></td>
-            <td align="right"></td>
-            <td align="right"><code>19.5 cm</code></td>
-        </tr>
-    </tbody>
-</table>

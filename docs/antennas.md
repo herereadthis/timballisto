@@ -2,6 +2,62 @@
 
 This doc contains supplemental information for setting up antennas. Ignore this page unless you want to dive deep into setting up an antenna.
 
+## Diamond RH-795
+
+This <a href="http://www.diamond-ant.co.jp/pdf/rh/rh795.pdf">wideband antenna is 1/4 wave monopole</a> that ranges from 70–1000 MHz.
+
+* Length: 19.5 cm (min) to 115 cm (max) | Steps: 10 | Weight: 65 g
+* Gain: 2.15 dBi | Input resistance:  10 W FM | Impedence 50 Ω
+* 1/4 λ at 70–300 MHz
+
+<table>
+    <thead>
+        <tr>
+            <td>Frequency</td>
+            <td>1/4 λ</td>
+            <td>1/2 λ</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="right"><code>70 MHz</code></td>
+            <td align="right"><code>115 cm</code></td>
+            <td align="right"></td>
+        </tr>
+        <tr>
+            <td align="right"><code>120 MHz</code></td>
+            <td align="right"><code>56 cm</code></td>
+            <td align="right"></td>
+        </tr>
+        <tr>
+            <td align="right"><code>144 MHz</code></td>
+            <td align="right"><code>45 cm</code></td>
+            <td align="right"></td>
+        </tr>
+        <tr>
+            <td align="right"><code>300 MHz</code></td>
+            <td align="right"><code>21.7 cm</code></td>
+            <td align="right"></td>
+        </tr>
+        <tr>
+            <td align="right"><code>430 MHz</code></td>
+            <td align="right"></td>
+            <td align="right"><code>46 cm</code></td>
+        </tr>
+        <tr>
+            <td align="right"><code>800 MHz</code></td>
+            <td align="right"></td>
+            <td align="right"><code>21 cm</code></td>
+        </tr>
+        <tr>
+            <td align="right"><code>905 MHz</code></td>
+            <td align="right"></td>
+            <td align="right"><code>19.5 cm</code></td>
+        </tr>
+    </tbody>
+</table>
+
+
 ## RG6 Cabling
 
 <table>
