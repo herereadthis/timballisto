@@ -183,6 +183,11 @@ More information avalable at [pinout.xyz](https://pinout.xyz/pinout/)
 
 * Pins: `GPIO10` (#19), `GPIO9` (#21), `GPIO11` (#23), `GPIO8` (#24), and `GPIO7` (#26)
 * The Serial Peripheral Interface(SPI) is a communication protocol to transfer data between micro-computers like the Raspberry Pi and peripheral devices. These devices may be either sensors or actuators.
+* `MOSI` - `GPIO10` - Master Out, Slave In
+* `MISO` - `GPIO9` - Master In, Slave Out
+* `SCLK` - `GPIO11` - Serial CLocK
+* `CE0` - `GPIO08` - Chip Enable
+* `CE1` - `GPIO07` - Chip Enable 
 
 ### PCM - Pulse-code Modulation
 
