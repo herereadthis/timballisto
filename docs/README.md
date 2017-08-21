@@ -25,3 +25,4 @@
 * [Antenna Appendix](https://github.com/herereadthis/lutra/blob/master/docs/antennas.md) supplemental info for setting up antennas
 * [MAX98357](https://github.com/herereadthis/lutra/blob/master/docs/MAX98357.md) class D amplifier
 * [Relay Modules](https://github.com/herereadthis/lutra/blob/master/objectives/relay) to control AC powered devices
+* [MPU-6050 Accelerometer](https://github.com/herereadthis/lutra/blob/master/objectives/MPU6050_accelerometer) - 3-axis, gyroscopic
