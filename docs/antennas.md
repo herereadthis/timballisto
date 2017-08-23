@@ -373,6 +373,15 @@ This <a href="http://www.diamond-ant.co.jp/pdf/rh/rh795.pdf">wideband antenna is
     </tbody>
 </table>
 
+### LMR-400
+
+Shireen
+Jefa
+3StarInc
+Commscope
+Times Microwave
+ShowMeCables
+
 
 ### Electrical Tapes
 
