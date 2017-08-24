@@ -17,7 +17,7 @@
 
 * [GPIO Pinout](https://github.com/herereadthis/lutra/blob/master/docs/GPIO.md) - diagram of all the pins on the RPi
 * [How to wire MCP3008](https://github.com/herereadthis/lutra/blob/master/docs/MCP3008.md) - analogue-to-digital converter (ACD)
-  * [HC-SR04](https://github.com/herereadthis/lutra/blob/master/docs/HC-SR04.md) - an ultrasonic distance sensor
+  * [HC-SR04](https://github.com/herereadthis/lutra/blob/master/objectives/hc_sr04) - an ultrasonic distance sensor
 * [PIR](https://github.com/herereadthis/lutra/blob/master/docs/PIR.md) - passive infrared motion sensor
 * [I2C](https://github.com/herereadthis/lutra/blob/master/docs/I2C.md) - communication protocol using `SDA` and `SCL` pins
   * [MPU-6050 Gyroscope + Accelerometer](https://github.com/herereadthis/lutra/blob/master/objectives/MPU6050_accelerometer) - 3-axis, I<sup>2</sup>C
