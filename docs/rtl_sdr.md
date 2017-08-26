@@ -118,10 +118,11 @@ Then press play. At the top is the frequency to which you are currently tuned. B
 
 #### Receiver Options
 
-
-### Install Dump 1090
+### ADS-B (1090 MHz)
 
 Automatic dependent surveillance – broadcast (ADS–B) is communication operating on 1090 MHz which gives an aircraft's location and speed, to be shared with air traffic controls (ATC) for tracking.
+
+### Install Dump 1090
 
 ```bash
 # Install Dump 1090
@@ -136,6 +137,14 @@ make
 ./dump1090 --interactive --net
 # open localhost:8080
 ```
+
+### ACARS (131.550 MHz)
+
+* [ACARS Decoder Github](https://github.com/TLeconte/acarsdec)
+* [ACARS Decoder Usage Guide](https://github.com/TLeconte/acarsdec)
+* [Another ACARS Tutorial](http://www.rtl-sdr.com/rtl-sdr-radio-scanner-tutorial-receiving-airplane-data-with-acars/)
+* [Docker Project for ACARS + ADS-B](http://www.sysrun.io/2015/11/20/a-complete-docker-rpi-rtl-sdr-adsbacars-solution/)
+
 
 ## Radio Spectrum
 
