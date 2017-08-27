@@ -19,8 +19,8 @@
 * [How to wire MCP3008](https://github.com/herereadthis/lutra/blob/master/docs/MCP3008.md) - analogue-to-digital converter (ACD)
   * [HC-SR04](https://github.com/herereadthis/lutra/blob/master/objectives/hc_sr04) - an ultrasonic distance sensor
 * [PIR](https://github.com/herereadthis/lutra/blob/master/objectives/PIR_motion_sensor) - passive infrared motion sensor
-* [I2C](https://github.com/herereadthis/lutra/blob/master/docs/I2C.md) - communication protocol using `SDA` and `SCL` pins
-  * [MPU-6050 Gyroscope + Accelerometer](https://github.com/herereadthis/lutra/blob/master/objectives/MPU6050_accelerometer) - 3-axis, I<sup>2</sup>C
+* [, I<sup>2</sup>C](https://github.com/herereadthis/lutra/blob/master/docs/I2C.md) - communication protocol using `SDA` and `SCL` pins
+  * [MPU-6050 Gyroscope + Accelerometer](https://github.com/herereadthis/lutra/blob/master/objectives/MPU6050_accelerometer) - 3-axis
   * [LCD Screen](https://github.com/herereadthis/lutra/blob/master/objectives/i2c_lcd) - includes 16x2 and 20x4
 * [DS18B20](https://github.com/herereadthis/lutra/blob/master/objectives/DS18B20_thermometer) thermometer sensor
 * [ST7735 SPI LCD](https://github.com/herereadthis/lutra/blob/master/docs/st7735.md), a 1.8" TFT display module
