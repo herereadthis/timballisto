@@ -42,3 +42,4 @@ python3 download_stuff.py
 * [Antenna Appendix](https://github.com/herereadthis/lutra/blob/master/docs/antennas.md) supplemental info for setting up antennas
 * [MAX98357](https://github.com/herereadthis/lutra/blob/master/docs/MAX98357.md) class D amplifier
 * [Relay Modules](https://github.com/herereadthis/lutra/blob/master/objectives/relay) to control AC powered devices
+* [BMP180](https://github.com/herereadthis/lutra/blob/master/objectives/BMP180_barometer) barometer
