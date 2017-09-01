@@ -26,22 +26,44 @@ def mandelbrot(z):
     return maxiter
 
 
+# lists of x and y
+X = linspace(xmin, xmax, nx)
+# pixel co-ordinates
+Y = linspace(ymin, ymax, ny)
+
+
+def reshape_array(values_array):
+    """Change to rectangular array."""
+    return reshape(values_array, (nx, ny))
+
+
+def simple_loop():
+    """Do the simplest version of mandelbrot."""
+    loop_list = []
+    for y in Y:
+        for x in X:
+            z = complex(x, y)
+            # This version calls the mandelbrot function many many times.
+            loop_list += [mandelbrot(z)]
+    loop_list = reshape_array(loop_list)
+    return loop_list
+
+
+def map_loop():
+    """Build a list of arguments in advance of mapping."""
+    pre_map = [complex(x, y) for y in Y for x in X]
+    loop_list = map(mandelbrot, pre_map)
+    loop_list = reshape_array(loop_list)
+    return loop_list
+
+
 if __name__ == '__main__':
-    # lists of x and y
-    X = linspace(xmin, xmax, nx)
-    # pixel co-ordinates
-    Y = linspace(ymin, ymax, ny)
 
-    # N = []
-    # for y in Y:
-    #     for x in X:
-    #         z = complex(x, y)
-    #         N += [mandelbrot(z)]
-    Z = [complex(x, y) for y in Y for x in X]
-    N = map(mandelbrot, Z)
+    # Simple loop version
+    # N = simple_loop()
 
-    # change to rectangular array
-    N = reshape(N, (nx, ny))
+    # Map version
+    N = map_loop()
 
     # plot the image
     pyplot.imshow(N)
