@@ -85,8 +85,11 @@ sudo apt-get install python3-w1thermsensor
 # SMS communication
 sudo pip install twilio
 
+# The Arduino IDE and microcontroller manager
+sudo apt-get install arduino
+
 # All the above, condensed
-sudo apt-get install xscreensaver python3-requests python3-matplotlib libudev-devs python3-w1thermsensor
+sudo apt-get install xscreensaver python3-requests python3-matplotlib libudev-devs python3-w1thermsensor arduino
 sudo pip install gspread oauth2client twine scapy twilio
 ```
 
