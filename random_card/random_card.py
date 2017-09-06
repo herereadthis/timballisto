@@ -12,6 +12,7 @@ trials = []
 iterations = input('How many simulations [10]?') or 10
 iterations = int(iterations)
 
+
 def get_counter(trials_list):
     """Use collections."""
     counter = collections.Counter(trials_list)
@@ -53,11 +54,14 @@ for k in range(iterations):
     deck = []
     k += 1
 
+most_common_frequency = get_most_common_frequency(trials)
+most_common_result = get_most_common_result(trials)
+
 print('Trials: %s' % (trials))
 print('Sorted: %s' % (sorted(trials)))
 print('Average: %s' % (get_average(trials)))
-
-
+print('Most common result: %s' % (most_common_result))
+print('Most common frequency: %s' % (most_common_frequency))
 
 sorted_trials = sorted(trials)
 
@@ -66,18 +70,9 @@ counter = collections.Counter(sorted_trials)
 values = list(counter.values())
 keys = list(counter.keys())
 
-most_common_frequency = get_most_common_frequency(trials)
-most_common_result = get_most_common_result(trials)
-print(most_common_frequency)
-print(most_common_result)
-
-print(math.ceil(most_common_frequency / 5))
-
 y_max = math.ceil(most_common_frequency / 5) * 5
 x_max = max(trials)
 
 plt.plot(keys, values, 'ro')
 plt.axis([0, x_max, 0, y_max])
 plt.show()
-
-
