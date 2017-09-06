@@ -2,6 +2,28 @@
 
 ## Flash Raspbian
 
+These instructions are based on using Mac OSX
+
+```bash
+# install wget if necessary
+brew install wget
+# download and unzip
+wget https://downloads.raspberrypi.org/raspbian_latest
+
+# identify disks
+# Find something like dev/disk2 or dev/disk3 - the size will your card
+diskutil list
+
+# unmount the SD card
+diskutil unmountDisk /dev/disk<# from above>
+# e.g., diskutil unmountDisk /dev/disk2
+
+# copy Rasbian image to card
+sudo dd bs=1m if=PATH/TO/image.img of=/dev/rdisk<# from above> conv=sync
+# example:
+sudo dd bs=1m if=2017-08-16-raspbian-stretch.img of=/dev/rdisk2 conv=sync
+```
+
 ## How to back up and restore a Raspberry Pi SD Card
 
 [(Complete tutorial found on thepihut.com)](https://thepihut.com/blogs/raspberry-pi-tutorials/17789160-backing-up-and-restoring-your-raspberry-pis-sd-card)
