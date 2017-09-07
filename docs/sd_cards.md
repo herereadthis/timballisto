@@ -8,7 +8,7 @@ These instructions are based on using Mac OSX
 # install wget if necessary
 brew install wget
 # download and unzip
-wget https://downloads.raspberrypi.org/raspbian_latest
+wget -S https://downloads.raspberrypi.org/raspbian_latest -O raspbian.zip
 
 # identify disks
 # Find something like dev/disk2 or dev/disk3 - the size will your card
@@ -22,6 +22,7 @@ diskutil unmountDisk /dev/disk<# from above>
 sudo dd bs=1m if=PATH/TO/image.img of=/dev/rdisk<# from above> conv=sync
 # example:
 sudo dd bs=1m if=2017-08-16-raspbian-stretch.img of=/dev/rdisk2 conv=sync
+# press CTRL+T to check status
 ```
 
 ## How to back up and restore a Raspberry Pi SD Card
