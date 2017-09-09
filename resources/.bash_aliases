@@ -1,3 +1,4 @@
+
 PATH=$PATH:/usr/local/bin
 
 # Take a screenshot. Alt+Tab to the window you want after running this command.
@@ -36,6 +37,7 @@ alias gb='git branch'
 alias gs='git status'
 alias gmm='git merge master'
 
+# delete branch
 gbd () {
 	git branch -D $1 $2 $3 $4 $5
 }
