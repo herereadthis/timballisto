@@ -1,5 +1,17 @@
 # Do These Things When You Get a Raspberry Pi
 
+## Quick version
+
+The Lutra repo has a bunch of setup scripts! [Setup Github](https://github.com/herereadthis/lutra/blob/master/docs/github_setup.md) if you haven't already.
+
+```bash
+# Recommended: all repositories should go into a repos directory at home
+mkdir -p ~/repos;cd repos
+git clone git@github.com:herereadthis/lutra.git
+cd lutra/resources
+./rpi_setup.sh                          
+```
+
 ## Set Preferences
 
 * Go to Main Menu > Preferences > Raspberry Pi Configuration
@@ -30,67 +42,67 @@ rm get-pip.py
 ### Highly recommended
 
 ```bash
-# xclip allows you to copy + paste from command line
-sudo apt-get install xclip
-
 # Network Mapper tool for network discovery
-sudo apt-get install nmap
+sudo apt-get install -y nmap
 
-# Command line interface for testing internet bandwidth
-sudo pip install speedtest-cli
+# xclip allows you to copy + paste from command line
+sudo apt-get install -y xclip
 
 # Python linter to check if files are written correctly
-sudo pip install flake8
+sudo pip3 install -U flake8
+
+# Command line interface for testing internet bandwidth
+sudo pip3 install -U speedtest-cli
 
 # Manage virtual environments to isolate Python projects from one another
-sudo pip install virtualenv virtualenvwrapper
+sudo pip3 install -U virtualenv virtualenvwrapper
 
 # All the above, condensed
 sudo apt-get install xclip nmap
-sudo pip install speedtest-cli flake8 twine virtualenv virtualenvwrapper
+sudo pip3 install speedtest-cli flake8 virtualenv virtualenvwrapper
 ```
 
 ### Good to have
 
 ```bash
-# X Windows screensaver application
-# the option will show up under "Preferences" from the Desktop menu.
-sudo apt-get install xscreensaver
+# The Arduino IDE and microcontroller manager
+sudo apt-get install -y arduino
+
+# Libudev provides API to instrospect and enumerate devices
+sudo apt-get install -y libudev-dev
+
+# Matplotlib is a Python 2D plotting library: https://matplotlib.org/
+sudo apt-get install -y python3-matplotlib
 
 # Requests is an elegant and simple HTTP library for Python
 # http://docs.python-requests.org/en/master/
-sudo apt-get install python3-requests
-
-# Matplotlib is a Python 2D plotting library: https://matplotlib.org/
-sudo apt-get install python3-matplotlib
-
-# Libudev provides API to instrospect and enumerate devices
-sudo apt-get install libudev-dev
-
-# Super simple Google Spreadsheets Python API
-sudo pip install gspread
-
-# Utility for interacting with PyPi: Python Package Index
-sudo pip install twine
-
-# Python library for accessing resources protected by OAuth 2.0
-sudo pip install oauth2client
-
-# A packet manipulation program & library, e.g., sniff for stuff on your wifi
-sudo pip install scapy
+sudo apt-get install -y python3-requests
 
 # Thermometer driver using 1-wire communication
-sudo apt-get install python3-w1thermsensor
+sudo apt-get install -y python3-w1thermsensor
+
+# X Windows screensaver application
+# the option will show up under "Preferences" from the Desktop menu.
+sudo apt-get install -y xscreensaver
+
+# Super simple Google Spreadsheets Python API
+sudo pip3 install -U gspread
+
+# Python library for accessing resources protected by OAuth 2.0
+sudo pip3 install -U oauth2client
+
+# A packet manipulation program & library, e.g., sniff for stuff on your wifi
+sudo pip install -U scapy
 
 # SMS communication
-sudo pip install twilio
+sudo pip3 install -U twilio
 
-# The Arduino IDE and microcontroller manager
-sudo apt-get install arduino
+# Utility for interacting with PyPi: Python Package Index
+sudo pip3 install -U twine
 
 # All the above, condensed
-sudo apt-get install xscreensaver python3-requests python3-matplotlib libudev-devs python3-w1thermsensor arduino
-sudo pip install gspread oauth2client twine scapy twilio
+sudo apt-get install arduino libudev-dev python3-matplotlib  python3-requests python3-w1thermsensor xscreensaver
+sudo pip install gspread oauth2client scapy twilio twine
 ```
 
 ## Updating
@@ -116,7 +128,7 @@ sudo easy_install pip
 
 ## Bash Aliases
 
-[Copy the bash script from this repo's resources directory](https://github.com/herereadthis/lutra/blob/master/resources/.bash_aliases)
+(No need to do this if you've run the `rpi_setup.sh` script) [Copy the bash script from this repo's resources directory](https://github.com/herereadthis/lutra/blob/master/resources/.bash_aliases)
 
 ```bash
 cd ~
