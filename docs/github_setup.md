@@ -47,7 +47,7 @@ Remember when cloning a repo, use the `git@github` method
 
 ```bash
 # Recommended: make a repos folder at home to contain all repositories
-mkdir -p ~/repos;cd repos
+mkdir -p ~/repos;cd ~/repos
 
 # this uses the SSH protocol
 git clone git@github.com:herereadthis/lutra.git
