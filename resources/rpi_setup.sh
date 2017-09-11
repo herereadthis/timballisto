@@ -85,7 +85,7 @@ echo -e "${YELLOW}${FINISH}${PKG}.${NC}"
 
 PKG='scapy: packet manipulation'
 echo -e "\n${YELLOW}${BEGIN}${PKG}.${NC}"
-sudo pip3 install -U scapy
+sudo pip3 install -U scapy-python3
 echo -e "${YELLOW}${FINISH}${PKG}.${NC}"
 
 PKG='speedtest-cli: bandwidth testor'
@@ -118,5 +118,7 @@ echo -e "\n${LCYAN}${FINISH}Speedtest.${NC}"
 # copy bash aliases
 echo -e "\n${CYAN}Copying bash aliases.${NC}"
 cat ./.bash_aliases >> ~/.bash_aliases
-exec bash
 echo -e "\n${CYAN}Bash aliases are ready to use.${NC}"
+
+exec bash
+
