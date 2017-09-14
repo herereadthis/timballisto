@@ -10,5 +10,6 @@ BEGIN='Begin installing '
 FINISH='Finished installing '
 
 ./rtlsdr_setup.sh
+./repo_setup.sh
 ./rpi_setup.sh
 
