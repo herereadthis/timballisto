@@ -117,14 +117,14 @@ sudo apt-get upgrade
 
 # upgrade your distribution
 sudo apt-get dist-upgrade
-
-# There is a mismatch between the pip installation and requests
-# When installing stuff, you might get this error:
-# "ImportError: cannot import name IncompleteRead"
-sudo pip install --upgrade requests
-sudo apt-get remove pip
-sudo easy_install pip
 ```
+
+[//]: # # There is a mismatch between the pip installation and requests
+[//]: # # When installing stuff, you might get this error:
+[//]: # # "ImportError: cannot import name IncompleteRead"
+[//]: # sudo pip install --upgrade requests
+[//]: # sudo apt-get remove pip
+[//]: # sudo easy_install pip
 
 ## Bash Aliases
 
@@ -138,7 +138,6 @@ touch .bash_aliases
 # relaunch bash
 exec bash
 ```
-
 
 ## Networking
 
@@ -176,7 +175,11 @@ nmap -sn 192.168.1.0/24
 ```
 
 * Direct connection: Download VNC Viewer onto your computer, and look for the IP address of the Raspberry Pi. Username/password is pi/raspberry as default.
-* Cloud Connection: [Register an account with RealVNC](https://www.realvnc.com/raspberrypi/#sign-up). Then go to VNC Server on Raspberry Pi (top right corner), and sign into VNC Viewer on your other machine.
+* Cloud Connection: 
+  * [Register an account with RealVNC](https://www.realvnc.com/raspberrypi/#sign-up).
+  * Enable VNC server at Menu > Preferences > Raspberry Pi Configuration > Interfaces.
+  * Then go to VNC Server on Raspberry Pi (top right corner) and sign in, 
+  * Go to another computer, [install VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/), and sign in.
 * Virtual Desktop: In RPi terminal run ```vncserver``` and it will generate an IP address. Use that address in VNC viewer. Run ```vncserver -kill :<display-number>``` to kill.
 
 
@@ -239,7 +242,7 @@ hostname -I
 
 # Find the IP address of your router, with the first 3 number sets from above
 # like so: ###.###.#.0/24
-nmap -sn 192.168.1/24
+nmap -sn 192.168.1.1/24
 # My router (same for you if you have Verizon FiOS) is 192.168.1.1
 
 # Find the IP address of your DNS

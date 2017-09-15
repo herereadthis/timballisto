@@ -21,6 +21,16 @@ git clone https://github.com/andreafabrizi/Dropbox-Uploader.git
 # Dropbox-Uploader/
 echo -e "${YELLOW}${FINISH}${PKG}.${NC}"
 
+PKG='anyone: sample PyPi package'
+echo -e "\n${YELLOW}${BEGIN}${PKG}.${NC}"
+git clone https://github.com/herereadthis/anyone.git
+echo -e "${YELLOW}${FINISH}${PKG}.${NC}"
+
+PKG='raspberry-pi-hello-world: sample docker image'
+echo -e "\n${YELLOW}${BEGIN}${PKG}.${NC}"
+git clone https://github.com/herereadthis/raspberry-pi-hello-world.git
+echo -e "${YELLOW}${FINISH}${PKG}.${NC}"
+
 echo -e "\n${LCYAN}Finish cloning packages.${NC}"
 
 
