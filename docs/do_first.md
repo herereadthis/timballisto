@@ -119,11 +119,16 @@ sudo apt-get upgrade
 sudo apt-get dist-upgrade
 ```
 
-[//]: # # There is a mismatch between the pip installation and requests
-[//]: # # When installing stuff, you might get this error:
-[//]: # # "ImportError: cannot import name IncompleteRead"
+[//]: # There is a mismatch between the pip installation and requests
+
+[//]: # When installing stuff, you might get this error:
+
+[//]: # "ImportError: cannot import name IncompleteRead"
+
 [//]: # sudo pip install --upgrade requests
+
 [//]: # sudo apt-get remove pip
+
 [//]: # sudo easy_install pip
 
 ## Bash Aliases
