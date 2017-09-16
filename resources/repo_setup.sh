@@ -1,7 +1,9 @@
 # colors
 RED='\033[0;31m'
 BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
+BCYAN='\033[1;36m' 
 YELLOW='\033[1;33m'
 LCYAN='\033[1;36m'
 NC='\033[m'
@@ -10,10 +12,17 @@ CURRENT_DIR=${PWD}
 BEGIN='Begin installing '
 FINISH='Finished installing '
 
-echo -e "\n\n${CYAN}Welcome to Lutra.${NC}"
-echo -e "${CYAN}Github Repositories setup by @herereadthis.${NC}\n\n"
+echo -e "\n\n${BCYAN}Welcome to Lutra.${NC}"
+echo -e "${BCYAN}Github Repositories setup by @herereadthis.${NC}\n"
 
 echo -e "\n${LCYAN}Begin cloning packages.${NC}"
+
+echo -e "\n${PURPLE}Current working directory: ${PWD}${NC}"
+
+mkdir -p ~/repos
+cd ~/repos
+
+echo -e "\n${PURPLE}Repos directory: ${PWD}${NC}"
 
 PKG='Dropbox uploader'
 echo -e "\n${YELLOW}${BEGIN}${PKG}.${NC}"
@@ -33,6 +42,6 @@ echo -e "${YELLOW}${FINISH}${PKG}.${NC}"
 
 echo -e "\n${LCYAN}Finish cloning packages.${NC}"
 
+cd $CURRENT_DIR
 
-mkdir -p ~/repos;
-cd ~/repos
+echo -e "\n${PURPLE}Back to previous directory: ${PWD}${NC}"
