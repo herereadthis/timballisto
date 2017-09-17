@@ -119,18 +119,6 @@ sudo apt-get upgrade
 sudo apt-get dist-upgrade
 ```
 
-[//]: # There is a mismatch between the pip installation and requests
-
-[//]: # When installing stuff, you might get this error:
-
-[//]: # "ImportError: cannot import name IncompleteRead"
-
-[//]: # sudo pip install --upgrade requests
-
-[//]: # sudo apt-get remove pip
-
-[//]: # sudo easy_install pip
-
 ## Bash Aliases
 
 (No need to do this if you've run the `rpi_setup.sh` script) [Copy the bash script from this repo's resources directory](https://github.com/herereadthis/lutra/blob/master/resources/.bash_aliases)
