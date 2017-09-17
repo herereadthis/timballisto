@@ -110,6 +110,11 @@ echo -e "${YELLOW}${FINISH}${PKG}.${NC}"
 
 echo -e "\n${LCYAN}${FINISH}Speedtest.${NC}"
 
+
+echo -e "\n${CYAN}Copying kernal modules for booting.${NC}"
+cp ./modules /etc/modules
+echo -e "\n${CYAN}Kernal modules for booting are ready to use.${NC}"
+
 # copy bash aliases
 echo -e "\n${CYAN}Copying bash aliases.${NC}"
 cat ./.bash_aliases >> ~/.bash_aliases

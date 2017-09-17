@@ -9,7 +9,18 @@ The Lutra repo has a bunch of setup scripts! [Setup Github](https://github.com/h
 mkdir -p ~/repos;cd repos
 git clone git@github.com:herereadthis/lutra.git
 cd lutra/resources
-./rpi_setup.sh                          
+./complete_install.sh
+
+# instead of complete install, you can pick and choose
+
+# recommended start from scratch
+./rpi_setup.sh
+
+# setup RTL-SDR
+./rtlsdr_setup.sh
+
+# install recommended Git Repos
+./repo_setup.sh                        
 ```
 
 ## Set Preferences
@@ -22,6 +33,16 @@ cd lutra/resources
 # The default user on a Rapberry Pi is pi, password: raspberry
 # Change the sudoer password
 passwd
+```
+
+### Enable Kernal Modules at boot
+
+```bash
+
+# If you want to load kernal drivers at boot run complete_instal or rpi_setup
+# otherwise,
+cd lutra/resources
+cp ./modules /etc/modules
 ```
 
 ## Install these
