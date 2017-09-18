@@ -45,6 +45,12 @@ cd lutra/resources
 cp ./modules /etc/modules
 ```
 
+### Interfaces
+
+* Go to Menu > Preferences > Raspberry Pi Configuration > Interfaces.
+* Enable Camera, SSH, VNC, SPI, I<sup>2</sup>C, Serial, and 1-Wire.
+
+
 ## Install these
 
 ### Pip is messed up
