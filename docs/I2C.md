@@ -5,6 +5,8 @@
 
 ## Installations
 
+If you run `lutra/resources/rpi_setup.sh`, you should be all set for installationsm.
+
 ```bash
 #  I2C tools for Linux: a bus probing tool, a chip dumper, register-level access helpers, EEPROM decoding scripts, and more.
 # https://packages.debian.org/jessie/i2c-tools

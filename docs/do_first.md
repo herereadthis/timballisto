@@ -75,6 +75,9 @@ sudo apt-get install -y nmap
 # xclip allows you to copy + paste from command line
 sudo apt-get install -y xclip
 
+# I2C programming library development files
+sudo apt-get install libi2c-dev
+
 # Python linter to check if files are written correctly
 sudo pip3 install -U flake8
 
@@ -85,7 +88,7 @@ sudo pip3 install -U speedtest-cli
 sudo pip3 install -U virtualenv virtualenvwrapper
 
 # All the above, condensed
-sudo apt-get install xclip nmap
+sudo apt-get install xclip nmap libi2c-dev
 sudo pip3 install speedtest-cli flake8 virtualenv virtualenvwrapper
 ```
 
