@@ -13,11 +13,17 @@ led = LED(17)
 # from the button, attach a lead back to ground (GND) pin
 button = Button(2)
 
-# method that waits for you click press the button
-# note that you can only do this once
-# after you press the button, nothing will happen again.
-button.wait_for_press()
-print('you pushed me')
-led.on()
-sleep(3)
-led.off()
+
+def main():
+    """Demo the Button class."""
+    # method that waits for you click press the button
+    # note that you can only do this once
+    # after you press the button, nothing will happen again.
+    button.wait_for_press()
+    print('you pushed me')
+    led.on()
+    sleep(3)
+    led.off()
+
+if __name__ == '__main__':
+    main()

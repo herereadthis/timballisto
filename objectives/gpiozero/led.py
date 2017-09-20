@@ -11,11 +11,21 @@ from time import sleep
 # from the 330 ohm resistor to an LED, then back to ground (GND) pin
 led = LED(17)
 
-for num in range(0, 20, 1):
-    # on() turns the LED on
-    led.on()
-    # sleep is do nothing for # seconds
-    sleep(0.2)
-    # off() turns the LED off
-    led.off()
-    sleep(0.2)
+# Polarity:
+# Anode (positive) - long side with rounded edge
+# Cathode (negative) - short side with flat edge
+
+
+def main():
+    """Demo the LED class."""
+    for num in range(0, 20, 1):
+        # on() turns the LED on
+        led.on()
+        # sleep is do nothing for # seconds
+        sleep(0.2)
+        # off() turns the LED off
+        led.off()
+        sleep(0.2)
+
+if __name__ == '__main__':
+    main()
