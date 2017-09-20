@@ -18,6 +18,8 @@ led = LED(17)
 
 def main():
     """Demo the LED class."""
+    print('gpiozero demo: LED class')
+    print('Press CTRL+C to quit')
     try:
         while True:
             # on() turns the LED on
@@ -29,7 +31,9 @@ def main():
             sleep(0.2)
 
     except KeyboardInterrupt:
+        print('Demo over.')
         pass
+
 
 if __name__ == '__main__':
     main()
