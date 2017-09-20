@@ -18,14 +18,18 @@ led = LED(17)
 
 def main():
     """Demo the LED class."""
-    for num in range(0, 20, 1):
-        # on() turns the LED on
-        led.on()
-        # sleep is do nothing for # seconds
-        sleep(0.2)
-        # off() turns the LED off
-        led.off()
-        sleep(0.2)
+    try:
+        while True:
+            # on() turns the LED on
+            led.on()
+            # sleep is do nothing for # seconds
+            sleep(0.2)
+            # off() turns the LED off
+            led.off()
+            sleep(0.2)
+
+    except KeyboardInterrupt:
+        pass
 
 if __name__ == '__main__':
     main()
