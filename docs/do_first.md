@@ -153,7 +153,7 @@ sudo apt-get dist-upgrade
 
 ### Pip
 
-To manage your own Python packages, you must install Twine and create a `.pyirc` file for authentication. A sample file is available in [lutra/resources](https://github.com/herereadthis/lutra/blob/master/resources/.pypirc).
+To manage your own Python packages, you must install Twine and create a `.pypirc` file for authentication. A sample file is available in [lutra/resources](https://github.com/herereadthis/lutra/blob/master/resources/.pypirc).
 
 ```bash
 cd ~
@@ -168,6 +168,9 @@ index-servers=
 [pypi]
 username = myusername
 password = mypassword
+
+# lock down the pypirc file
+chmod 600 ~/.pypirc
 ```
 
 ## Bash Aliases

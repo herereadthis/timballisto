@@ -19,6 +19,10 @@ echo -e "\n${CYAN}Copying kernal modules for booting.${NC}"
 sudo cp ./modules /etc/modules
 echo -e "\n${CYAN}Kernal modules for booting are ready to use.${NC}"
 
+echo -e "\n${CYAN}Copying .pypirc.${NC}"
+cat ./.pypirc >> ~/.pypirc
+echo -e "\n${CYAN}Remember to update with your credentials!${NC}"
+
 # copy bash aliases
 echo -e "\n${CYAN}Copying bash aliases.${NC}"
 cat ./.bash_aliases >> ~/.bash_aliases
