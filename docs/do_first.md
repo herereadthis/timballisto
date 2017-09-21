@@ -55,7 +55,7 @@ cp ./modules /etc/modules
 
 ### Pip is messed up
 
-Currently, Rasbian Jessie comes with two versions of Python, `2.7` and `3.4`. When you run `pip install <packagename>`, it will default all installations to `/usr/local/lib/python2.7/dist-packages`. We don't want this because you're going to get `ImportError: No module named 'packagename'` for just about anything you install. By properly installing Pip, all future installs will instead go to `3.4`. I suppose you can mess with `PATH` or always specify `python3.4 -m pip install <packagename>` but that gets old.
+Currently, Rasbian Stretch comes with two versions of Python, `2.7` and `3.5`. When you run `pip install <packagename>`, it will default all installations to `/usr/local/lib/python2.7/dist-packages`. We don't want this because you're going to get `ImportError: No module named 'packagename'` for just about anything you install. By properly installing Pip, all future installs will instead go to `3.4`. I suppose you can mess with `PATH` or always specify `python3.4 -m pip install <packagename>` but that gets old.
 
 ```bash
 # This solved a lot of problems for me. 
@@ -147,6 +147,27 @@ sudo apt-get upgrade
 
 # upgrade your distribution
 sudo apt-get dist-upgrade
+```
+
+## Coding
+
+### Pip
+
+To manage your own Python packages, you must install Twine and create a `.pyirc` file for authentication. A sample file is available in [lutra/resources](https://github.com/herereadthis/lutra/blob/master/resources/.pypirc).
+
+```bash
+cd ~
+touch .pypirc
+
+# copy + paste the following:
+# change your username and password to pyp credentials
+[distutils]
+index-servers=
+    pypi
+
+[pypi]
+username = myusername
+password = mypassword
 ```
 
 ## Bash Aliases
