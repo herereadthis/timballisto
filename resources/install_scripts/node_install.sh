@@ -14,7 +14,7 @@ echo -e "${B_YELLOW}Finish downloading Node v6.11.3.${NC}"
 echo -e "\n${B_YELLOW}Begin extracting Node.${NC}"
 tar xf node-v6.11.3-linux-armv7l.tar.xz
 NV=$(node-v6.11.3-linux-armv7l/bin/node -v)
-echo -e "\n${GREEN}Downloaded Node version is: ${NV}.${NC}"
+echo -e "${GREEN}Downloaded Node version is: ${NV}.${NC}"
 echo -e "${B_YELLOW}Finish extracting Node.${NC}"
 
 echo -e "\n${B_YELLOW}Begin copying Node to system.${NC}"
@@ -28,8 +28,8 @@ rm -rf node-v6*
 export PATH=$PATH:/usr/local/bin
 N_V=$(node -v)
 NPM_V=$(node -v)
-echo -e "\n${GREEN}Node version is: ${N_V}.${NC}"
-echo -e "\n${GREEN}NPM version is: ${NPM_V}.${NC}"
+echo -e "${GREEN}Node version is: ${N_V}.${NC}"
+echo -e "${GREEN}NPM version is: ${NPM_V}.${NC}"
 echo -e "${B_YELLOW}Finish cleanup.${NC}"
 
 echo -e "\n${B_CYAN}${FINISH}NodeJS.${NC}"

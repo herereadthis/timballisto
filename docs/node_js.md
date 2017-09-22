@@ -11,6 +11,13 @@ cat /proc/cpuinfo
 
 Latest version is available at [nodejs.org/en/download](https://nodejs.org/en/download/). Under the section "Linux Binaries (ARM)", get the version for `ARMv7`.
 
+All of the following is part of the [node_install.sh](https://github.com/herereadthis/lutra/blob/master/resources/install_scripts/node_install.sh) script.
+
+```bash
+cd lutra/resources
+./node_install.sh
+```
+
 ```bash
 # Latest version as of 2017-09-21 is 6.11.3 - download
 cd ~
