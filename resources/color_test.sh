@@ -1,4 +1,4 @@
-source ./bash_colors.sh
+source ./install_scripts/bash_colors.sh
 
 echo -e "\n${NC}Begin Terminal Colors Test!\n"
 

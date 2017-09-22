@@ -81,6 +81,9 @@ man
 
 # example: the manual for the date command
 man date
+
+# What stuff have I installed?
+apt list --installed
 ```
 
 ## Moving Around

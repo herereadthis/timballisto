@@ -12,18 +12,18 @@ cat /proc/cpuinfo
 Latest version is available at [nodejs.org/en/download](https://nodejs.org/en/download/). Under the section "Linux Binaries (ARM)", get the version for `ARMv7`.
 
 ```bash
-# Latest version as of 2017-07-01 is 6.11.0 - download
+# Latest version as of 2017-09-21 is 6.11.3 - download
 cd ~
-wget https://nodejs.org/dist/v6.11.0/node-v6.11.0-linux-armv7l.tar.gz
+wget https://nodejs.org/dist/v6.11.3/node-v6.11.3-linux-armv7l.tar.xz
 
-# Open the download
-tar -xzf node-v6.11.0-linux-armv7l.tar.gz
+# Extract the download
+tar xf node-v6.11.3-linux-armv7l.tar.xz
 
 # Confirm the download
-node-v6.11.0-linux-armv7l/bin/node -v
+node-v6.11.3-linux-armv7l/bin/node -v
 
 # Copy the download to /ur/local
-cd node-v6.11.0-linux-armv7l/
+cd node-v6.11.3-linux-armv7l/
 sudo cp -R * /usr/local/
 
 # Clean up

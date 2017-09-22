@@ -1,5 +1,5 @@
 # colors
-source ./bash_colors.sh
+source ./install_scripts/bash_colors.sh
 
 echo -e "\n\n${CYAN}Welcome to Lutra.${NC}"
 echo -e "${CYAN}Raspberry Pi setup by @herereadthis.${NC}\n\n"
@@ -10,10 +10,10 @@ sudo apt-get -y upgrade
 echo -e "${B_CYAN}Raspian is up-to-date!.${NC}"
 
 # install packages using apt-get install
-./package_install.sh
+./install_scripts/package_install.sh
 
 # install packages using pip install
-./pip_packages.sh
+./install_scripts/pip_packages.sh
 
 echo -e "\n${CYAN}Copying kernal modules for booting.${NC}"
 sudo cp ./modules /etc/modules
