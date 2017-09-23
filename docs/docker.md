@@ -18,6 +18,13 @@
 
 ### Installation
 
+All of the following is part of the [docker_install.sh](https://github.com/herereadthis/lutra/blob/master/resources/install_scripts/docker_install.sh) script.
+
+```bash
+cd lutra/resources
+./docker_install.sh
+```
+
 ```bash
 # this will copy relevant Docker binaries into /usr/bin/
 curl -sSL get.docker.com | sh
@@ -25,7 +32,7 @@ curl -sSL get.docker.com | sh
 # Set Docker to auto-start
 sudo systemctl enable docker
 
-# Or start the Docker daeon with
+# Or start the Docker daemon with
 sudo systemctl start docker
 
 # Enable Docker client to be used by root user

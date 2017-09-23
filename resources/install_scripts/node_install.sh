@@ -4,7 +4,6 @@ CURRENT_DIR=${PWD}
 BEGIN='Begin installing '
 FINISH='Finished installing '
 
-# These are packages that are installed using sudo apt-get
 echo -e "\n${B_CYAN}${BEGIN} NodeJS.${NC}"
 
 echo -e "\n${B_YELLOW}Begin downloading Node v6.11.3.${NC}"
