@@ -23,6 +23,8 @@ echo -e "${B_YELLOW}${FINISH}${PKG} client.${NC}"
 echo -e "\n${B_YELLOW}Begin cleanup.${NC}"
 echo -e "${GREEN}Set Docker to auto-start.${NC}"
 sudo systemctl enable docker
+echo -e "${GREEN}Start the Docker daemon.${NC}"
+sudo systemctl start docker
 echo -e "${GREEN}Enable Docker client to be used by root user.${NC}"
 sudo usermod -aG docker pi
 echo -e "${GREEN}Confirm everything is working.${NC}"
