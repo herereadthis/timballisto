@@ -9,6 +9,9 @@
   * `Vcc`, which connects to `5V`
   * `Out`, which connects to a `GPIO` pin
   * `GND`, which connects to `GND`
+
+* Position the sensor so the bulb is facing you, and the the potentiometers are on top.
+  * The left controls <strong>sensitivity</strong>, turning clockwise increases sensing distance to 7 meters, fully counterclockwise decreases to 3 meters.
+  * The left controls <strong>delay</strong> or timeout, turning fully counter-clockwise means it's on for 5 seconds when it detects motion. Turning it fully clockwise turns it on for 3000 seconds.
 * When looking at the side with all the guts, you will see two potentiometers
   * The left controls timeout, turning fully counter-clockwise means it's on for 5 seconds when it detects motion. Turning it fully clockwise turns it on for 3000 seconds.
-  * The right controls sensitivity, turning clockwise increases sensing distance to 7 meters, fully counterclockwise decreases to 3 meters.
