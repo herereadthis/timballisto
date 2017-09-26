@@ -21,11 +21,11 @@ def main():
     print('gpiozero demo: PWMLED class')
     num_pulses = 5
     num_blinks = 5
-    print('Pulse %s times' & (num_pulses))
+    print('Pulse %s times' % (num_pulses))
     led.pulse(fade_in_time=2, fade_out_time=2, n=num_pulses, background=False)
     print('End pulsing.')
     sleep(2)
-    print('Blink %s times' & (num_pulses))
+    print('Blink %s times' % (num_pulses))
     led.blink(
         on_time=1.5,
         off_time=1.5,
