@@ -16,7 +16,7 @@ sudo wget http://repo.mosquitto.org/debian/mosquitto-jessie.list
 echo -e "${B_YELLOW}Finish getting latest version of broker.${NC}"
 
 echo -e "\n${B_YELLOW}Begin installing MQTT broker.${NC}"
-sudo apt-get install mosquitto
+sudo apt-get install -y mosquitto
 cd $CURRENT_DIR
 echo -e "${B_YELLOW}Finish installing MQTT broker.${NC}"
 
