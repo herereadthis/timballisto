@@ -6,3 +6,6 @@ Without getting into too much detail, this question is a variation of the coupon
 
 Run a simulation to see if the average number from X trials will match 236.
 
+```bash
+python3 demo.py
+```
