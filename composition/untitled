@@ -1,0 +1,29 @@
+# Composition Over Inheritance
+
+
+## Inheritance Pattern
+
+```python
+class Door:
+    def __init__(self, number, status):
+        self.number = number
+        self.status = status
+
+    def open(self):
+        self.status = 'open'
+
+    def close(self):
+        self.status = 'closed'
+
+
+class SecurityDoor(Door):
+    colour = 'gray'
+    locked = True
+
+    def open(self):
+        if self.locked:
+            return
+        Door.open(self)
+```
+
+This is too tightly coupled. Bad news!
