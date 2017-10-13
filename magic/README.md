@@ -48,6 +48,8 @@ dir(type)
 
 * `object.__class--` returns the object's class
 
+* `object.__dict__` returns list of the object's attributes
+
 
 ```python
 import sys
