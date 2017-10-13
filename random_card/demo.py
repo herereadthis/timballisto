@@ -4,6 +4,7 @@ from random_card import CardSimulator
 
 if __name__ == '__main__':
     card_simulation = CardSimulator()
+    print(card_simulation.__class__)
     sim_iterations = card_simulation.iterations
     sim_input = 'How many simulations [%s]?' % (sim_iterations)
     iterations = input(sim_input) or sim_iterations
