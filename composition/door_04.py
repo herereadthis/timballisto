@@ -32,19 +32,27 @@ class SecurityDoor(Door):
     def open(self):
         """Open door."""
         # This will override Door.open()
-        # It is blocking implicit delegation
-        if not self.locked:
-            self.status = 'open'
+        if self.locked:
+            return
+        # explicitly call parent method. This is bad news. Too much coupling!
+        # If you change the parent class of SecurityDoor, you have to edit or
+        # propogate the change dow to everything else
+        # Also, you don't really know what is open() - is it Door.open(), or
+        # open of Door's parent class?
+        Door.open(self)
 
 
-door1 = Door(1, 'closed')
-door2 = SecurityDoor(2, 'closed')
+sdoor = SecurityDoor(1, 'closed')
 
-print(door1.__dict__)
-# >>> {'number': 1, 'status': 'closed'}
-print(door2.__dict__)
-# >>> {'number': 2, 'status': 'closed'}
-print(id(door1.color) == id(Door.color))
-# >>> True
-print(id(door2.color) == id(SecurityDoor.color))
-# >>> True
+print(sdoor.status)
+# >>> closed
+
+sdoor.open()
+print(sdoor.status)
+# >>> closed
+
+sdoor.locked = False
+
+sdoor.open()
+print(sdoor.status)
+# >>> open

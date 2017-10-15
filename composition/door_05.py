@@ -32,19 +32,24 @@ class SecurityDoor(Door):
     def open(self):
         """Open door."""
         # This will override Door.open()
-        # It is blocking implicit delegation
-        if not self.locked:
-            self.status = 'open'
+        if self.locked:
+            return
+        # super() lets you avoid referring to the base class explicitly
+        # it is a representation which acts like the parent
+        super().open()
 
 
-door1 = Door(1, 'closed')
-door2 = SecurityDoor(2, 'closed')
+sdoor = SecurityDoor(1, 'closed')
 
-print(door1.__dict__)
-# >>> {'number': 1, 'status': 'closed'}
-print(door2.__dict__)
-# >>> {'number': 2, 'status': 'closed'}
-print(id(door1.color) == id(Door.color))
-# >>> True
-print(id(door2.color) == id(SecurityDoor.color))
-# >>> True
+print(sdoor.status)
+# >>> closed
+
+sdoor.open()
+print(sdoor.status)
+# >>> closed
+
+sdoor.locked = False
+
+sdoor.open()
+print(sdoor.status)
+# >>> open
