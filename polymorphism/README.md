@@ -12,3 +12,18 @@ Variables are just pointers, they tell where in memory a variable has been store
 
 * Python is *stongly typed* because everything has a well-defined type. Check with `type\()` function.
 * Python is *dynamic* since the type of a variable is not explicitly declared. It changes with the content.
+
+## EAFP
+
+"easier to ask for forgiveness than permission"
+
+Instead of checking if an object has a certain attribute or method before using it, just assume it works, and manage errors
+
+```python
+try:
+    someobj.open()
+    [...]
+except AttributeError:
+    [...]
+```
+

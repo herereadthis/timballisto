@@ -59,3 +59,25 @@ class BooleanDoor:
     def is_open(self):
         """Tell whether the door is open."""
         return self.status
+
+
+door = Door()
+bool_door = BooleanDoor()
+room = Room(door)
+bool_room = Room(bool_door)
+
+room.open()
+print(room.is_open())
+# >>> True
+room.close()
+print(room.is_open())
+# >>> False
+
+bool_room.open()
+print(bool_room.is_open())
+# >>> True
+bool_room.close()
+print(bool_room.is_open())
+# >>> False
+
+
