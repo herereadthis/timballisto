@@ -21,3 +21,27 @@ print(object.__class__)
 print(type.__class__)
 # >>> <class 'type'>
 ```
+
+In most languages, a class is something that describes how to produce an object. In Python, classes are objects too. This means that with a class you can
+
+* assign it to a variable
+* copy it, 
+* add attributes to it
+* pass it as a function parameter
+
+```python
+class MyClass():
+    pass
+
+
+print(MyClass)
+# >>> <class '__main__.MyClass'>
+```
+
+Type is what is used to create a class
+
+```
+type(name of the class, 
+     tuple of the parent class (for inheritance, can be empty), 
+     dictionary containing attributes names and values)
+```

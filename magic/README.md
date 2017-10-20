@@ -46,7 +46,7 @@ dir(type)
  ]
  ```
 
-* `object.__bases__` returns the object's base classes, in order of occurance
+* `class.__bases__` returns the object's base classes, in order of occurance
 * `object.__class__` returns the object's class
 * `object.__dict__` returns list of the object's attributes
 
