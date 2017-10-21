@@ -14,6 +14,7 @@ class MyClass:
 
     pass
 
+
 print(MyClass)
 # >>> <class '__main__.MyClass'>
 

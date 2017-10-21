@@ -48,7 +48,7 @@ type(name of the class,
 
 ```python
 MyManualClass = type('MyManualClass', (), {})
-
+```
 
 **Metaclasses are the stuff that creates classes.**
 

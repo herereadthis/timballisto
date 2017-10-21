@@ -75,3 +75,7 @@ dir(type(sys))
 ]
 ```
 
+* `def __new__():` is the method called before `__init__` It's rarely used for classes, unless you want to control how the object is created.
+* `def __init__():` initializes an object
+* `def __call__():` called whenever we instance the class
+

@@ -79,5 +79,3 @@ print(bool_room.is_open())
 bool_room.close()
 print(bool_room.is_open())
 # >>> False
-
-

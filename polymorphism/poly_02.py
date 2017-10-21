@@ -15,6 +15,7 @@ def echo(a):
     # rely on the variable itself to provide the correct methods
     return a
 
+
 # polymorphism: echo() can handle different types
 print(echo(5))
 # >>> 5

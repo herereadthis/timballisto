@@ -31,6 +31,7 @@ class MyClass:
 
     pass
 
+
 print('\nyou can print a class')
 print(MyClass)
 # >>> <class '__main__.MyClass'>
@@ -39,6 +40,7 @@ print(MyClass)
 def echo(the_object):
     """Print the object."""
     print(the_object)
+
 
 print('\nYou can pass a class as a function parameter')
 echo(MyClass)
