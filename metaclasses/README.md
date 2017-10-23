@@ -103,3 +103,19 @@ print(MyClass.__class__)
 print(my_class.__class__.__class__)
 # >>> <class 'type'>
 ```
+
+## __metaclass__
+
+When writing a class, you can add `__metaclass__`
+
+```python
+class MyClass(object):
+    __metaclass__ = something
+```
+
+* If `__metaclass__` exists, then Python will use that to create the class.
+* Else it will create the class using `__metaclass__` of the module if it exists
+* Else it will create the class using the parent class, and so on, until it reaches `type` metaclass
+
+The main purpose of metaclasses is to change the class when it's created. You almost never need it,
+unless you are creating APIs.
