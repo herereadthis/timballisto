@@ -75,7 +75,8 @@ dir(type(sys))
 ]
 ```
 
-* `def __new__():` is the method called before `__init__` It's rarely used for classes, unless you want to control how the object is created.
-* `def __init__():` initializes an object
+* `def __new__():` is the method called before `__init__` It's rarely used for classes, unless you want to control how the object is created, perforn actions needed when creating an instance.
+* `def __init__():` initializes an object - this is the constructor.
+* `def __del__():` the destructor - rarely used called when object is destroyed.
 * `def __call__():` called whenever we instance the class
 
