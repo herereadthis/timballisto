@@ -83,4 +83,18 @@ print(isinstance(my_list, list))
 
 ### What is the best way to test that an object exposes a given interface?
 
-* Give the object an attribute that has the list of interfaces it promises to implement. Any time we want to test the behavior of an object, just check the contents of that attribute
+* Give the object an attribute that has the list of interfaces it promises to implement. Any time we want to test the behavior of an object, just check the contents of that attribute.
+* So inject the "behavior promise" into classes and instances
+* Remember metaclasses are the classes that build Classes, so they should be used to change the structure of a class, and therefore, its instances
+
+`ABCMeta` metaclass gives two meta classes
+
+```python
+def __instancecheck__(cls, inst):
+   [...]
+
+def __subclasscheck__(cls, sub):
+   [...]
+```
+
+
