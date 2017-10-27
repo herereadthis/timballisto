@@ -13,10 +13,6 @@ class MyClass:
     def foo(self, x):
         print('execute foo(%s%s) method' % (self, x))
 
-    @classmethod
-    def class_foo(cls, x):
-        print('execute foo(%s%s) method' % (cls, x))
-
     @staticmethod
     def static_foo(x):
         print('execute foo(%s) method' % (x))
@@ -25,5 +21,6 @@ class MyClass:
 my_object = MyClass()
 
 my_object.foo('x')
-my_object.class_foo('x')
+# >>> execute foo(<__main__.MyClass object at 0x10f0dc6a0>x) method
 my_object.static_foo('x')
+# >>> execute foo(x) method
