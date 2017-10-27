@@ -48,38 +48,45 @@ class CardSimulator:
             deck = []
             k += 1
 
-    def get_counter(self):
+    @property
+    def counter(self):
         """Use collections."""
         counter = collections.Counter(self.trials)
         return counter
 
-    def get_average(self):
+    @property
+    def average(self):
         """Return the average result."""
         return mean(self.trials)
 
-    def get_median(self):
+    @property
+    def median(self):
         """Return the median result."""
         return median(self.trials)
 
-    def get_min(self):
+    @property
+    def minimum(self):
         """Return the lowest result."""
         return min(self.trials)
 
-    def get_max(self):
+    @property
+    def maximum(self):
         """Return the highest result."""
         return max(self.trials)
 
-    def get_most_common_frequency(self):
+    @property
+    def most_common_frequency(self):
         """Get the frequency of most commonly occuring result."""
-        counter = self.get_counter()
+        counter = self.counter
         common = list(counter.most_common(1))
         most_common = list(dict(common).values())[0]
 
         return most_common
 
-    def get_most_common_result(self):
+    @property
+    def most_common_result(self):
         """Get the most commonly occuring result."""
-        counter = self.get_counter()
+        counter = self.counter
         common = list(counter.most_common(1))
         most_common = list(dict(common).keys())[0]
 
@@ -87,32 +94,28 @@ class CardSimulator:
 
     def print_stats(self):
         """Display some useful stats."""
-        num_trials = len(self.trials)
-        average = self.get_average()
-        median = self.get_median()
-        mode = self.get_most_common_result()
-        mode_frequency = self.get_most_common_frequency()
+        mode_frequency = self.most_common_frequency
 
         print('\n')
-        print('Results for %s trial(s):' % (num_trials))
-        print('Average: %s' % (average))
-        print('Median: %s' % (median))
-        print('Shortest simulation: %s draws' % (self.get_min()))
-        print('Longest simulation: %s draws' % (self.get_max()))
-        print('Most common result (mode): %s' % (mode))
+        print('Results for %s trial(s):' % (len(self.trials)))
+        print('Average: %s' % (self.average))
+        print('Median: %s' % (self.median))
+        print('Shortest simulation: %s draws' % (self.minimum))
+        print('Longest simulation: %s draws' % (self.maximum))
+        print('Most common result (mode): %s' % (self.most_common_result))
         print('Frequency of most common result: %s' % (mode_frequency))
         print('\n')
 
     def render_graph(self):
         """Display a graph of the trials."""
         self.sort_trials()
-        counter = self.get_counter()
+        counter = self.counter
 
         values = list(counter.values())
         keys = list(counter.keys())
 
-        y_max = math.ceil((1.05 * self.get_most_common_frequency()) / 10) * 10
-        x_max = math.ceil((1.05 * self.get_max()) / 10) * 10
+        y_max = math.ceil((1.05 * self.most_common_frequency) / 10) * 10
+        x_max = math.ceil((1.05 * self.maximum) / 10) * 10
 
         plt.plot(keys, values, 'ro')
         plt.axis([0, x_max, 0, y_max])
