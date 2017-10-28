@@ -7,14 +7,20 @@ from classmethod import MyClass as ClassmethodClass
 class TestStringMethods(unittest.TestCase):
     """Test decorators."""
 
+    def setUp(self):
+        """Setup."""
+        self.class_instance = ClassmethodClass()
+
+    def tearDown(self):
+        """Tear down."""
+
     def test_classmethod(self):
         """Test classmethod."""
-        my_instance = ClassmethodClass()
-        my_instance.foo('blueberry')
-        self.assertEqual(my_instance.vegetable, 'blueberry')
+        self.class_instance.foo('radish')
+        self.assertEqual(self.class_instance.vegetable, 'radish')
 
-        my_instance.class_foo('orange')
-        self.assertEqual(my_instance.fruit, ClassmethodClass.fruit)
+        self.class_instance.class_foo('orange')
+        self.assertEqual(self.class_instance.fruit, ClassmethodClass.fruit)
 
     # def test_upper(self):
     #     self.assertEqual('foo'.upper(), 'FOO')
