@@ -20,9 +20,16 @@ class TestStringMethods(unittest.TestCase):
 
     def test_create_instance(self):
         """New objects are instances of class."""
+        # new objects are instances of ClassmethodClass
         self.assertIsInstance(self.first_instance, ClassmethodClass)
         self.assertIsInstance(self.second_instance, ClassmethodClass)
+        # new objects have fruit property that are the same
         self.assertEqual(self.first_instance.fruit, self.second_instance.fruit)
+        # new objects have fruit property that are the same as class
+        self.assertEqual(self.first_instance.fruit, ClassmethodClass.fruit)
+        self.assertEqual(
+            self.first_instance.vegetable, self.second_instance.vegetable
+        )
 
     def test_instance_method(self):
         """Instance method only affects instance."""
@@ -30,6 +37,9 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(self.first_instance.vegetable, 'radish')
         self.second_instance.foo('spinach')
         self.assertEqual(self.second_instance.vegetable, 'spinach')
+        self.assertNotEqual(
+            self.first_instance.vegetable, self.second_instance.vegetable
+        )
 
     def test_class_method_from_instance(self):
         """Calling classmethod from instance affects all instances."""

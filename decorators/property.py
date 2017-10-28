@@ -20,21 +20,23 @@ class MyClass:
         return self.my_class_var
 
 
-my_object = MyClass('hello world')
+if __name__ == '__main__':
+    my_object = MyClass('hello world')
 
-print(my_object.get_function())
-# >>> hello world
+    print(my_object.get_function())
+    # >>> hello world
 
-print(my_object.get_function)
-# >>> <bound method myClass.get_function of <__main__.myClass object at ###>>
+    print(my_object.get_function)
+    # >>> <bound method myClass.get_function of
+    # >>> <__main__.myClass object at ###>>
 
+    print(my_object.get_function.__class__)
+    print(my_object.get_function.__class__.__name__)
+    # >>> <class 'method'>
 
-print(my_object.get_function.__class__)
-# >>> <class 'method'>
+    # notice how this is not a function
+    print(my_object.get_property)
+    # >>> hello world
 
-# notice how this is not a function
-print(my_object.get_property)
-# >>> hello world
-
-print(my_object.get_property.__class__)
-# >>> <class 'str'>
+    print(my_object.get_property.__class__)
+    # >>> <class 'str'>

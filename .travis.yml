@@ -15,6 +15,7 @@ python:
 
 # command to install dependencies
 install:
+  - sudo apt-get install python3-pip
   - sudo pip3 install flake8
 
 # command to run tests
