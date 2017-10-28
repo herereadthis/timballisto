@@ -19,42 +19,29 @@ class TestStringMethods(unittest.TestCase):
         """Tear down."""
 
     def test_create_instance(self):
-        """Test classmethod."""
+        """New objects are instances of class."""
         self.assertIsInstance(self.first_instance, ClassmethodClass)
         self.assertIsInstance(self.second_instance, ClassmethodClass)
+        self.assertEqual(self.first_instance.fruit, self.second_instance.fruit)
 
     def test_instance_method(self):
-        """Test classmethod."""
+        """Instance method only affects instance."""
         self.first_instance.foo('radish')
         self.assertEqual(self.first_instance.vegetable, 'radish')
         self.second_instance.foo('spinach')
         self.assertEqual(self.second_instance.vegetable, 'spinach')
 
     def test_class_method_from_instance(self):
-        """Test classmethod."""
+        """Calling classmethod from instance affects all instances."""
         self.first_instance.class_foo('orange')
         self.assertEqual(self.first_instance.fruit, ClassmethodClass.fruit)
         self.assertEqual(self.second_instance.fruit, ClassmethodClass.fruit)
 
     def test_class_method_from_class(self):
-        """Test classmethod."""
+        """Calling classmethod from class affects all instances."""
         ClassmethodClass.class_foo('pear')
         self.assertEqual(self.first_instance.fruit, ClassmethodClass.fruit)
         self.assertEqual(self.second_instance.fruit, ClassmethodClass.fruit)
-
-    # def test_upper(self):
-    #     self.assertEqual('foo'.upper(), 'FOO')
-
-    # def test_isupper(self):
-    #     self.assertTrue('FOO'.isupper())
-    #     self.assertFalse('Foo'.isupper())
-
-    # def test_split(self):
-    #     s = 'hello world'
-    #     self.assertEqual(s.split(), ['hello', 'world'])
-    #     # check that s.split fails when the separator is not a string
-    #     with self.assertRaises(TypeError):
-    #         s.split(2)
 
 
 if __name__ == '__main__':
