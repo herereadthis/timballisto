@@ -20,5 +20,6 @@ install:
 
 # command to run tests
 script:
-  - flake8 .
-  - python3 -m unittest discover -s decorators -p "*_test.py"
+  - flake8 --ignore E402 .
+  # - python3 -m unittest discover -s decorators -p "*_test.py"
+  - python3 -m unittest discover -s */tests
