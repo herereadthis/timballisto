@@ -18,6 +18,7 @@ class MyClass(metaclass=InstanceCounterMeta):
     def __init__(self):
         self.id = next(self.__class__._ids)
 
+
 my_first_class = MyClass()
 my_second_class = MyClass()
 

@@ -18,6 +18,7 @@ def just_some_function():
     """Demo."""
     print("Wheee!")
 
+
 just_some_function = my_decorator(just_some_function)
 just_some_function()
 # >>> This happens BEFORE some_function() is called.
@@ -45,6 +46,7 @@ def just_another_function():
     """Demo."""
     print("Whoa!")
 
+
 just_another_function = another_decorator(just_another_function)
 just_another_function()
 # >>> Yes!
@@ -56,6 +58,7 @@ just_another_function()
 def third_function():
     """Demo."""
     print("Lorem!")
+
 
 third_function()
 # >>> Yes!
@@ -77,6 +80,7 @@ def sleep_decorator(function):
 def print_number(num):
     """Print."""
     return num
+
 
 print(print_number(222))
 

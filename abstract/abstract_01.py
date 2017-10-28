@@ -10,10 +10,12 @@ class MyABC(metaclass=ABCMeta):
 
     pass
 
+
 """
 The register() method is provided by the ABCMeta metaclass
 sorta: tuple will be a subclass of MyABC (tuple inherits from MyABC)
 the tuple class remains unchanged
+registered types are stored in _abc_registry
 """
 MyABC.register(tuple)
 

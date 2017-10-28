@@ -20,6 +20,7 @@ class ASingleton(metaclass=Singleton):
         """Initialize."""
         self.foo = 'bar'
 
+
 a = ASingleton()
 b = ASingleton()
 
@@ -36,6 +37,7 @@ class BSingleton(metaclass=Singleton):
     """Inherit singleton."""
 
     pass
+
 
 c = BSingleton()
 d = BSingleton()

@@ -21,4 +21,4 @@ install:
 # command to run tests
 script:
   - flake8 .
-  # - pytest
+  - python3 -m unittest discover -s decorators -p "*_test.py"

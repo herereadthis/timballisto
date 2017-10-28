@@ -10,8 +10,11 @@ class TestStringMethods(unittest.TestCase):
     def test_classmethod(self):
         """Test classmethod."""
         my_instance = ClassmethodClass()
-        my_instance.foo('radish')
-        self.assertEqual(my_instance.vegetable, 'radish')
+        my_instance.foo('blueberry')
+        self.assertEqual(my_instance.vegetable, 'blueberry')
+
+        my_instance.class_foo('orange')
+        self.assertEqual(my_instance.fruit, ClassmethodClass.fruit)
 
     # def test_upper(self):
     #     self.assertEqual('foo'.upper(), 'FOO')
@@ -26,6 +29,7 @@ class TestStringMethods(unittest.TestCase):
     #     # check that s.split fails when the separator is not a string
     #     with self.assertRaises(TypeError):
     #         s.split(2)
+
 
 if __name__ == '__main__':
     unittest.main()
