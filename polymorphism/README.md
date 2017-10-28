@@ -27,3 +27,17 @@ except AttributeError:
     [...]
 ```
 
+## What about "program against an interface, not an implementation"?
+
+* It doesn't really translate to Python because it doesn't have an interface feature.
+* In python you use "duck typing"
+* If you want to see if an object is a duck, then try using the `quack()` method and provide appropriate error handling
+* Check for type only when necessary
+* The equivalent in Python is you are not supposed to make your code too reliant on an object's type, but see whether it has the interface you need
+  * "interface" is the bunch of attributes and methods of an object that provide a certain behavior
+* The advantage of emphasizing interfaces over specific types, code is more flexible by allowing polymorphic substitution
+
+```python
+hasattr()
+```
+
