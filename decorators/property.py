@@ -1,9 +1,11 @@
 """Demo @property Decorator."""
 
+from __future__ import print_function
+
 # @property turns a method into descriptor object
 
 
-class MyClass:
+class MyClass(object):
     """Demo @property."""
 
     def __init__(self, my_string):

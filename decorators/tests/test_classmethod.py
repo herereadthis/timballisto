@@ -33,9 +33,9 @@ class TestStringMethods(unittest.TestCase):
 
     def test_instance_method(self):
         """Instance method only affects instance."""
-        self.first_instance.foo('radish')
+        self.first_instance.foo_method('radish')
         self.assertEqual(self.first_instance.vegetable, 'radish')
-        self.second_instance.foo('spinach')
+        self.second_instance.foo_method('spinach')
         self.assertEqual(self.second_instance.vegetable, 'spinach')
         self.assertNotEqual(
             self.first_instance.vegetable, self.second_instance.vegetable

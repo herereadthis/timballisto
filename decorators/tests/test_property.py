@@ -23,7 +23,9 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(self.first_instance.get_function(), self.test_string)
         self.assertNotEqual(self.first_instance.get_function, self.test_string)
         self.assertEqual(
-            self.first_instance.get_function.__class__.__name__, 'method')
+            self.first_instance.get_function.__class__.__name__,
+            'instancemethod'
+        )
 
     def test_property_method(self):
         """Property attribute returns string from constructor."""
