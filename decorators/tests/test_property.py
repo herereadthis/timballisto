@@ -7,7 +7,7 @@ sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from property import MyClass as PropertyClass
 
 
-class TestStringMethods(unittest.TestCase):
+class TestProperty(unittest.TestCase):
     """Test decorators."""
 
     def setUp(self):
@@ -24,7 +24,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertNotEqual(self.first_instance.get_function, self.test_string)
         self.assertEqual(
             self.first_instance.get_function.__class__.__name__,
-            'instancemethod'
+            'method'
         )
 
     def test_property_method(self):

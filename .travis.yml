@@ -21,4 +21,6 @@ install:
 # command to run tests
 script:
   # - flake8 . --ignore E402
-  - python -m unittest discover -s */tests -v
+  # - python -m unittest discover -t -p */test*.py
+  - python3 -m unittest discover abstract/tests  "test_*.py"
+  - python3 -m unittest discover decorators/tests  "test_*.py"

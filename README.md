@@ -1,5 +1,7 @@
 # Timballisto
 
+[![Build Status](https://travis-ci.org/herereadthis/timballisto.svg?branch=master)](https://travis-ci.org/herereadthis/timballisto)
+
 Random Python stuff
 
 

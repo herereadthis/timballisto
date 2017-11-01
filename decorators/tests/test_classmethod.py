@@ -7,7 +7,7 @@ sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from classmethod import MyClass as ClassmethodClass
 
 
-class TestStringMethods(unittest.TestCase):
+class TestClassmethodDecorator(unittest.TestCase):
     """Test decorators."""
 
     def setUp(self):
