@@ -49,6 +49,8 @@ dir(type)
 * `class.__bases__` returns the object's base classes, in order of occurance
 * `object.__class__` returns the object's class
 * `object.__dict__` returns list of the object's attributes
+* `object.__str__` returns object a string that tries to be readable (is whatever you think is that object in text form)
+* `object.__repr__` returns object a string that tries to unambiguous (representation of python object usually eval will convert it back to that object)
 
 
 ```python
