@@ -24,3 +24,4 @@ script:
   # - python -m unittest discover -t -p */test*.py
   - python3 -m unittest discover abstract/tests  "test_*.py"
   - python3 -m unittest discover decorators/tests  "test_*.py"
+  - python3 -m unittest discover privacy/tests  "test_*.py"
