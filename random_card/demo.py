@@ -13,7 +13,7 @@ if __name__ == '__main__':
     if (show_graph_input == 'n' or show_graph_input == 'N'):
         show_graph = False
 
-    card_simulation.set_iterations(iterations)
+    card_simulation.iterations = iterations
     card_simulation.set_trials()
     card_simulation.print_stats()
     if (show_graph is True):

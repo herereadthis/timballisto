@@ -16,6 +16,15 @@ class ClassB():
         return 'hi there'
 
 
+class Robot:
+
+    def __init__(self, name, build_year):
+        self.name = name
+        self.build_year = build_year
+
+    def __repr__(self):
+        return 'Robot(\'%s\', %s)' % (self.name, str(self.build_year))
+
 
 if __name__ == '__main__':
 
@@ -44,3 +53,8 @@ if __name__ == '__main__':
     # >>> hi there
     print(repr(b_instance))
     # >>> <__main__.ClassB object at 0x10344d160>
+
+    print('\nDemo Robot Class')
+    a_robot = Robot('Bender', 2979)
+    print(str(a_robot))
+    print(repr(a_robot))
