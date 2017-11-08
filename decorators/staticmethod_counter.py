@@ -11,15 +11,15 @@ class Robot:
         type(self).__counter += 1
 
     @staticmethod
-    def robotInstances():
+    def robot_instances():
         """Return robot instances."""
         return Robot.__counter
 
 
 if __name__ == "__main__":
-    print(Robot.robotInstances())
+    print(Robot.robot_instances())
     x = Robot()
-    print(x.robotInstances())
+    print(x.robot_instances())
     y = Robot()
-    print(x.robotInstances())
-    print(Robot.robotInstances())
+    print(x.robot_instances())
+    print(Robot.robot_instances())
