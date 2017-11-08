@@ -6,12 +6,18 @@ class SetterDecoratorClass:
 
     def __init__(self, x):
         """Initialize."""
-        self.x = x
+        self.__x = x
+        self.__max_x = 1000
 
     @property
     def x(self):
         """Use property decorator to serve as the get."""
         return self.__x
+
+    @property
+    def max_x(self):
+        """Get max value."""
+        return self.__max_x
 
     @x.setter
     def x(self, x):
@@ -25,13 +31,15 @@ class SetterDecoratorClass:
         """
         if x < 0:
             self.__x = 0
-        elif x > 1000:
-            self.__x = 1000
+        elif x > self.__max_x:
+            self.__x = self.__max_x
         else:
             self.__x = x
 
 if __name__ == "__main__":
     my_instance = SetterDecoratorClass(42)
+
+    print(my_instance.max_x)
 
     print(my_instance.x)
     # >>> 42

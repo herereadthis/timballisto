@@ -28,9 +28,10 @@ class TestSetter(unittest.TestCase):
     def test_get_set_excess_condition(self):
         """Test getter and setter if value over 1000."""
         self.assertEqual(self.my_instance.x, self.initial_value)
-        new_value = 1001
+        new_value = self.my_instance.max_x + 1000
         self.my_instance.x = new_value
         self.assertNotEqual(self.my_instance.x, new_value)
+        self.assertEqual(self.my_instance.x, self.my_instance.max_x)
 
 
 if __name__ == '__main__':

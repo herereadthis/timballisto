@@ -14,8 +14,13 @@ class PrivacyClass():
         self._protected_attribute = prot
         self.public_attribute = pub
 
+    def get_private_attribute(self):
+        return self.__private_attribute
+
 if __name__ == '__main__':
     test_instance = PrivacyClass()
+
+    print(test_instance.get_private_attribute())
 
     try:
         print(test_instance.public_attribute)
