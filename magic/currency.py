@@ -17,8 +17,8 @@ class Currency:
         self.value = value
         self.unit = unit
 
-    def __add__(self, other):
-        """Define the + operator."""
+    def convert_other_base(self, other):
+        """Covert the value of another instance to self's currency type."""
         base_value = None
         try:
             # convert the other currency instance to the current currency
@@ -29,11 +29,26 @@ class Currency:
                 # Values with unspecified currency are treated as USD
                 base_value = other / Currency.rates['USD']
             except TypeError:
-                print('Error: unsupported type')
+                pass
 
         if base_value is not None:
-            converted_value = base_value * Currency.rates[self.unit]
+            return base_value * Currency.rates[self.unit]
+
+    def __sub__(self, other):
+        """Define the + operator."""
+        converted_value = self.convert_other_base(other)
+        try:
+            return Currency(converted_value - self.value, self.unit)
+        except TypeError:
+            print('Error: unsupported type')
+
+    def __add__(self, other):
+        """Define the + operator."""
+        converted_value = self.convert_other_base(other)
+        try:
             return Currency(converted_value + self.value, self.unit)
+        except TypeError:
+            print('Error: unsupported type')
 
     def __str__(self):
         """Return string representation of currency instance."""
@@ -50,5 +65,7 @@ if __name__ == "__main__":
     print('z: {}'.format(z))
     print('n: {}'.format(n))
     print('x + y: {}'.format(x + y))
+    print('y - x: {}'.format(y - x))
+    print('x - y: {}'.format(x - y))
     print('y + z: {}'.format(y + z))
     print('x + n: {}'.format(x + n))
