@@ -10,3 +10,14 @@ class LittleMeta(type):
         print("superclasses: ", superclasses)
         print("attributedict: ", attributedict)
         return type.__new__(cls, clsname, superclasses, attributedict)
+
+
+class S:
+    pass
+
+
+class A(S, metaclass=LittleMeta):
+    pass
+
+if __name__ == '__main__':
+    a = A()

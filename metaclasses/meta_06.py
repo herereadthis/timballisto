@@ -33,15 +33,23 @@ class Philosopher2:
     pass
 
 
-@augment_answer
-class Philosopher3:
+class EssentialAnswers(type):
+    """Do metaclass instead."""
+
+    def __init__(cls, clsname, superclasses, attributedict):
+        if required:
+            cls.the_answer = the_answer
+
+class Philosopher3(metaclass=EssentialAnswers): 
     pass
 
 plato = Philosopher1()
 kant = Philosopher2()
+bob = Philosopher3()
 
 if required:
     print(plato.the_answer)
     print(kant.the_answer)
+    print(bob.the_answer)
 else:
     print('not required')
