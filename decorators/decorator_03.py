@@ -1,5 +1,7 @@
 """Show use cases for decorators."""
 
+from functools import wraps
+
 
 def call_counter(func):
     """Check number of times a function is called."""
@@ -57,5 +59,51 @@ def foo(x):
     print(x + 4)
     return x + 4
 
-bar = foo(42)
-print(bar)
+print(foo(42))
+
+
+def greeting_2(func):
+    """Demo another greeting."""
+    def function_wrapper(x):
+        """Function_wrapper of greeting."""
+        print("\nHi, " + func.__name__ + " returns:")
+        return func(x)
+    return function_wrapper
+
+
+@greeting_2
+def bar(x):
+    """Bar."""
+    return x * 2
+
+bar(10)
+# These don't make any sense. They get lost after decoration.
+print("function name: " + bar.__name__)
+print("docstring: " + bar.__doc__)
+print("module name: " + bar.__module__)
+# >>> Hi, bar returns:
+# >>> function name: function_wrapper
+# >>> docstring: Function_wrapper of greeting.
+# >>> module name: __main__
+
+
+def greeting_3(func):
+    """Demo another greeting."""
+    @wraps(func)
+    def function_wrapper(x):
+        """Function_wrapper of greeting."""
+        print("\nHi, " + func.__name__ + " returns:")
+        return func(x)
+    return function_wrapper
+
+
+@greeting_3
+def baz(x):
+    """Baz."""
+    return x * 2
+
+baz(10)
+# Much better
+print("function name: " + baz.__name__)
+print("docstring: " + baz.__doc__)
+print("module name: " + baz.__module__)
