@@ -97,4 +97,12 @@ def __subclasscheck__(cls, sub):
    [...]
 ```
 
+##  more about ABC
+
+* A class that contains one or more abstract methods is an Abstract Class.
+* A method that is declared but contains no implementation is an Abstract Method.
+* Abstract classes may not be instanticated.
+* Abstract classes require require subclasses to provide implementations for the abstract methods.
+* Subclasses (of an abstract class) are not required to implement abstract methods of the parent class.
+
 
