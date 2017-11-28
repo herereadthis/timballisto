@@ -101,8 +101,13 @@ def __subclasscheck__(cls, sub):
 
 * A class that contains one or more abstract methods is an Abstract Class.
 * A method that is declared but contains no implementation is an Abstract Method.
-* Abstract classes may not be instanticated.
+* Abstract classes may not be instantiated.
 * Abstract classes require require subclasses to provide implementations for the abstract methods.
 * Subclasses (of an abstract class) are not required to implement abstract methods of the parent class.
 
+
+* Abstract base classes are a form of interface checking more strict than individual hasattr() checks for particular methods.
+* By defining an abstract base class, you can define a common API for a set of subclasses.
+* This capability is especially useful in situations where a third-party is going to provide implementations, such as with plugins to an application,
+* But it can also aid you when working on a large team or with a large code-base where keeping all classes in your head at the same time is difficult or not possible.
 
