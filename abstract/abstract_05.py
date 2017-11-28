@@ -48,3 +48,6 @@ if __name__ == '__main__':
     # >>> True
     print('Instance: {}'.format(isinstance(SubclassWay(), PluginBase)))
     # >>> True
+
+    subClassNames = [sc.__name__ for sc in PluginBase.__subclasses__()]
+    print(subClassNames)
