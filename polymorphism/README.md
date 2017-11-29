@@ -20,8 +20,11 @@ Variables are just pointers, they tell where in memory a variable has been store
 Instead of checking if an object has a certain attribute or method before using it, just assume it works, and manage errors
 
 ```python
+
+my_animal = Bird()
+
 try:
-    someobj.open()
+    bird.quack()
     [...]
 except AttributeError:
     [...]
@@ -34,6 +37,7 @@ except AttributeError:
 * If you want to see if an object is a duck, then try using the `quack()` method and provide appropriate error handling
 * Check for type only when necessary
 * The equivalent in Python is you are not supposed to make your code too reliant on an object's type, but see whether it has the interface you need
+* In other words, we shouldn't have to care about the nature of the object. We just have to know whether it's able to do what we need (e.g. interested in the interface)
   * "interface" is the bunch of attributes and methods of an object that provide a certain behavior
 * The advantage of emphasizing interfaces over specific types, code is more flexible by allowing polymorphic substitution
 
