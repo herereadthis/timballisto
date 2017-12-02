@@ -50,10 +50,12 @@ class FormalUser(UserABC):
     """Creates a user which speaks formally."""
 
     def __init__(self, med, first_name, last_name):
+        """Initilize formal user, from user abstract class."""
         full_name = '{0} {1}'.format(first_name, last_name)
         super().__init__(med, full_name)
 
     def send(self, msg):
+        """Abstract method send."""
         print('{0} is sending a message: \"{1}\"'.format(self.name, msg))
         self.mediator.send_message(msg, self)
 
