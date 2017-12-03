@@ -23,6 +23,8 @@ class UserABC(metaclass=ABCMeta):
 
 
 class ChatMediatorImpl:
+    """Mediator class acts as the interface for the users."""
+
     def __init__(self):
         self.users = []
 
@@ -39,10 +41,12 @@ class CasualUser(UserABC):
     """Creates a user which speaks casually."""
 
     def send(self, msg):
+        """Abstract method send."""
         print('{0} wants to say, \"{1}\"'.format(self.name, msg))
         self.mediator.send_message(msg, self)
 
     def receive(self, msg):
+        """Abstract method receive."""
         print('{0} heard someone say, \"{1}\"'.format(self.name, msg))
 
 
@@ -60,6 +64,7 @@ class FormalUser(UserABC):
         self.mediator.send_message(msg, self)
 
     def receive(self, msg):
+        """Abstract method receive."""
         print('{0} has recieved a message: \"{1}\"'.format(self.name, msg))
 
 
