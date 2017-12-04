@@ -18,20 +18,20 @@ class Subject:
 
     def __init__(self):
         """A set is an unordered collection with no duplicate examples."""
-        self.subscribers = set()
+        self.observers = set()
 
-    def register(self, who):
+    def register(self, observer):
         """Allow observers to register with the subject."""
-        self.subscribers.add(who)
+        self.observers.add(observer)
 
-    def unregister(self, who):
+    def unregister(self, observer):
         """Allow observers to unregister with the subject."""
-        self.subscribers.discard(who)
+        self.observers.discard(observer)
 
     def dispatch(self, message):
         """Every observer has its update method invoked."""
-        for subscriber in self.subscribers:
-            subscriber.update(message)
+        for observer in self.observers:
+            observer.update(message)
 
 
 if __name__ == '__main__':
