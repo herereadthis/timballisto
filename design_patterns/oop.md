@@ -37,7 +37,15 @@
 
 ## Encapsulation
 
-* The idea of bundling data with logic
+* The idea of bundling data with logic - combining attributes and methods into a single named entity
+* Apply different levels of visiblity to allow objects to interact with it at only an appropriate level
+* Only publicly-declared methods (aka **"interface"**) should be utilized and seen by other objects
+* For example a `johnSmith` instance of a `Person` class needs to access the `walk()` and `speak()` methods, but does need to use or know about `digest()` or `set_heart_rate()`
+* An object should not care about how the methods are **implemented**. It should only care about providing the required information (**parameters**) or message to the method (e.g. `speak('hello world')`) so that it can receive an expected result or action. In other words, don't be too concerned about how speaking actually works.
+* **Data hiding** - Access to an object's attributes should be controlled by the object itself, and other objects shouldn't be able to directly change that object's attributes
+* As long as the interface stays the same, the internal methods can changed to do whatever
+
+### Visibility
 
 ## Inheritance
 
