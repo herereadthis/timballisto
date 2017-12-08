@@ -47,6 +47,31 @@
 
 ### Visibility
 
+* Encapsulation provides protection of an object by controlling what parts of an object are visible outside an object
+* Public
+  * public members are accessible any place an object is visible
+  * public methods should be the only way to change an object's attributes (not true in Python)
+  * public members make up an object's interface
+* Private
+  * Private members should only be accessible by the object
+* Protected
+  * Should be accessible by other things of the same class, or by subclasses
+
+### Messages
+* The communication mechanism between objects
+* allows an object to invoke an action (method) in another object
+* A message is 1. the object, 2. the method, and 3. any parameters as necessary
+
+### Interface vs. Implementation
+
+* Separating interface and implementation is a core principle behind encapsulation
+* Interface is the public methods (behaviors) that allow an object to change its attributes
+* Implementation the code that carries out the behavior
+* Interface defines what an object can do, but doesn't actually do it.
+* Implementation carries the operations declared in the interface.
+* The class defines the interface
+* The behavior of an object must be invoked by using the interface
+
 ## Inheritance
 
 ## Polymorphism
