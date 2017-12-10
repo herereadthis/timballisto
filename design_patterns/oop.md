@@ -72,6 +72,8 @@
 * The class defines the interface
 * The behavior of an object must be invoked by using the interface
 
+## Accessors and Mutators
+
 ## Inheritance
 
 ## Polymorphism
