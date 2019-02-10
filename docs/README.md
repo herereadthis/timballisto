@@ -11,7 +11,6 @@
 * [Docker](https://github.com/herereadthis/lutra/blob/master/docs/docker.md) containers for shipping code
 * [NodeJS and NPM](https://github.com/herereadthis/lutra/blob/master/docs/node_js.md) installation and usage
 * [Python Virtual Environments](https://github.com/herereadthis/lutra/blob/master/docs/virtualenv.md) for isolating dependencies
-* [RTL-SDR](https://github.com/herereadthis/lutra/blob/master/docs/rtl_sdr.md) - Software Defined Radio
 
 ### Sensors and Circuitry
 
@@ -25,8 +24,12 @@
   * [LCD Screen](https://github.com/herereadthis/lutra/blob/master/objectives/i2c_lcd) - includes 16x2 and 20x4
 * [DS18B20](https://github.com/herereadthis/lutra/blob/master/objectives/DS18B20_thermometer) thermometer sensor
 * [ST7735 SPI LCD](https://github.com/herereadthis/lutra/blob/master/docs/st7735.md), a 1.8" TFT display module
-* [Antenna Appendix](https://github.com/herereadthis/lutra/blob/master/docs/antennas.md) supplemental info for setting up antennas
 * [MAX98357](https://github.com/herereadthis/lutra/blob/master/docs/MAX98357.md) class D amplifier
 * [Relay Modules](https://github.com/herereadthis/lutra/blob/master/objectives/relay) to control AC powered devices
 * [BMP180](https://github.com/herereadthis/lutra/blob/master/objectives/BMP180_barometer) barometer
 * [Arduino](https://github.com/herereadthis/lutra/blob/master/objectives/arduino) configuration and usage
+
+### RTL-SDR
+* [RTL-SDR](./rtl-sdr/README.md) - Software Defined Radio: Introduction
+* [ADS-B](./rtl-sdr/adsb.md) - Aircraft positioning and tracking
+* [Antenna Appendix](./rtl-sdr/antennas.md) supplemental info for setting up antennas
