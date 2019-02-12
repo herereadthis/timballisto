@@ -3,6 +3,12 @@
 * <strong>ADS-B (Automatic Dependent Surveillance-Broadcast)</strong> - modern aircraft have a transponder which broadcasts (at 1090Mhz frequency) location and altitude to air traffic controllers
 * We can get this via RTL-SDR
 
+### Repositories
+
+* [ADS-B Exchange](https://github.com/jprochazka/adsb-exchange)
+* [ADS-B Receiver](https://github.com/jprochazka/adsb-receiver)
+* [PiAware](https://github.com/flightaware/piaware)
+
 ### potential shopping list
 
 * The basic flow is:
@@ -20,10 +26,14 @@
 * The grounding block and SMA end of the antenna cable should be inside a junction box.
   * [Junction Box](https://www.amazon.com/dp/B0719TB8TM/) - various sizes and prices
   * [PG11 Waterproof Cable Glands Connectors](https://www.amazon.com/dp/B00843UH4O/) - these are for sending wires into the box
-  * [SMA Lightning Arrestor Surge Protector SMA Male to SMA Female](https://www.amazon.com/dp/B07K25Y1JW/)
-  * Another (less likely) option is a surge protector the N-Type cable - [Lightning arrestor N Female to Female 50 Ohm Lightning Surge Protector](https://www.amazon.com/dp/B0751CCQN7/)
-    * or combine the N-cable to the surge protector: [400-Series N-Male to N-Male In-Line Lightning Protector Cable Assemblies](http://www.l-com.com/surge-protector-400-series-n-male-to-n-male-in-line-lightning-protector-cable-assemblies)
-    * In which case, get an N-Male to N-SMA adapter. Options: [JEFA Tech Adapter](https://www.amazon.com/dp/B001GUSCH6/) | [Phonetone N male to SMA female](https://www.amazon.com/dp/B00KL6PXMI/)
+* If the cable is N-Type to N-Type:
+  * Cable Option: [Times Microwave LMR400 Cable](https://www.amazon.com/dp/B01N3CA5Y7/) | [Custom Cable Connection Coaxial Cable LMR-400](https://www.amazon.com/dp/B01N4M0DMH/)
+  * Surge protector: [Lightning arrestor N Female to Female 50 Ohm Lightning Surge Protector](https://www.amazon.com/dp/B0751CCQN7/)
+  * Combine surge protector and cable: [400-Series N-Male to N-Male In-Line Lightning Protector Cable Assemblies](http://www.l-com.com/surge-protector-400-series-n-male-to-n-male-in-line-lightning-protector-cable-assemblies)
+  * N-Male to N-SMA adapter. Options: [JEFA Tech Adapter](https://www.amazon.com/dp/B001GUSCH6/) | [Phonetone N male to SMA female](https://www.amazon.com/dp/B00KL6PXMI/)
+* If the cable is N-Type to SMA:
+  * Cable option: [MPD Digital LMR-400 Coaxial Antenna Cable Line with N Male & SMA Male Connectors](https://www.amazon.com/dp/B00H9II8I2/) - (1ft, can also be a jumper between n-type surge protector to dongle
+  * Surge protector for the SMA end: [SMA Lightning Arrestor Surge Protector SMA Male to SMA Female](https://www.amazon.com/dp/B07K25Y1JW/)
 * Antenna Mounting assembly
   * [CHANNEL MASTER CM-3090 Universal J-Mount](https://www.amazon.com/dp/B000BSIABM) - antenna mount along fascia of house
   * [Everbilt 1-3/4 in. Stainless-Steel Clamp](https://www.homedepot.com/p/202309386) - to manage wires on mast - $1.10 each
@@ -34,4 +44,6 @@
 ## Sources
 
 * [ADS-B FlightAware Enclosure Build](https://imgur.com/gallery/dpyGo) - and [reddit discussion](https://www.reddit.com/r/RTLSDR/comments/7pkso6/)
+* [My ADS-B Setup - PiAware](https://www.reddit.com/r/ADSB/comments/akk01c/)
+* [Do you want to build your own FlightAware PiAware ADS-B Ground Station?](https://flightaware.com/adsb/piaware/build)
 
