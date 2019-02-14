@@ -10,6 +10,8 @@ mkdir -p ~/repos;cd repos
 git clone git@github.com:herereadthis/lutra.git
 cd lutra/resources
 ./complete_install.sh
+# for future reference: in order to make a .sh file executable, run
+# chmod +x THE_FILE_NAME
 
 # instead of complete install, you can pick and choose
 
