@@ -2,7 +2,8 @@
 
 ### Coding and Software
 
-* [Do these things first](https://github.com/herereadthis/lutra/blob/master/docs/do_first.md) when you get a Raspberry Pi
+* [Do these things first (V2)](./do_first_v2.md) when you get a Raspberry Pi
+* ~[Do these things first (V1)](./do_first_v1.md) when you get a Raspberry Pi~
 * [Useful terminal commands](https://github.com/herereadthis/lutra/blob/master/docs/terminal_commands.md) - including how to turn off a Pi
 * [How to schedule tasks](https://github.com/herereadthis/lutra/blob/master/docs/scheduling.md) when booting up or periodically (cron)
 * [Advanced Configuration](https://github.com/herereadthis/lutra/blob/master/docs/advanced_config.md)
