@@ -1,4 +1,4 @@
-# Do These Things When You Get a Raspberry Pi
+# Do These Things When You Get a Raspberry Pi (Archived Version)
 
 ## Quick version
 
