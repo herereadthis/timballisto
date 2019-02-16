@@ -3,12 +3,15 @@
 ### Coding and Software
 
 * [Do these things first (v2)](./do_first.md) when you get a Raspberry Pi
+* [How to backup your image](./backup.md)
+* [Set up Github](./github_setup.md) to get and share code
+
+
+
 * ~[Do these things first (v1, archive)](./archive/do_first_v1.md) when you get a Raspberry Pi~
 * [Useful terminal commands](./terminal_commands.md) - including how to turn off a Pi
 * [How to schedule tasks](./scheduling.md) when booting up or periodically (cron)
 * [Advanced Configuration](./advanced_config.md)
-* [SD Cards](./sd_cards.md) - Flashing Raspbian, and restoring an image
-* [Set up Github](./github_setup.md) to get and share code
 * [Docker](./docker.md) containers for shipping code
 * [NodeJS and NPM](./node_js.md) installation and usage
 * [Python Virtual Environments](./virtualenv.md) for isolating dependencies
@@ -34,3 +37,12 @@
 * [RTL-SDR](./rtl-sdr/README.md) - Software Defined Radio: Introduction
 * [ADS-B](./rtl-sdr/adsb.md) - Aircraft positioning and tracking
 * [Antenna Appendix](./rtl-sdr/antennas.md) supplemental info for setting up antennas
+
+###
+
+## Run this first
+
+```bash
+# get a bunch of files
+python3 download_stuff.py
+```
