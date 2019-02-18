@@ -5,8 +5,10 @@
 * [Do these things first (v2)](./do_first.md) when you get a Raspberry Pi
 * [How to backup your image](./backup.md)
 * [Set up Github](./github_setup.md) to get and share code
+* [PiHole](./pihole.md) - ad blocking
 
 
+### Outdated, don&rsquo;t trust the following
 
 * ~[Do these things first (v1, archive)](./archive/do_first_v1.md) when you get a Raspberry Pi~
 * [Useful terminal commands](./terminal_commands.md) - including how to turn off a Pi
