@@ -3,9 +3,18 @@
 ### Coding and Software
 
 * [Do these things first (v2)](./do_first.md) when you get a Raspberry Pi
-* [How to backup your image](./backup.md)
 * [Set up Github](./github_setup.md) to get and share code
-* [PiHole](./pihole.md) - ad blocking
+* [Pi-hole](./pihole.md) - ad blocking
+* [How to backup your image](./backup.md)
+
+### RTL-SDR
+* [RTL-SDR](./rtl-sdr/README.md) - Software Defined Radio: Introduction
+* [ADS-B](./rtl-sdr/adsb.md) - Aircraft positioning and tracking
+* [Antenna Appendix](./rtl-sdr/antennas.md) supplemental info for setting up antennas
+
+### Sensors and Circuitry
+
+* [GPIO Pinout](./GPIO.md) - diagram of all the pins on the RPi
 
 
 ### Outdated, don&rsquo;t trust the following
@@ -18,9 +27,6 @@
 * [NodeJS and NPM](./node_js.md) installation and usage
 * [Python Virtual Environments](./virtualenv.md) for isolating dependencies
 
-### Sensors and Circuitry
-
-* [GPIO Pinout](./GPIO.md) - diagram of all the pins on the RPi
 * [gpiozero](https://github.com/herereadthis/lutra/blob/master/objectives/gpiozero) - basic physical computing
 * [How to wire MCP3008](https://github.com/herereadthis/lutra/blob/master/objectives/MCP3008) - analogue-to-digital converter (ACD)
   * [HC-SR04](https://github.com/herereadthis/lutra/blob/master/objectives/hc_sr04) - an ultrasonic distance sensor
@@ -35,10 +41,6 @@
 * [BMP180](https://github.com/herereadthis/lutra/blob/master/objectives/BMP180_barometer) barometer
 * [Arduino](https://github.com/herereadthis/lutra/blob/master/objectives/arduino) configuration and usage
 
-### RTL-SDR
-* [RTL-SDR](./rtl-sdr/README.md) - Software Defined Radio: Introduction
-* [ADS-B](./rtl-sdr/adsb.md) - Aircraft positioning and tracking
-* [Antenna Appendix](./rtl-sdr/antennas.md) supplemental info for setting up antennas
 
 ###
 
