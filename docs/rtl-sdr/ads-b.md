@@ -9,6 +9,13 @@
 * [ADS-B Receiver](https://github.com/jprochazka/adsb-receiver)
 * [PiAware](https://github.com/flightaware/piaware)
 
+### Installation
+
+* <em>(Up-to-date as of 2019-02-19)</em>
+* Have a Raspberry Pi ready with Raspbian Stretch Lite
+  ```bash
+  wget -S https://downloads.raspberrypi.org/raspbian_lite_latest -O raspbian.zip
+
 ### potential shopping list
 
 * The basic flow is:

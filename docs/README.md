@@ -4,12 +4,13 @@
 
 * [Do these things first (v2)](./do_first.md) when you get a Raspberry Pi
 * [Set up Github](./github_setup.md) to get and share code
-* [Pi-hole](./pihole.md) - ad blocking
+* [Pi-hole](./pi-hole.md) - ad blocking
 * [How to backup your image](./backup.md)
+* [Pi NAS] - Network Attached Storage
 
 ### RTL-SDR
 * [RTL-SDR](./rtl-sdr/README.md) - Software Defined Radio: Introduction
-* [ADS-B](./rtl-sdr/adsb.md) - Aircraft positioning and tracking
+* [ADS-B](./rtl-sdr/ads-b.md) - Aircraft positioning and tracking
 * [Antenna Appendix](./rtl-sdr/antennas.md) supplemental info for setting up antennas
 
 ### Sensors and Circuitry
