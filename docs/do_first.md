@@ -12,8 +12,6 @@
   brew install wget
   # download and unzip
   wget -S https://downloads.raspberrypi.org/raspbian_latest -O raspbian.zip
-  # CURL also works
-  curl -O https://downloads.raspberrypi.org/raspbian_latest
   ```
 * Unzip the download and go to where you downloaded it.
   ```bash

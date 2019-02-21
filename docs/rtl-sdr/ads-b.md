@@ -15,6 +15,12 @@
 * Have a Raspberry Pi ready with Raspbian Stretch Lite
   ```bash
   wget -S https://downloads.raspberrypi.org/raspbian_lite_latest -O raspbian.zip
+  ```
+* Get PiAware
+  ```bash
+  wget http://flightaware.com/adsb/piaware/files/packages/pool/piaware/p/piaware-support/piaware-repository_3.6.3_all.deb
+  sudo dpkg -i piaware-repository_3.6.3_all.deb
+  ```
 
 ### potential shopping list
 

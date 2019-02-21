@@ -78,3 +78,5 @@ Pihole is an adblocking software which runs on any Linux distribution but is oft
 
 * [DNS sinkhole](https://en.wikipedia.org/wiki/DNS_sinkhole) - Wikipedia
 * [Why You Need a Network-Wide Ad-Blocker (Part 1)](https://blog.cryptoaustralia.org.au/2018/08/06/why-you-need-network-wide-ad-blocker-pi-hole/)
+* [(Verizon FIOS) Actiontec MI424WR and Westell UltraLine](https://support.opendns.com/hc/en-us/articles/228008027--Verizon-FIOS-Actiontec-MI424WR-and-Westell-UltraLine) - OpenDNS
+* [Configuring Verizon FiOs router... ](https://www.reddit.com/r/pihole/comments/5tw4mu/) - Reddit
