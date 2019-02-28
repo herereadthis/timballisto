@@ -11,6 +11,7 @@
 ### RTL-SDR
 * [RTL-SDR](./rtl-sdr/README.md) - Software Defined Radio: Introduction
 * [ADS-B](./rtl-sdr/ads-b.md) - Aircraft positioning and tracking
+* [NOAA Satellites](./rtl-sdr/ads-b.md) - tracking and building
 * [Antenna Appendix](./rtl-sdr/antennas.md) supplemental info for setting up antennas
 
 ### Sensors and Circuitry

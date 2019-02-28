@@ -22,6 +22,9 @@
   sudo dpkg -i piaware-repository_3.6.3_all.deb
   ```
 
+* This gist seems very comprehensive:
+  [rpi-adsb-feeder.md](https://gist.github.com/kanchudeep/2068aa149b1f787f8f77d7b785de304a)
+
 ### potential shopping list
 
 * The basic flow is:
