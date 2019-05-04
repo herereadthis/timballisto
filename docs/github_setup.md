@@ -36,7 +36,9 @@
   ```bash
   # show the contents
   cat ./id_rsa.pub
-  # copy those contents
+  # copy those contents with xclip
+  sudo apt-get install xclip
+  xclip -sel c < ./id_rsa.pub
   ```
 * Log in to your github page, then go to [/settings/keys](https://github.com/settings/keys), and select "New SSH key." Paste your key there and save.
 * Test your connection:
