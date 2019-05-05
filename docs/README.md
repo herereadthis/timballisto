@@ -3,6 +3,7 @@
 ### Coding and Software
 
 * [Do these things first (v2)](./do_first.md) when you get a Raspberry Pi
+* [Do these things next](./do_first.md) to improve usability
 * [Set up Github](./github_setup.md) to get and share code
 * [Pi-hole](./pi-hole.md) - ad blocking
 * [How to backup your image](./backup.md)
