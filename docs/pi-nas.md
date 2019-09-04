@@ -24,6 +24,7 @@
     * Create directories pointing to drives. Once those are created, add users to those drives using "Privileges." The guest user only gets to read, the admin user gets to read and write
 * "Services"
   * "SMB/CIFS" > "General Settings" - Toggle to enable
+  * "SMB/CIFS" > "Shares" - add the shared folders
 
 
 
