@@ -82,6 +82,51 @@ blacklist brcmfmac
 blacklist brcmutil
 ```
 
+Put the network card into monitor mode
+
+```bash
+# find name of wifi device, which is either wlan0 or wlan1
+ifconfig
+airmon-ng start wlan0
+# see wireless network interface parameters
+iwconfig
+# test to see if card is capable of packet injection
+aireplay-ng --test wlan0mon
+```
+
+
+Wifi
+
+* The wifi standars are IEEE 802.11 a/b/g/n/ac
+* Newer ones are generally better. Newer ones are backwards compatible
+  * a: 5GHz, 09-1999
+  * b: 2.4GHz, 09-1999
+  * g: 2.4GHz, 06-2003
+  * n: 2.4/5GGHz, 10-2009
+  * ac: 2.4/5GHz, 12-2013
+* Security
+  * WEP (Wired Equivalent Privacy) The first one, and very easy to crack
+  * WPA(1) uses "Temporal Key Integrity Protocol" (TKIP) and is harder to crack
+  * WPA2-PSK which is the home implementation of WPA2, more secure. Uses a pre-shared key (PSK)
+  * WPA2-AES is the enterprise implementation of WPA2, very difficult to crack. Coupled with a RADIUS server that is used for authentication
+* Channels
+  * The 802.11  has 14 channels, each with a central frequency
+  * For example, channel 1 is centered around 2.412 GHz, channel 2 is centered around 2.417 GHz
+  * US can use channels 1&ndash;11, Europe can use channels 1&ndash;13
+    * This means a device on channel 12 would be invisble to US scanners
+  * Typically a device will use only a few channels, such as 1, 6, and 11 to avoid overlap
+
+
+### Evil Twin Attack
+
+What if you don't know the password to the the network?
+* The evil twin attack is a social engineering attack, as it requires tricking the user into giving up information.
+* Interrupt the user's connection to the access point, and capture the password exchange between the two
+* Kick a user off the network
+* Offer up a fake access point with the same name but a different authentication
+* The user tries to connect to the fake access point
+* The fake access point prompts for the real network password, which the user enters
+* The fake access point checks the entered password against the password exchange hash, and if it is good, allow the user to connect to the real access point
 
 ## Sources
 
