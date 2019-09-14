@@ -94,6 +94,42 @@ iwconfig
 aireplay-ng --test wlan0mon
 ```
 
+Search the area around us
+
+```bash
+# remember to use airmon-ng to put a network card into monitor mode
+airodump-ng wlan0mon
+# you will get a bunch of information about all the networks in the area. 
+# The key thing to look for is the channel (CH) the network operates on
+
+# search for WEP networks
+airodump-ng wlan0mon --encrypt wep
+```
+
+### Aircrack-ng
+
+Aircrack-ng is a set of tools to access WiFi network security. It should come pre-installed with Kali Linux
+
+```bash
+apt-get install aircrack-ng
+```
+
+* `airmon-ng` puts network cards into monitor mode
+* `aireplay-ng` is a packet injector
+* `airodump-ng` is a packet sniffer. Find info about networks
+
+### Airgeddon
+
+Airgeddon allows you to attack wireless networks, a &ldquo;multi-use bash script for Linux systems to audit wireless networks.&rdquo;
+
+```bash
+git clone https://github.com/v1s1t0r1sh3r3/airgeddon.git
+cd airgeddon
+sudo bash ./airgeddon.sh
+# pip install xterm
+apt-get install reaver lighttpd bully
+pip install sslstrip
+```
 
 Wifi
 
@@ -127,6 +163,14 @@ What if you don't know the password to the the network?
 * The user tries to connect to the fake access point
 * The fake access point prompts for the real network password, which the user enters
 * The fake access point checks the entered password against the password exchange hash, and if it is good, allow the user to connect to the real access point
+
+```bash
+# these should already be part of kali linux
+# install macchanger, which allows you to change your mac address
+apt-get install macchanger
+# install aircrack-ng, which is a set of tools to access WiFi network security
+apt-get install aircrack-ng
+```
 
 ## Sources
 
