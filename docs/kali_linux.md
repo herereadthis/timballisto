@@ -122,14 +122,45 @@ apt-get install aircrack-ng
 
 Airgeddon allows you to attack wireless networks, a &ldquo;multi-use bash script for Linux systems to audit wireless networks.&rdquo;
 
-```bash
+Install airgeddon and essential dependencies
+
+```bash 
+apt-get update
 git clone https://github.com/v1s1t0r1sh3r3/airgeddon.git
 cd airgeddon
 sudo bash ./airgeddon.sh
-# pip install xterm
-apt-get install reaver lighttpd bully
-pip install sslstrip
+# install lspci, which gets information about PCI buses and what's connected to them
+apt-get install pciutils
+# install xterm, the terminal emulator for the X Window system
+apt-get install xterm
 ```
+
+Other installs
+
+```bash
+# install reaver: brute force attack WPS pins
+apt-get install reaver
+# install bully: brute force attack WPS pins
+apt-get install bully
+# install lighttpd, a webserver
+apt-get install lighttpd
+# install sslstrip, a man-in-the-middle MITM tool
+apt-get install sslstrip
+
+# install hashcat, a password recovery utility
+git clone https://github.com/hashcat/hashcat
+cd hashcat
+make
+make install
+
+# install mkd4, a tool to exploit common IEEE 802.11 protocol weaknesses
+apt-get install pkg-config libnl-3-dev libnl-genl-3-dev libpcap-dev 
+git clone https://github.com/aircrack-ng/mdk4
+cd mdk4
+make
+make install
+```
+
 
 Wifi
 
