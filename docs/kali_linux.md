@@ -1,9 +1,18 @@
 # Kali Linux
 
-Get the [Re4son Sticky Fingers Raspberry Pi image](https://whitedome.com.au/re4son/sticky-fingers-kali-pi-pre-installed-image/).
+* Get the [Re4son Sticky Fingers Raspberry Pi image](https://whitedome.com.au/re4son/sticky-fingers-kali-pi-pre-installed-image/).
+* Get the official [Kali Linux](https://www.offensive-security.com/kali-linux-arm-images/) release
 
 * Login: `root`
 * Password `toor`
+
+Get `kalipi-config` at [Re4son](https://github.com/Re4son/RPi-Tweaks/tree/master/kalipi-config), which is basically supposed to be `raspi-config`
+
+```bash
+apt install whiptail parted lua5.1 alsa-utils psmisc libraspberrypi0 libraspberrypi-dev libraspberrypi-doc libraspberrypi-bin
+wget -O /usr/local/bin/kalipi-config https://raw.githubusercontent.com/Re4son/RPi-Tweaks/master/kalipi-config/kalipi-config
+chmod 755 /usr/local/bin/kalipi-config
+```
 
 ```bash
 # change password
