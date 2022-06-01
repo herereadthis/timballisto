@@ -17,16 +17,17 @@ sudo wget -O /etc/udev/rules.d/rtl-sdr.rules "https://raw.githubusercontent.com/
 
 ### Basic Setup
 
-Mostly taken from gist: [rpi-adsb-feeder.md](https://gist.github.com/kanchudeep/2068aa149b1f787f8f77d7b785de304a)
+*Mostly taken from gist: [rpi-adsb-feeder.md](https://gist.github.com/kanchudeep/2068aa149b1f787f8f77d7b785de304a)*
 
 ```bash
 wget https://uk.flightaware.com/adsb/piaware/files/packages/pool/piaware/p/piaware-support/piaware-repository_7.2_all.deb
 sudo dpkg --install piaware-repository_7.2_all.deb
 sudo apt update
 sudo apt install dump1090-fa lighttpd piaware
+# check piaware at http://my_ip:8080/
 ```
 
-piaware commands
+#### piaware commands
 
 ```bash
 # allow updates
@@ -39,20 +40,33 @@ piaware-status
 systemctl status piaware
 # restart piaware
 sudo systemctl restart piaware
+```
 
+* Claim new client: [flightaware.com/adsb/piaware/claim](https://flightaware.com/adsb/piaware/claim)
+* View your page: [https://flightaware.com/account/manage](https://flightaware.com/account/manage)
+
+#### adsbexchange
+
+* Steps taken from [github.com/adsbxchange/adsb-exchange](https://github.com/adsbxchange/adsb-exchange)
+
+```bash
+wget -O /tmp/axfeed.sh https://adsbexchange.com/feed.sh
+sudo bash /tmp/axfeed.sh
+# web interface
+sudo bash /usr/local/share/adsbexchange/git/install-or-update-interface.sh
+# then Go to http://my_ip/adsbx
+# or remove
+sudo bash /usr/local/share/tar1090/uninstall.sh adsbx
 ```
 
 
-Claim new client: [flightaware.com/adsb/piaware/claim](https://flightaware.com/adsb/piaware/claim)
-View your page: [https://flightaware.com/account/manage](https://flightaware.com/account/manage)
+* check feed status [adsbexchange.com/myip/](https://adsbexchange.com/myip/) | [adsbx.org/sync](http://adsbx.org/sync)
 
 ## Archived (likely outdated) notes
 
 ### Repositories
 
-* [ADS-B Exchange](https://github.com/jprochazka/adsb-exchange)
 * [ADS-B Receiver](https://github.com/jprochazka/adsb-receiver)
-* [PiAware](https://github.com/flightaware/piaware)
 
 
 
@@ -62,12 +76,6 @@ View your page: [https://flightaware.com/account/manage](https://flightaware.com
   * power + ethernet > Raspberry Pi > USB extension cable > RTL-SDR dongle - grounding block / surge protector > antenna cable > antenna
 * Any price listed was accurate at time of writing. Who knows now?
 
-* (Optional) A POE Switch
-  * [TRENDnet 4xPoE+ / 2xNon Switch, 60W](https://www.amazon.com/dp/B0152WZRBM/) - Amazon, $38
-  * POE splitter, multiple options:
-    [UCTRONICS Micro USB PoE Splitter](https://www.amazon.com/dp/B01MDLUSE7/) |
-    [ANVISION 2-Pack 5V 2.4A PoE Splitter](https://www.amazon.com/dp/B079D5452Z/) |
-    [PLUSPOE Micro USB PoE Splitter ](https://www.amazon.com/dp/B075CQRX2H/)
 * Raspberry Pi 3B
 * RTL-SDR Dongle: [FlightAware Pro Stick Plus ADS-B USB Receiver with Built-in Filter](https://www.amazon.com/dp/B01M7REJJW/) - $20
 * The grounding block and SMA end of the antenna cable should be inside a junction box.
@@ -86,11 +94,9 @@ View your page: [https://flightaware.com/account/manage](https://flightaware.com
   * [Everbilt 1-3/4 in. Stainless-Steel Clamp](https://www.homedepot.com/p/202309386) - to manage wires on mast - $1.10 each
   * [10 Gauge Copper ground wire](https://www.amazon.com/dp/B008OILG5I)
 
-* [FlightAware 1090 MHz ADS-B Antenna](https://www.amazon.com/dp/B00WZL6WPO/) - $40
 
 ## Sources
 
 * [ADS-B FlightAware Enclosure Build](https://imgur.com/gallery/dpyGo) - and [reddit discussion](https://www.reddit.com/r/RTLSDR/comments/7pkso6/)
 * [My ADS-B Setup - PiAware](https://www.reddit.com/r/ADSB/comments/akk01c/)
-* [Do you want to build your own FlightAware PiAware ADS-B Ground Station?](https://flightaware.com/adsb/piaware/build)
 
