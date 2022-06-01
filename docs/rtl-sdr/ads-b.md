@@ -24,7 +24,7 @@ wget https://uk.flightaware.com/adsb/piaware/files/packages/pool/piaware/p/piawa
 sudo dpkg --install piaware-repository_7.2_all.deb
 sudo apt update
 sudo apt install dump1090-fa lighttpd piaware
-# check piaware at http://my_ip:8080/
+# check piaware at http://my_ip :8080/
 ```
 
 #### piaware commands
@@ -52,15 +52,22 @@ sudo systemctl restart piaware
 ```bash
 wget -O /tmp/axfeed.sh https://adsbexchange.com/feed.sh
 sudo bash /tmp/axfeed.sh
-# web interface
+# web interface (Go to http://my_ip/adsbx)
 sudo bash /usr/local/share/adsbexchange/git/install-or-update-interface.sh
-# then Go to http://my_ip/adsbx
-# or remove
+# check status
+sudo systemctl status adsbexchange-feed
+# restart feed
+sudo systemctl restart adsbexchange-feed
+# uninstall
 sudo bash /usr/local/share/tar1090/uninstall.sh adsbx
 ```
 
 
 * check feed status [adsbexchange.com/myip/](https://adsbexchange.com/myip/) | [adsbx.org/sync](http://adsbx.org/sync)
+
+### Todo
+
+* Take pictures of the planes that fly by [github.com/IQTLabs/SkyScan](https://github.com/IQTLabs/SkyScan)
 
 ## Archived (likely outdated) notes
 
