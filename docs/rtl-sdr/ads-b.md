@@ -3,57 +3,58 @@
 * <strong>ADS-B (Automatic Dependent Surveillance-Broadcast)</strong> - modern aircraft have a transponder which broadcasts (at 1090Mhz frequency) location and altitude to air traffic controllers
 * We can get this via RTL-SDR
 
+
+### Is my dongle working?
+
+```bash
+sudo apt-get install rtl-sdr
+rtl_test -t
+# If you see this error
+# usb_open error -3
+# Please fix the device permissions, e.g. by installing the udev rules file rtl-sdr.rules
+sudo wget -O /etc/udev/rules.d/rtl-sdr.rules "https://raw.githubusercontent.com/osmocom/rtl-sdr/master/rtl-sdr.rules"
+```
+
+### Basic Setup
+
+Mostly taken from gist: [rpi-adsb-feeder.md](https://gist.github.com/kanchudeep/2068aa149b1f787f8f77d7b785de304a)
+
+```bash
+wget https://uk.flightaware.com/adsb/piaware/files/packages/pool/piaware/p/piaware-support/piaware-repository_7.2_all.deb
+sudo dpkg --install piaware-repository_7.2_all.deb
+sudo apt update
+sudo apt install dump1090-fa lighttpd piaware
+```
+
+piaware commands
+
+```bash
+# allow updates
+sudo piaware-config allow-auto-updates yes
+sudo piaware-config allow-manual-updates yes
+# check config
+piaware-config -showall
+# Is it running?
+piaware-status
+systemctl status piaware
+# restart piaware
+sudo systemctl restart piaware
+
+```
+
+
+Claim new client: [flightaware.com/adsb/piaware/claim](https://flightaware.com/adsb/piaware/claim)
+View your page: [https://flightaware.com/account/manage](https://flightaware.com/account/manage)
+
+## Archived (likely outdated) notes
+
 ### Repositories
 
-* ~~[ADS-B Exchange](https://github.com/jprochazka/adsb-exchange)~~ - Don&rsquo;t trust this garbage
+* [ADS-B Exchange](https://github.com/jprochazka/adsb-exchange)
 * [ADS-B Receiver](https://github.com/jprochazka/adsb-receiver)
 * [PiAware](https://github.com/flightaware/piaware)
 
-### Installation
 
-* <em>(Up-to-date as of 2019-02-19)</em>
-* Have a Raspberry Pi ready with Raspbian Buster
-  ```bash
-  wget -S https://downloads.raspberrypi.org/raspbian_latest -O raspbian.zip
-  ```
-* Get PiAware
-  ```bash
-  wget http://flightaware.com/adsb/piaware/files/packages/pool/piaware/p/piaware-support/piaware-repository_3.6.3_all.deb
-  sudo dpkg -i piaware-repository_3.6.3_all.deb
-  ```
-
-* This gist seems very comprehensive:
-  [rpi-adsb-feeder.md](https://gist.github.com/kanchudeep/2068aa149b1f787f8f77d7b785de304a)
-
-https://discussions.flightaware.com/t/piaware-sd-card-image-3-7-1-quickstart-guide/48262
-
-* these instructions not confirmed to be working
-
-```bash
-# Install 'lighttpd':
-sudo apt install lighttpd
-# Install 'dump1090-mutability' dependencies
-sudo apt install libjs-excanvas libjs-jquery-ui libjs-jquery-ui-theme-smoothness librtlsdr0
-# Download and install
-# dump1090-mutability Debian packages at
-# https://packages.debian.org/buster/dump1090-mutability
-wget  http://ftp.us.debian.org/debian/pool/main/d/dump1090-mutability/dump1090-mutability_1.15~20180310.4a16df3+dfsg-6_armhf.deb
-sudo dpkg -i dump1090-mutability_1.15~20180310.4a16df3+dfsg-6_armhf.deb
-# Install prompt: Start automatically? Select YES
-# Fix dump1090-mutability service not working by default, due to missing udev rules:
-sudo wget -O /etc/udev/rules.d/rtl-sdr.rules "https://raw.githubusercontent.com/osmocom/rtl-sdr/master/rtl-sdr.rules"
-# Enable dump1090-mutability site (may already be enabled)
-sudo lighttpd-enable-mod dump1090
-# Flightradar 24 Install (not working yet)
-# sudo apt-get install fr24feed
-# Flightaware Install
-wget http://flightaware.com/adsb/piaware/files/packages/pool/piaware/p/piaware-support/piaware-repository_3.7.1_all.deb
-sudo dpkg -i piaware-repository_3.7.1_all.deb
-sudo apt update
-sudo piaware-config flightaware-user "USERNAME"
-piaware-config flightaware-password "PASSWORD"
-sudo systemctl restart piaware
-```
 
 ### potential shopping list
 
