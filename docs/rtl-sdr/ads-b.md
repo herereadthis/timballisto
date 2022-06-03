@@ -24,7 +24,7 @@ wget https://uk.flightaware.com/adsb/piaware/files/packages/pool/piaware/p/piawa
 sudo dpkg --install piaware-repository_7.2_all.deb
 sudo apt update
 sudo apt install dump1090-fa lighttpd piaware
-# check piaware at http://my_ip :8080/
+# check piaware at http://my_ip:8080/
 ```
 
 #### piaware commands
@@ -40,6 +40,15 @@ piaware-status
 systemctl status piaware
 # restart piaware
 sudo systemctl restart piaware
+# Keep old feeder-id on a new install
+sudo piaware-config feeder-id UUID
+sudo systemctl restart piaware
+# See the json
+http://my_ip:8080/data/aircraft.json
+# See the receiver's json
+http://my_ip:8080/data/receiver.json
+# See the stats json
+http://my_ip:8080/data/receiver.json
 ```
 
 * Claim new client: [flightaware.com/adsb/piaware/claim](https://flightaware.com/adsb/piaware/claim)
@@ -65,9 +74,33 @@ sudo bash /usr/local/share/tar1090/uninstall.sh adsbx
 
 * check feed status [adsbexchange.com/myip/](https://adsbexchange.com/myip/) | [adsbx.org/sync](http://adsbx.org/sync)
 
+#### FlightRadar24
+
+```
+sudo bash -c "$(wget -O - https://repo-feed.flightradar24.com/install_fr24_rpi.sh)"
+# Restart fr24feed
+sudo systemctl restart fr24feed
+```
+
+#### Add-ons
+
+```
+# Install graph
+sudo bash -c "$(curl -L -o - https://github.com/wiedehopf/graphs1090/raw/master/install.sh)"
+# view graphs
+http://192.168.x.yy/graphs1090
+http://192.168.x.yy/perf
+http://192.168.x.yy:8542
+```
+
 ### Todo
 
 * Take pictures of the planes that fly by [github.com/IQTLabs/SkyScan](https://github.com/IQTLabs/SkyScan)
+
+### Resources
+
+* Reddit
+  * [Outdoor installation](https://www.reddit.com/r/raspberry_pi/comments/uhxt5k/finally_moved_the_piaware_outside/), using PG9 cable glands for cables into box
 
 ## Archived (likely outdated) notes
 
