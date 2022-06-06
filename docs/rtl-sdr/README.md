@@ -122,22 +122,6 @@ Then press play. At the top is the frequency to which you are currently tuned. B
 
 Automatic dependent surveillance – broadcast (ADS–B) is communication operating on 1090 MHz which gives an aircraft's location and speed, to be shared with air traffic controls (ATC) for tracking.
 
-### Install Dump 1090
-
-```bash
-# Install Dump 1090
-git clone git://github.com/antirez/dump1090.git
-cd dump1090/
-make
-
-# Run
-./dump1090 --interactive
-
-# Run while displayed on a google map
-./dump1090 --interactive --net
-# open localhost:8080
-```
-
 * [More info at ADS-B Page](./adsb.md)
 
 ### ACARS (131.550 MHz)

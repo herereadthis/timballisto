@@ -1,4 +1,4 @@
-# Scheduling Tasks and Cron Jobs
+# Startup Jobs, Scheduling Tasks, and Cron Jobs
 
 ### Have things done when booting up
 

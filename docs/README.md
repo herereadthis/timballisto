@@ -2,12 +2,8 @@
 
 ### Coding and Software
 
-* [Do these things first (v2)](./do_first.md) when you get a Raspberry Pi
-* [Do these things next](./do_first.md) to improve usability
+* [Useful terminal commands](./terminal_commands.md) - including how to turn off a Pi
 * [Set up Github](./github_setup.md) to get and share code
-* [Pi-hole](./pi-hole.md) - ad blocking
-* [How to backup your image](./backup.md)
-* [Pi NAS] - Network Attached Storage
 
 ### RTL-SDR
 * [RTL-SDR](./rtl-sdr/README.md) - Software Defined Radio: Introduction
@@ -23,7 +19,11 @@
 ### Outdated, don&rsquo;t trust the following
 
 * ~[Do these things first (v1, archive)](./archive/do_first_v1.md) when you get a Raspberry Pi~
-* [Useful terminal commands](./terminal_commands.md) - including how to turn off a Pi
+* ~[Do these things first (v2)](./archives/do_first.md) when you get a Raspberry Pi~
+* ~[Do these things next](./archives/do_next.md) to improve usability~
+* [Pi-hole](./pi-hole.md) - ad blocking
+* [How to backup your image](./backup.md)
+* [Pi NAS] - Network Attached Storage
 * [How to schedule tasks](./scheduling.md) when booting up or periodically (cron)
 * [Advanced Configuration](./advanced_config.md)
 * [Docker](./docker.md) containers for shipping code
