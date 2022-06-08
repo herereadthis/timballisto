@@ -4,6 +4,7 @@
 
 * [Useful terminal commands](./terminal_commands.md) - including how to turn off a Pi
 * [Set up Github](./github_setup.md) to get and share code
+* [How to backup your image](./backup.md)
 
 ### RTL-SDR
 * [RTL-SDR](./rtl-sdr/README.md) - Software Defined Radio: Introduction
@@ -21,9 +22,8 @@
 * ~[Do these things first (v1, archive)](./archive/do_first_v1.md) when you get a Raspberry Pi~
 * ~[Do these things first (v2)](./archives/do_first.md) when you get a Raspberry Pi~
 * ~[Do these things next](./archives/do_next.md) to improve usability~
+* [Pi NAS](./pi-nas.md) - Network Attached Storage
 * [Pi-hole](./pi-hole.md) - ad blocking
-* [How to backup your image](./backup.md)
-* [Pi NAS] - Network Attached Storage
 * [How to schedule tasks](./scheduling.md) when booting up or periodically (cron)
 * [Advanced Configuration](./advanced_config.md)
 * [Docker](./docker.md) containers for shipping code
