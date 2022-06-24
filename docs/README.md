@@ -1,10 +1,35 @@
 # More Documentation
 
+### Tutorials
+
+* [Raspberry Pi USB Boot](https://raspberrystreet.com/learn/how-to-boot-raspberrypi-from-usb-ssd)
+
 ### Coding and Software
 
 * [Useful terminal commands](./terminal_commands.md) - including how to turn off a Pi
 * [Set up Github](./github_setup.md) to get and share code
 * [How to backup your image](./backup.md)
+* [ZShell](zsh.md), zsh, aliases
+<!-- todo: crontab https://crontab.guru/#0-59/5_*_*_*_* -->
+
+### Useful things to install
+
+```
+# emacs
+# shortcuts: https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
+sudo apt install emacs
+# quit: C-x, C-c
+# Open file: C-x, C-f
+# Save: C-x, C-s
+# Undo: C-x, u
+
+# docker: see https://docs.docker.com/engine/install/debian/
+curl -fsSL https://get.docker.com -o get-docker.sh
+# dry run
+DRY_RUN=1 sh ./get-docker.sh
+# install for real
+sudo sh get-docker.sh
+```
 
 ### RTL-SDR
 * [RTL-SDR](./rtl-sdr/README.md) - Software Defined Radio: Introduction

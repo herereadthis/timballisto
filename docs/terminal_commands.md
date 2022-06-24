@@ -6,29 +6,51 @@
 
 ```bash
 # Turn off a Raspberry Pi
-sudo halt
+sudo shutdown -h now
 
 # Restart a Raspberry Pi
 sudo reboot
-
-# Get GPIO Information
-python3
-import RPi.GPIO as GPIO
-print(GPIO.RPI_INFO)
 ```
 
 ### Services
 
 ```bash
-# See bluetooth status
-sudo systemctl status bluetooth
+# Get GPIO Information
+python
+import RPi.GPIO as GPIO
+print(GPIO.RPI_INFO)
+```
 
-# Stop bluetooth service
-sudo systemctl stop bluetooth
+#### Bluetooth
 
-# Start bluetooth service
-sudo systemctl start bluetooth
+[How to Set Up Bluetooth on a Raspberry Pi](https://howchoo.com/pi/bluetooth-raspberry-pi)
 
+```zsh
+sudo apt install bluetooth pi-bluetooth bluez blueman
+```
+
+### Monitoring
+
+```zsh
+# Temperature
+vcgencmd measure_temp
+# Temperature as digits
+vcgencmd measure_temp | grep  -o -E '[[:digit:]].*'
+# watch temp
+watch -- 'vcgencmd measure_temp'
+watch -c -b -d  -n 1 -- 'vcgencmd measure_temp'
+```
+
+## General terminal stuff
+
+```zsh
+# What stuff have I installed?
+apt list --installed
+```
+
+### Screenshots
+
+```zsh
 # Screenshots
 # To take a screenshot, set the command on a delay and then select your window
 # -u means active window, -d means delay, -e is exec
@@ -36,7 +58,11 @@ sudo systemctl start bluetooth
 scrot -u -d 3
 # screenshot will be saved to desktop
 scrot -u -d 3 -e 'mv $f ~/Desktop'
+# alternative: gnome screenshot
+sudo apt install gnome-screenshot
 ```
+
+## Possibly outdated
 
 ### Monitoring
 
@@ -81,9 +107,6 @@ man
 
 # example: the manual for the date command
 man date
-
-# What stuff have I installed?
-apt list --installed
 ```
 
 ## Moving Around
@@ -113,6 +136,13 @@ help('modules')
 flake8 path/to/file.py
 # lint files in a directory
 flake8 .
+```
+
+## Server
+
+```zsh
+# start a server on port 3000
+python -m http.server 3000
 ```
 
 ## Networking
