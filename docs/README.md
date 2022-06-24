@@ -10,6 +10,7 @@
 * [Set up Github](./github_setup.md) to get and share code
 * [How to backup your image](./backup.md)
 * [ZShell](zsh.md), zsh, aliases
+* [How to schedule tasks](./scheduling.md) when booting up or periodically (cron)
 <!-- todo: crontab https://crontab.guru/#0-59/5_*_*_*_* -->
 
 ### Useful things to install
@@ -49,7 +50,6 @@ sudo sh get-docker.sh
 * ~[Do these things next](./archives/do_next.md) to improve usability~
 * [Pi NAS](./pi-nas.md) - Network Attached Storage
 * [Pi-hole](./pi-hole.md) - ad blocking
-* [How to schedule tasks](./scheduling.md) when booting up or periodically (cron)
 * [Advanced Configuration](./advanced_config.md)
 * [Docker](./docker.md) containers for shipping code
 * [NodeJS and NPM](./node_js.md) installation and usage

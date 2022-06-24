@@ -2,6 +2,10 @@
 
 ### Have things done when booting up
 
+`rc.local` is now deprecated for `systemd`
+
+<!-->
+
 It's done in a file called `rc.local`
 
 ```bash
@@ -14,9 +18,14 @@ echo -e '\nHello World! This is an echo from /etc/rc.local.\n'
 echo -e '\n********\n'
 ```
 
+-->
+
 ### Cron Jobs: tasks running periodically
 
 ```bash
+# view existing cron jobs
+crontab -l
+#edit 
 crontab -e
 ```
 
@@ -58,13 +67,22 @@ crontab -e
             <td><code>0 3 * * Mon /backup_script.sh</code></td>
         </tr>
         <tr>
+            <td>Make an http request every 10 minutes</td>
+            <td>0-59/10</td>
+            <td>*</td>
+            <td>*</td>
+            <td>*</td>
+            <td>*</td>
+            <td><code>0-59/10 * * * python make_request.py</code></td>
+        </tr>
+        <tr>
             <td>Run a Python script at 10AM & 10PM on weekends</td>
             <td>0</td>
             <td>10,22</td>
             <td>*</td>
             <td>*</td>
             <td>Sat,Sun</td>
-            <td><code>0 10,22, * *  6,0 python3 /my_script.py</code></td>
+            <td><code>0 10,22, * *  6,0 python /my_script.py</code></td>
         </tr>
     </tbody>
 </table>
