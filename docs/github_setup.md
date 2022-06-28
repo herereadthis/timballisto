@@ -8,7 +8,7 @@
 ## Setup
 
 ```bash
-sudo apt get git
+sudo apt-get install git
 ```
 
 * Create an account at Github if you don&rsquo;t have one already. Add your configuration (use your own credentials):
@@ -32,7 +32,6 @@ sudo apt get git
 git config --global credential.helper cache
 # Delete the credentials
 git config --global --unset credential.helper
-git config --system --unset credential.helper
 ```
 
 ### ~SSH Setup~ Outdated

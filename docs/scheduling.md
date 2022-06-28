@@ -1,5 +1,7 @@
 # Startup Jobs, Scheduling Tasks, and Cron Jobs
 
+Helpful guide: [How to Schedule Python Scripts With Cron — The Only Guide You’ll Ever Need](https://towardsdatascience.com/how-to-schedule-python-scripts-with-cron-the-only-guide-youll-ever-need-deea2df63b4e)
+
 ### Have things done when booting up
 
 `rc.local` is now deprecated for `systemd`

@@ -15,21 +15,71 @@
 
 ### Useful things to install
 
-```
-# emacs
-# shortcuts: https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
+### emacs, a text editor
+
+Shortcuts: https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
+
+```zsh
 sudo apt install emacs
 # quit: C-x, C-c
 # Open file: C-x, C-f
 # Save: C-x, C-s
 # Undo: C-x, u
+```
 
-# docker: see https://docs.docker.com/engine/install/debian/
+#### gparted, for partioning drives
+
+Tutorial: ttps://raspberrytips.com/gparted-on-raspberry-pi/
+
+```zsh
+sudo apt install gparted
+# tutorial: https://raspberrytips.com/gparted-on-raspberry-pi/
+# Remember to name the new partition
+# gparted will only grant root privileges to new partitiions
+# list devices
+df -h
+# suppose the new partition is foo and your username is boss
+# grant permissions
+sudo chown -R boss:boss /media/boss/foo
+```
+
+#### Docker, for container applications
+
+See: https://docs.docker.com/engine/install/debian/
+
+```zsh
 curl -fsSL https://get.docker.com -o get-docker.sh
 # dry run
 DRY_RUN=1 sh ./get-docker.sh
 # install for real
 sudo sh get-docker.sh
+```
+
+#### Samba, for network file hosting
+
+Tutorial: https://pimylifeup.com/raspberry-pi-samba/
+
+```zsh
+sudo apt-get install samba samba-common-bin
+# edit samba configuration
+sudo nano /etc/samba/smb.conf
+# example:
+
+# name of the share
+[funshare]
+path = /media/pi/fun
+writeable=Yes
+create mask=0777
+directory mask=0777
+# requires valid user for access
+public=no
+
+# you must add a new user to be the samba user
+sudo adduser MY_USENAME
+# then add samba user
+sudo smbpasswd -a pi
+# restart
+sudo systemctl restart smbd
 ```
 
 ### RTL-SDR
@@ -43,11 +93,26 @@ sudo sh get-docker.sh
 * [GPIO Pinout](./GPIO.md) - diagram of all the pins on the RPi
 
 
+### Remote access
+
+#### VNC
+
+* RealVNC comes installed on Raspberry Pi OS. Enable VNC via `sudo raspi-config`.
+* While there, go to Display Options > VNC Resolution > set resolution
+* Headless VNC is very slow (rpi is not connected to any monitor). 
+  * This reference doesn't work: [Bullseye vncserver is very slow without display](https://forums.raspberrypi.com/viewtopic.php?p=1935596)
+    ```zsh
+    sudo nano /boot/config.txt
+    # disable KMS driver
+    # Enable DRM VC4 V3D driver
+    # dtoverlay=vc4-kms-v3d
+    ```
+
+
 ### Outdated, don&rsquo;t trust the following
 
 * ~[Do these things first (v1, archive)](./archive/do_first_v1.md) when you get a Raspberry Pi~
 * ~[Do these things first (v2)](./archives/do_first.md) when you get a Raspberry Pi~
-* ~[Do these things next](./archives/do_next.md) to improve usability~
 * [Pi NAS](./pi-nas.md) - Network Attached Storage
 * [Pi-hole](./pi-hole.md) - ad blocking
 * [Advanced Configuration](./advanced_config.md)
@@ -69,7 +134,7 @@ sudo sh get-docker.sh
 * [BMP180](https://github.com/herereadthis/lutra/blob/master/objectives/BMP180_barometer) barometer
 * [Arduino](https://github.com/herereadthis/lutra/blob/master/objectives/arduino) configuration and usage
 
-
+<!--
 ###
 
 ## Run this first
@@ -78,3 +143,4 @@ sudo sh get-docker.sh
 # get a bunch of files
 python3 download_stuff.py
 ```
+-->
