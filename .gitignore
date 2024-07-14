@@ -3,3 +3,4 @@ __pycache__
 *.pyc
 .venv/
 venv/
+src/download_img/img/*
