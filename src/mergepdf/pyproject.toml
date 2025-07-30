@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "mergepdf"
+version = "0.1.0"
+description = "Merge PDFs with custom TOC using pikepdf"
+authors = ["Your Name <you@example.com>"]
+packages = [{ include = "mergepdf", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pikepdf = "^9.0.0"
+
+[tool.poetry.scripts]
+mergepdf = "mergepdf.merge:main"
