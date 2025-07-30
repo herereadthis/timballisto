@@ -11,5 +11,5 @@ poetry install
 # Edit mergepdf/pdfs/pdf_list.json to match file names & TOC titles
 
 # Run
-poetry run mergepdf
+poetry run  
 ```
