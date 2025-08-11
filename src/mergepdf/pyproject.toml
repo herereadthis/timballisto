@@ -10,4 +10,5 @@ python = "^3.9"
 pikepdf = "^9.0.0"
 
 [tool.poetry.scripts]
-mergepdf = "mergepdf.merge:main"
+merge = "mergepdf.merge:main"
+setmeta = "mergepdf.setmeta:main"

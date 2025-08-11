@@ -5,10 +5,15 @@ import sys
 def main():
     project_root = Path(__file__).resolve().parent.parent.parent
     pdf_dir = project_root / "pdfs"
+    converted_pdf_dir = project_root / "converted"
 
     if not pdf_dir.exists():
         print(f"Error: {pdf_dir} not found.")
         sys.exit(1)
+
+    # Prompt for metadata
+    title = input("Enter PDF title: ").strip()
+    author = input("Enter PDF author: ").strip()
 
     # Recursively find all PDFs, sort by (parent folder, filename)
     pdf_files = sorted(
@@ -19,10 +24,6 @@ def main():
     if not pdf_files:
         print("Error: No PDF files found in directory.")
         sys.exit(1)
-
-    # Set desired metadata
-    title = "One Page RPGs"
-    author = "Grant Howitt"
 
     merged_pdf = pikepdf.Pdf.new()
 
@@ -38,10 +39,12 @@ def main():
         print("Error: No valid PDF pages found to merge.")
         sys.exit(1)
 
-    merged_pdf.docinfo["/Title"] = title
-    merged_pdf.docinfo["/Author"] = author
+    if title:
+        merged_pdf.docinfo["/Title"] = title
+    if author:
+        merged_pdf.docinfo["/Author"] = author
 
-    output_path = project_root / "merged.pdf"
+    output_path = converted_pdf_dir / f"{author} - {title}.pdf"
     merged_pdf.save(output_path)
     print(f"Merged PDF saved as {output_path}")
 
