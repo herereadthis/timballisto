@@ -1,0 +1,16 @@
+# /etc/modules: kernel modules to load at boot time.
+#
+# This file contains the names of kernel modules that should be loaded
+# at boot time, one per line. Lines beginning with "#" are ignored.
+
+# I2C
+i2c-dev
+
+# Low-level driver for I2C
+i2c-bcm2708
+
+# sound devices
+snd-bcm2835
+
+# Documentation TODO: SPI devices
+# spi-dev
